@@ -1,7 +1,7 @@
-import akiyam from '../assets/images/akiyum.webp'
-import aarohana from '../assets/images/aarohana.webp'
-import third from '../assets/images/03.webp'
-import fourth from '../assets/images/04.webp'
+import akiyam from '../assets/images/01.png'
+import aarohana from '../assets/images/02.png'
+import third from '../assets/images/03.png'
+import fourth from '../assets/images/04.png'
 
 import musician from '../assets/images/musician.png'
 
@@ -67,7 +67,7 @@ export const ourCareerData = {
             id: 0,
             image: musician,
             title: 'KARTHIK IYER',
-            about: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus doloremque libero eos suscipit sit, odit dicta, iste unde aspernatur cupiditate, inventore quas minima laborum. Rem doloribus iusto aperiam ab quisquam!',
+            about: 'Karthik Iyer, frontman of IndoSoul has been playing the violin since the age of 8. One of the pioneers in the usage of electric violin in the Indian music scene, his vision is to take Indian classical music to a global audience. He has performed across the world in countries like US, Canada, UK, Australia, etc including iconic shows like Later with Jools Holland BBC, Glastonbury festival, MTV Coke Studio to mention a few. He has curated and released four original albums with IndoSoul apart from playing for film music directors like A.R. Rahman, Harris Jayaraj, Anirudh, Imman, etc.',
         },
     ],
 };

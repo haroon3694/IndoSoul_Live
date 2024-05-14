@@ -54,19 +54,19 @@ const Footer = () => {
     ];
 
   return (
-    <div className="w-full flex justify-between relative z-10 px-20">
-        <div className='flex gap-20 items-center'>
+    <div className="w-full flex flex-col md:flex-row justify-between relative z-10 px-20 gap-10 md:gap-0">
+        <div className='flex flex-col md:flex-row gap-10 md:gap-20 items-center'>
             <img src={logoMain} className='w-32' alt="" />
             <div className='w-fit flex flex-col gap-2'>
                 {
                     footerLinks?.map((data) => (
-                        <h1 key={data?.id} className='text-md text-white uppercase cursor-pointer'>{data?.title}</h1>
+                        <h1 key={data?.id} className='text-md text-white text-center md:text-left uppercase cursor-pointer'>{data?.title}</h1>
                     ))
                 }
             </div>
         </div>
 
-        <div className='w-fit flex items-center gap-5'>
+        <div className='w-full justify-center md:w-fit flex items-center gap-10 md:gap-5'>
             {
                 footerData?.map((data) => (
                     <img src={data?.logo} key={data?.id} className='w-6 cursor-pointer' alt="" />

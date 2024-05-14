@@ -8,3 +8,12 @@
   line-height: 1.5;
   font-weight: 400; */
 }
+
+@font-face {
+  font-family: 'BebasNeue';
+  src: url('./assets/fonts/BebasNeue-Regular.otf');
+}
+
+.font-clashdisplay {
+  font-family: 'Clash Display', sans-serif;
+}
