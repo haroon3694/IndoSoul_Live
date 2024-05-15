@@ -7,6 +7,8 @@ import karthik from '../assets/images/musicianCarousal/karthik.png'
 import ramkumar from '../assets/images/musicianCarousal/ramkumar.png'
 import reshwin from '../assets/images/musicianCarousal/reshwin.png'
 import vikram from '../assets/images/musicianCarousal/vikram.png'
+import akshay from '../assets/images/musicianCarousal/akshay.png'
+import venkat from '../assets/images/musicianCarousal/venkat.png'
 
 import bandVideo from '../assets/videos/bandVideo.webm'
 
@@ -90,7 +92,7 @@ export const ourCareerData = {
         },
         {
             id: 3,
-            image: karthik,
+            image: venkat,
             title: 'VENKAT SUBRAMANIAN',
             about: 'More famously known as Mr. Mridangam in his social circles, hails from a family of artists and started learning Mridangam professionally from when he was thirteen. He specialises not onyl in Mridangam, but also in other precussion instruments like the Morsing, Ghanjeera, Ghatam, Tavil etc. He accompanies as a precussionist and has travelled across India and other countries like Sri Lanka, UAE, Cambodia and Singapore for private concerts. ',
         },
@@ -102,7 +104,7 @@ export const ourCareerData = {
         },
         {
             id: 5,
-            image: karthik,
+            image: akshay,
             title: 'AKSHAY YESODHARAN',
             about: 'A trained singer, guitarist and music composer with foundation in Western Classical Piano from the KM Music Conservatory, Akshay Yesodharan has been a professional musician for the past ten years. He has toured with Mr. A.R. Rahman as part ten years. He has toured with Mr. A.R. Rahman as part of his KMMC Chamber Choir, in India as well as Germany for the Bollywood dreams four. His recent works for the South Indian film industry include the background score for a Tamil and Telegu film and vocals for a Tamil web series called The Story of Things.',
         },

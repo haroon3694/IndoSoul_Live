@@ -1,4 +1,5 @@
-import heroImg from '../../assets/images/landingPageHero.webp'
+// import heroImg from '../../assets/images/landingPageHero.webp'
+import hero from '../../assets/images/hero.jpg'
 import logoMain from '../../assets/icons/logo-main.svg'
 import PrimaryButton from '../global/PrimaryButton'
 
@@ -6,7 +7,7 @@ const Hero = () => {
     return (
         <div className='w-full relative'>
             <div className="w-full h-screen relative">
-                <img src={heroImg} className="w-full h-screen object-cover" alt="" />
+                <img src={hero} className="w-full h-screen object-cover object-bottom" alt="" />
                 <div className='absolute bottom-0 left-0 w-full h-[20vh] bg-gradient-to-t from-black' />
             </div>
             <div className='absolute top-1/2 -translate-y-[50%] md:-translate-y-[40%] left-1/2 -translate-x-1/2 flex flex-col items-center gap-10 w-full px-6'>
