@@ -16,7 +16,7 @@ const MusiciansCarousal = () => {
                                 <img src={data?.image} className='w-90' alt="" />
                             </div>
                             <div className='w-fit flex flex-col gap-4'>
-                                <h1 className='text-4xl'>{data?.title}</h1>
+                                <h1 className='text-4xl font-clashdisplay tracking-widest'>{data?.title}</h1>
                                 <p>{data?.about}</p>
                             </div>
                         </div>
