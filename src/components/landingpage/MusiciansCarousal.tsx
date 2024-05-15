@@ -1,28 +1,44 @@
 import musiciansHeading from '../../assets/icons/musicians.svg'
 import { ourCareerData } from '../../data/landingPageData'
 import PrimaryButton from '../global/PrimaryButton'
+import Slider from "react-slick";
 
 const MusiciansCarousal = () => {
+
+    const settings = {
+        dots: false,
+        infinite: true,
+        fade: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        autoplay: true,
+        pauseonhover: false,
+    };
+
     return (
         <div className='w-full'>
-            <div className='w-full flex justify-center items-center pb-20'>
+            <div className='w-full flex justify-center items-center pb-10 md:pb-20'>
                 <img src={musiciansHeading} className='w-62 z-10' alt="" />
             </div>
-            {
-                ourCareerData?.musicians?.map((data) => (
-                    <div key={data?.id} className='w-[90%] md:w-[70%] text-justify mx-auto flex items-center text-white'>
-                        <div className='w-full flex flex-col md:flex-row gap-20 items-center'>
-                            <div className='w-fit'>
-                                <img src={data?.image} className='w-90' alt="" />
-                            </div>
-                            <div className='w-fit flex flex-col gap-4'>
-                                <h1 className='text-4xl'>{data?.title}</h1>
-                                <p>{data?.about}</p>
+            <Slider {...settings} className='md:px-20 w-full lg:w-[70%] mx-auto'>
+                {
+                    ourCareerData?.musicians?.map((data) => (
+                        <div key={data?.id} className='w-full text- flex items-center text-white px-2 lg:px-16'>
+                            <div className='w-full flex flex-col md:flex-row gap-10 lg:gap-20 items-center'>
+                                <div className='w-fit'>
+                                    <img src={data?.image} className='w-90' alt="" />
+                                </div>
+                                <div className='w-fit flex flex-col gap-4'>
+                                    <h1 className='text-4xl font-clashdisplay tracking-wide md:tracking-[0.3em] lg:tracking-widest'>{data?.title}</h1>
+                                    <p className=''>{data?.about}</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                ))
-            }
+                    ))
+                }
+            </Slider>
             <div className='w-full flex justify-center items-center pt-14 md:pt-20 pb-20'>
                 <PrimaryButton btnText='TALK WITH US' />
             </div>

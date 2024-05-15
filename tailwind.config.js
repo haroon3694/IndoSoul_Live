@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        clashdisplay: ['BEBASNEUE'],
+        bebasNeue: ['BEBASNEUE'],
       }
     },
   },

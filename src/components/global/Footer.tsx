@@ -57,10 +57,10 @@ const Footer = () => {
     <div className="w-full flex flex-col md:flex-row justify-between relative z-10 px-20 gap-10 md:gap-0">
         <div className='flex flex-col md:flex-row gap-10 md:gap-20 items-center'>
             <img src={logoMain} className='w-32' alt="" />
-            <div className='w-fit flex flex-col gap-2'>
+            <div className='w-fit flex flex-col gap-4 md:gap-2 font-clashdisplay tracking-widest'>
                 {
                     footerLinks?.map((data) => (
-                        <h1 key={data?.id} className='text-md text-white text-center md:text-left uppercase cursor-pointer'>{data?.title}</h1>
+                        <h1 key={data?.id} className='text-sm md:text-md text-white text-center md:text-left uppercase cursor-pointer'>{data?.title}</h1>
                     ))
                 }
             </div>

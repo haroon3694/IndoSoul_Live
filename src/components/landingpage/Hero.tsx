@@ -9,19 +9,18 @@ const Hero = () => {
                 <img src={heroImg} className="w-full h-screen object-cover" alt="" />
                 <div className='absolute bottom-0 left-0 w-full h-[20vh] bg-gradient-to-t from-black' />
             </div>
-            <div className='absolute top-1/2 -translate-y-1/3 left-1/2 -translate-x-1/2 flex flex-col items-center gap-16 w-full px-6'>
-                <img src={logoMain} className='w-52' alt="" />
-                <div className='text-white text-center flex flex-col items-center md:text-nowrap text-lg gap-3'>
+            <div className='absolute top-1/2 -translate-y-[50%] md:-translate-y-[40%] left-1/2 -translate-x-1/2 flex flex-col items-center gap-10 w-full px-6'>
+                <img src={logoMain} className='w-52 md:w-72' alt="" />
+                <div className='text-white flex flex-col items-center xl:text-nowrap text-md md:text-lg xl:text-xl md:gap-2 text-center'>
                     <p>Namaste! Thank you for your interest in IndoSoul,</p>
                     <p>a 12-year-old music band that brings together elements of different music genres on the bedrock of Indian classical music.</p>
-                    <div className='w-full flex justify-center items-center pt-5'>
-                        <PrimaryButton btnText='Talk with us' />
+                    <div className='w-full flex justify-center items-center pt-20 md:pt-5'>
+                        <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2Oy2TFgjxR4qp0qcY_WHvf_woG_VGqWEdygUfyDpSAEOXfseze-9WW1KUBLE3MS5hbQsJhnCMg" target='_blank'>
+                            <PrimaryButton btnText='Talk with us' />
+                        </a>
                     </div>
                 </div>
             </div>
-            {/* <div className='w-full flex justify-center items-center absolute bottom-44 md:bottom-40 xl:bottom-32 left-0'>
-                <PrimaryButton btnText='TALK WITH US' />
-            </div> */}
         </div>
     )
 }

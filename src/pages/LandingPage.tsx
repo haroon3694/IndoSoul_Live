@@ -10,7 +10,7 @@ import MembersGallery from '../components/landingpage/MembersGallery'
 
 const LandingPage = () => {
     return (
-        <div className='relative'>
+        <div className='relative overflow-hidden'>
             <Hero />
             <div className='w-full bg-black relative' style={{ backgroundImage: `url(${landingPageGradient})` }}>
                 <div className='absolute top-0 left-0 w-full h-[8vh] bg-gradient-to-b from-black' />
@@ -27,17 +27,22 @@ const LandingPage = () => {
                     </div>
                 </div>
                 <div className='w-full z-10 relative px-5 sm:px-10 md:px-20 lg:px-32 xl:px-64'>
-                    <div className='flex flex-col md:flex-row justify-center md:items-center gap-20 py-40 xl:py-56 font-normal font-bebasneue'>
+                    <div className='flex flex-col md:flex-row justify-center md:items-center gap-10 md:gap-20 xl:gap-32 py-40 xl:py-56 font-normal'>
                         {
                             ourCareerData?.experience?.map((data) => (
-                                <div key={data?.id} className='text-left md:text-center'>
-                                    <h1 className='text-white text-9xl md:text-[12rem]'>{data?.amount}</h1>
-                                    <h1 className='text-white text-xl uppercase ml-5 md:ml-0'>{data?.title}</h1>
+                                <div key={data?.id} className='text-left md:text-center font-bebasNeue font-extralight'>
+                                    <h1 className='text-white text-9xl lg:text-[12rem]'>{data?.amount}</h1>
+                                    <h1 className='text-white text-4xl uppercase ml-5 md:ml-0'>{data?.title}</h1>
                                 </div>
                             ))
                         }
                     </div>
+                </div>
+                <div className='w-full px-10'>
                     <MusiciansCarousal />
+                    {/* <div className='w-full py-10'>
+                        <video src={ourCareerData?.bandVideo} autoPlay={true} loop={true} className='rounded-sm h-[70vh] mx-auto'></video>
+                    </div> */}
                     <MembersGallery />
                     <div className='w-full flex justify-center items-center mt- md:mt-24 mb-90'>
                         <PrimaryButton btnText='VIEW MORE' />
