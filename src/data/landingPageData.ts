@@ -1,5 +1,5 @@
-import akiyam from '../assets/images/01.png'
-import aarohana from '../assets/images/02.png'
+import aikiyambg from '../assets/images/aikiyam_bg.png'
+import aarohanabg from '../assets/images/arohana_bg.png'
 import third from '../assets/images/03.png'
 import fourth from '../assets/images/04.png'
 
@@ -14,27 +14,27 @@ import music_6 from '../assets/images/musicians/06.webp'
 import music_7 from '../assets/images/musicians/07.webp'
 import music_8 from '../assets/images/musicians/08.webp'
 
-import akiyamLogo from '../assets/icons/aakiyam.svg'
+import aikiyamLogo from '../assets/icons/aikiyam_logo.png'
 import aarohanaLogo from '../assets/icons/aarohana.svg'
 
 export const experienceData = [
     {
         id: 0,
         title: 'Akiyam',
-        image: akiyam,
-        logo: akiyamLogo,
+        image: aikiyambg,
+        logo: aikiyamLogo,
     },
     {
         id: 1,
         title: 'Aarohana',
-        image: aarohana,
+        image: aarohanabg,
         logo: aarohanaLogo,
     },
     {
         id: 3,
         title: 'Akiyam',
         image: third,
-        logo: akiyamLogo,
+        logo: aikiyamLogo,
     },
     {
         id: 4,
