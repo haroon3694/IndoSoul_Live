@@ -1,4 +1,3 @@
-// import heroImg from '../../assets/images/landingPageHero.webp'
 import hero from '../../assets/images/hero.jpg'
 import logoMain from '../../assets/icons/logo-main.svg'
 import PrimaryButton from '../global/PrimaryButton'
