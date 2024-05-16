@@ -17,3 +17,9 @@
 .font-clashdisplay {
   font-family: 'Clash Display', sans-serif;
 }
+
+.glass-morphism {
+  background: rgba(9, 8, 8, 0.74);
+  backdrop-filter: blur(6.9px);
+  -webkit-backdrop-filter: blur(6.9px);
+}
