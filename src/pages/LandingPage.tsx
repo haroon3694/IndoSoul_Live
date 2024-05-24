@@ -90,7 +90,7 @@ const LandingPage = () => {
                     </div>
                     <MembersGallery />
                 </div>
-                <div className='w-full mt-28 md:mt-56 pb-8 bottom-0 left-0'>
+                <div className='w-full mt-28 md:mt-10 pb-8 bottom-0 left-0'>
                     <Footer />
                 </div>
             </div>

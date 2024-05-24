@@ -20,15 +20,15 @@ const MusiciansCarousal = () => {
     return (
         <div className='w-full'>
             <div className='w-full flex justify-center items-center pb-10 md:pb-20'>
-                <img src={musiciansHeading} className='w-62 z-10' alt="" />
+                <img src={musiciansHeading} className='w-fit z-10' alt="" />
             </div>
-            <Slider {...settings} className='md:px-20 w-full lg:w-[70%] mx-auto'>
+            <Slider {...settings} className='md:px-20 w-full lg:w-[80%] mx-auto'>
                 {
                     ourCareerData?.musicians?.map((data) => (
                         <div key={data?.id} className='w-full text- flex items-center text-white px-2 lg:px-16'>
                             <div className='w-full flex flex-col md:flex-row gap-10 lg:gap-20 items-center'>
                                 <div className='w-fit'>
-                                    <img src={data?.image} className='w-90' alt="" />
+                                    <img src={data?.image} className='w-fit' alt="" />
                                 </div>
                                 <div className='w-fit flex flex-col gap-4'>
                                     <h1 className='text-4xl font-clashdisplay tracking-wide md:tracking-[0.3em] lg:tracking-widest'>{data?.title}</h1>
