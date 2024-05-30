@@ -10,7 +10,7 @@ const Hero = () => {
                 <div className='absolute bottom-0 left-0 w-full h-[20vh] bg-gradient-to-t from-black' />
             </div>
             <div className='absolute top-1/2 -translate-y-[50%] md:-translate-y-[40%] left-1/2 -translate-x-1/2 flex flex-col items-center gap-10 w-full px-6'>
-                <img src={logoMain} className='w-52 md:w-72' alt="" />
+                <img src={logoMain} className='w-52 md:w-60 pt-50' alt="" />
                 <div className='text-white flex flex-col items-center xl:text-nowrap text-md md:text-lg xl:text-xl md:gap-2 text-center'>
                     <p>Namaste! Thank you for your interest in IndoSoul,</p>
                     <p>a 12-year-old music band that brings together elements of different music genres on the bedrock of Indian classical music.</p>

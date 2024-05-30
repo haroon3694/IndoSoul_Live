@@ -34,28 +34,28 @@ const Footer = () => {
         },
     ];
 
-    const footerLinks = [
-        {
-            id: 0,
-            link: '#',
-            title: 'home',
-        },
-        {
-            id: 1,
-            link: '#',
-            title: 'about',
-        },
-        {
-            id: 2,
-            link: '#',
-            title: 'bookings',
-        },
-        {
-            id: 3,
-            link: '#',
-            title: 'contact',
-        },
-    ];
+    // const footerLinks = [
+    //     {
+    //         id: 0,
+    //         link: '#',
+    //         title: 'home',
+    //     },
+    //     {
+    //         id: 1,
+    //         link: '#',
+    //         title: 'about',
+    //     },
+    //     {
+    //         id: 2,
+    //         link: '#',
+    //         title: 'bookings',
+    //     },
+    //     {
+    //         id: 3,
+    //         link: '#',
+    //         title: 'contact',
+    //     },
+    // ];
 
   return (
     <div className="w-full flex flex-col md:flex-row justify-between relative z-10 px-20 gap-10 md:gap-0">
