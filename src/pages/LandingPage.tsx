@@ -47,8 +47,15 @@ const LandingPage = () => {
             <div className='w-full bg-black relative' style={{ backgroundImage: `url(${landingPageGradient})` }}>
                 <div className='absolute top-0 left-0 w-full h-[8vh] bg-gradient-to-b from-black' />
                 <div className='w-full px-5 sm:px-10 md:px-20 xl:px-32 pt-36 xl:pt-56 gap-10 z-10'>
-                    <div className='w-full flex justify-center items-center mb-20'>
+                    <div className='w-full flex justify-center items-center mb-10'>
                         <img src={expHeading} className='w-62 z-10' alt="" />
+                    </div>
+                    <div className='text-white text-justify font-extralight text-[1.2rem] pb-5 mb-5 w-fit'>
+                        Elevate your special occasions with the enchanting musical experiences crafted by House of IndoSoul. 
+                        Our offerings are designed to infuse every moment with a unique blend of tradition and contemporary 
+                        charm, creating unforgettable memories. Whether it's the sacred Muhurtham, lively pre-wedding festivities,
+                        or grand wedding receptions, or corporate functions, IndoSoul’s diverse ensemble provide bespoke musical 
+                        journeys that resonate with the essence of celebrations with your loved ones.
                     </div>
                     <div className='w-full grid grid-cols-2 md:grid-cols-4 gap-5 xl:gap-10'>
                         {
@@ -64,7 +71,7 @@ const LandingPage = () => {
                             ourCareerData?.experience?.map((data, index) => (
                                 <div key={data?.id} className='text-left md:text-center font-bebasNeue font-extralight'>
 
-                                    <h1 className='text-white text-9xl lg:text-[12rem]'>
+                                    <h1 className='text-white text-9xl lg:text-[8rem]'>
                                         {
                                             isVisible ? (
                                                 <>

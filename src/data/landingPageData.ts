@@ -12,14 +12,14 @@ import venkat from '../assets/images/musicianCarousal/venkat.png'
 
 import bandVideo from '../assets/videos/bandVideo.webm'
 
-import music_1 from '../assets/images/musicians/01.webp'
-import music_2 from '../assets/images/musicians/02.webp'
-import music_3 from '../assets/images/musicians/03.webp'
-import music_4 from '../assets/images/musicians/04.webp'
-import music_5 from '../assets/images/musicians/05.webp'
-import music_6 from '../assets/images/musicians/06.webp'
-import music_7 from '../assets/images/musicians/07.webp'
-import music_8 from '../assets/images/musicians/08.webp'
+import music_1 from '../assets/images/gallery/01.webp'
+import music_2 from '../assets/images/gallery/02.jpg'
+import music_3 from '../assets/images/gallery/03.jpg'
+import music_4 from '../assets/images/gallery/04.jpg'
+import music_5 from '../assets/images/gallery/05.webp'
+import music_6 from '../assets/images/gallery/06.jpg'
+import music_7 from '../assets/images/gallery/07.webp'
+import music_8 from '../assets/images/gallery/08.jpg'
 
 import aikiyamLogo from '../assets/images/experienceCards/akyam.png'
 import aarohanaLogo from '../assets/images/experienceCards/aarohana.png'
@@ -32,6 +32,7 @@ export const experienceData = [
         title: 'Akiyam',
         image: aikiyambg,
         logo: aikiyamLogo,
+        heading: 'Infusing a sacred sense of spirit and divinity into muhurthams and other traditional celebrations through music' ,
         content: [
             `Amidst the happy chatter of your family and friends, strong and loud 'Naadaswaram' notes pierce and waft through the gathering accompanied by bold 'Thavil' beats to create the perfect backdrop-as both of you join hands to stick to each other through thick and thin.  Running parallel to the traditional notes are IndoSoul's modern touches… All these seemingly disparate elements come together and blend into one beautiful sound… As you both become one. An experience of oneness or 'Aikyam'.`,
             `The experience includes:`,
@@ -47,6 +48,7 @@ export const experienceData = [
         title: 'Aarohana',
         image: aarohanabg,
         logo: aarohanaLogo,
+        heading: 'Setting the Perfect tunes for Your Wedding Festivities' ,
         content: [
             `Fasten your seat belts as this ride is going to take you to dizzying heights of the higher octave and deep bass notes and everywhere in between. An amazing mix of film or popular music with some classical melodies, this one promises a light, airy and fun musical journey.`,
             `'Aarohana' offers an experience where it's not just about the music but creating an immersive experience that would be a treat to all your senses. With visually stunning stage arrangements, the band engages with your guests, encouraging them to participate in the musical celebrations, turning it into an experience of shared love, laughter and music.`,
@@ -62,6 +64,7 @@ export const experienceData = [
         title: 'IndoSoul',
         image: third,
         logo: indoSoulLogo,
+        // heading: "Infusing a sacred sense of spirit and divinity into muhurthams and other traditional celebrations through music" ,
         content: [
             `You are all set to take your next big step… And, what better than to celebrate it musically with all your loved ones by your side? From the enthusiastic folks on the dance floor the minute they hear a beat to the reluctant ones shaking an arm or two to group performances-IndoSoul promises to infuse vibrancy and energy into these experiences in its signature music style.`,
             `With expertise in different genres of music, IndoSoul would present exceptional medleys that span decades and styles. Right from the 1960s to now, from MSV to ARR to Elvis Presley, from the traditional classical songs to the popular music, we offer them all.`,
@@ -78,6 +81,7 @@ export const experienceData = [
         title: 'IndoSoul Ensemble',
         image: fourth,
         logo: ensambleLogo,
+        heading: 'The Perfect Symphony for Every event of Your 3 day Grand Indian Wedding ',
         content: [
             `You are unique and so is your story of love. Your journey of coming together with your special someone would be set to tune accompanied by the right beats-right from the first time you met to the day you decided to start a journey together. Your very own unique or 'Adwitiya' musical recorded for posterity. Not just the music but the sound and lighting effects would be customised to narrate your story in a unique manner.`,
             `The experience includes:`,
@@ -94,12 +98,12 @@ export const ourCareerData = {
     experience: [
         {
             id: 0,
-            amount: 150,
+            amount: 1000,
             title: 'shows',
         },
         {
             id: 1,
-            amount: 50,
+            amount: 100,
             title: 'cities',
         },
         {
@@ -112,8 +116,8 @@ export const ourCareerData = {
         {
             id: 0,
             image: karthik,
-            title: 'KARTHIK IYER',
-            about: 'Karthik Iyer, frontman of IndoSoul has been playing the violin since the age of 8. One of the pioneers in the usage of electric violin in the Indian music scene, his vision is to take Indian classical music to a global audience. He has performed across the world in countries like US, Canada, UK, Australia, etc including iconic shows like Later with Jools Holland BBC, Glastonbury festival, MTV Coke Studio to mention a few. He has curated and released four original albums with IndoSoul apart from playing for film music directors like A.R. Rahman, Harris Jayaraj, Anirudh, Imman, etc.',
+            title: 'Karthick Iyer',
+            about: 'Karthick Iyer, frontman of IndoSoul has been playing the violin since the age of 8. One of the pioneers in the usage of electric violin in the Indian music scene, his vision is to take Indian classical music to a global audience. He has performed across the world in countries like US, Canada, UK, Australia, etc including iconic shows like Later with Jools Holland BBC, Glastonbury festival, MTV Coke Studio to mention a few. He has curated and released four original albums with IndoSoul apart from playing for film music directors like A.R. Rahman, Harris Jayaraj, Anirudh, Imman, etc.',
         },
         {
             id: 1,

@@ -2,19 +2,19 @@ import { useState } from 'react'
 import cross from '../../assets/icons/cross.svg'
 import PrimaryButton from '../global/PrimaryButton'
 
-const ExperienceCard = ({ id, image, logo, content }: { id: number, image: string, logo: string, content: string[] }) => {
+const ExperienceCard = ({ id, image, logo, content, heading}: { id: number, image: string, logo: string, content: string[], heading: string}) => {
 
     const [viewPopUp, setViewPopUp] = useState(false);
 
     return (
         <>
-            <div key={id} className='relative group overflow-hidden rounded-md'>
+            <div onClick={() => setViewPopUp(true)} key={id} className='relative group overflow-hidden rounded-md'>
                 <img src={image} className='w-full group-hover:scale-150 group-hover:blur-sm transition-all duration-500 ease-in-out' alt="" />
                 <div className='px-2'>
                     <img src={logo} className={`w-36 md:w-52 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2`} alt="" />
                 </div>
                 <div className='w-full flex justify-center items-center absolute bottom-10 left-0'>
-                    <PrimaryButton btnText='know more' onClick={() => setViewPopUp(true)} />
+                    <PrimaryButton btnText='know more'  />
                 </div>
             </div>
             <div className={`${viewPopUp ? 'flex' : 'hidden'} w-full fixed bg-black bg-opacity-10 justify-center items-center h-screen inset-0 z-20 px-5`} onClick={() => setViewPopUp(false)}>
@@ -23,6 +23,7 @@ const ExperienceCard = ({ id, image, logo, content }: { id: number, image: strin
                         <div className='w-full flex justify-center items-center '>
                             <img src={logo} className={`w-36 md:w-52`} alt="" />
                         </div>
+                        <h1 className='text-[1.6rem] text-[red] font-bold'>{heading}</h1>
                         <div className='w-full py-10 flex flex-col gap-6'>
                             {
                                 content?.map((data) => (
