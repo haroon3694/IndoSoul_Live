@@ -12,7 +12,7 @@ import venkat from '../assets/images/musicianCarousal/venkat.png'
 
 import bandVideo from '../assets/videos/bandVideo.webm'
 
-import music_1 from '../assets/images/gallery/01.webp'
+import music_1 from '../assets/images/gallery/01.png'
 import music_2 from '../assets/images/gallery/02.jpg'
 import music_3 from '../assets/images/gallery/03.jpg'
 import music_4 from '../assets/images/gallery/04.jpg'
@@ -25,8 +25,9 @@ import aikiyamLogo from '../assets/images/experienceCards/akyam.png'
 import aarohanaLogo from '../assets/images/experienceCards/aarohana.png'
 import ensambleLogo from '../assets/images/experienceCards/ensamble.png'
 import indoSoulLogo from '../assets/images/experienceCards/indoSoul.png'
+import { ExperienceDataType, MusicianGalleryType, OurCareerDataType } from '../types/landingPageDataType'
 
-export const experienceData = [
+export const experienceData: ExperienceDataType[] = [
     {
         id: 0,
         title: 'Akiyam',
@@ -65,6 +66,7 @@ export const experienceData = [
         image: third,
         logo: indoSoulLogo,
         // heading: "Infusing a sacred sense of spirit and divinity into muhurthams and other traditional celebrations through music" ,
+        heading: null,
         content: [
             `You are all set to take your next big step… And, what better than to celebrate it musically with all your loved ones by your side? From the enthusiastic folks on the dance floor the minute they hear a beat to the reluctant ones shaking an arm or two to group performances-IndoSoul promises to infuse vibrancy and energy into these experiences in its signature music style.`,
             `With expertise in different genres of music, IndoSoul would present exceptional medleys that span decades and styles. Right from the 1960s to now, from MSV to ARR to Elvis Presley, from the traditional classical songs to the popular music, we offer them all.`,
@@ -94,7 +96,7 @@ export const experienceData = [
     },
 ];
 
-export const ourCareerData = {
+export const ourCareerData: OurCareerDataType = {
     experience: [
         {
             id: 0,
@@ -153,7 +155,7 @@ export const ourCareerData = {
     bandVideo: bandVideo,
 };
 
-export const musicianGallery = [
+export const musicianGallery: MusicianGalleryType[] = [
     {
         id: 0,
         image: music_1,
