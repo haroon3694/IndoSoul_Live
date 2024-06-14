@@ -12,9 +12,19 @@ const MusiciansCarousal = () => {
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
-        arrows: false,
+        arrows: true,
         autoplay: true,
         pauseonhover: false,
+         nextArrow: (
+            <div>
+                <div className="next-slick-arrow"> {`>`} </div>
+            </div>
+        ),
+        prevArrow: (
+            <div>
+                <div className="prev-slick-arrow"> {`<`} </div>
+            </div>
+        ),
     };
 
     return (
@@ -22,7 +32,7 @@ const MusiciansCarousal = () => {
             <div className='w-full flex justify-center items-center pb-10 md:pb-20'>
                 <img src={musiciansHeading} className='w-fit z-10' alt="" />
             </div>
-            <Slider {...settings} className='md:px-20 w-full lg:w-[80%] mx-auto'>
+            <Slider {...settings} className='md:px-20 w-full lg:w-[70%] mx-auto'>
                 {
                     ourCareerData?.musicians?.map((data) => (
                         <div key={data?.id} className='w-full text- flex items-center text-white px-2 lg:px-16'>
@@ -32,7 +42,7 @@ const MusiciansCarousal = () => {
                                 </div>
                                 <div className='w-fit flex flex-col gap-4'>
                                     <h1 className='text-4xl font-clashdisplay tracking-wide md:tracking-[0.3em] lg:tracking-widest'>{data?.title}</h1>
-                                    <p className=''>{data?.about}</p>
+                                    <p className='text-justify'>{data?.about}</p>
                                 </div>
                             </div>
                         </div>

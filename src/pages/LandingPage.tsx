@@ -1,6 +1,6 @@
 import landingPageGradient from '../assets/images/bodyGradientImage.png'
 import expHeading from '../assets/icons/experiences.svg'
-import { experienceData, ourCareerData } from '../data/landingPageData'
+import { experienceData, musicianGallery, ourCareerData } from '../data/landingPageData'
 import Footer from '../components/global/Footer'
 import Hero from '../components/landingpage/Hero'
 import ExperienceCard from '../components/landingpage/ExperienceCard'
@@ -8,6 +8,7 @@ import MusiciansCarousal from '../components/landingpage/MusiciansCarousal'
 import MembersGallery from '../components/landingpage/MembersGallery'
 import CountUp from "react-countup";
 import { useEffect, useRef, useState } from 'react'
+import { ParallaxScroll } from '../components/global/ParallaxGallery'
 
 const LandingPage = () => {
 
@@ -51,10 +52,10 @@ const LandingPage = () => {
                         <img src={expHeading} className='w-62 z-10' alt="" />
                     </div>
                     <div className='text-white text-justify font-extralight text-[1.2rem] pb-5 mb-5 w-fit'>
-                        Elevate your special occasions with the enchanting musical experiences crafted by House of IndoSoul. 
-                        Our offerings are designed to infuse every moment with a unique blend of tradition and contemporary 
+                        Elevate your special occasions with the enchanting musical experiences crafted by House of IndoSoul.
+                        Our offerings are designed to infuse every moment with a unique blend of tradition and contemporary
                         charm, creating unforgettable memories. Whether it's the sacred Muhurtham, lively pre-wedding festivities,
-                        or grand wedding receptions, or corporate functions, IndoSoul’s diverse ensemble provide bespoke musical 
+                        or grand wedding receptions, or corporate functions, IndoSoul’s diverse ensemble provide bespoke musical
                         journeys that resonate with the essence of celebrations with your loved ones.
                     </div>
                     <div className='w-full grid grid-cols-2 md:grid-cols-4 gap-5 xl:gap-10'>
@@ -95,7 +96,12 @@ const LandingPage = () => {
                     <div className='w-full px-0 md:px-20 lg:px-32 xl:px-40'>
                         <video src={ourCareerData?.bandVideo} muted autoPlay loop={true} className='rounded-sm w-full object-cover md:object-contain h-[50vh] md:h-auto max-h-screen'></video>
                     </div>
-                    <MembersGallery />
+                    <div className='block md:hidden'>
+                        <MembersGallery />
+                    </div>
+                    <div className='hidden md:block'>
+                        <ParallaxScroll images={musicianGallery?.map((data) => data?.image)} />
+                    </div>
                 </div>
                 <div className='w-full mt-28 md:mt-10 pb-8 bottom-0 left-0'>
                     <Footer />
