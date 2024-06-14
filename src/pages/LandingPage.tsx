@@ -99,9 +99,9 @@ const LandingPage = () => {
                     <div className='block md:hidden'>
                         <MembersGallery />
                     </div>
-                    <div className='hidden md:block'>
-                        <ParallaxScroll images={musicianGallery?.map((data) => data?.image)} />
-                    </div>
+                </div>
+                <div className='hidden md:block my-40'>
+                    <ParallaxScroll images={musicianGallery?.map((data) => data?.image)} />
                 </div>
                 <div className='w-full mt-28 md:mt-10 pb-8 bottom-0 left-0'>
                     <Footer />
