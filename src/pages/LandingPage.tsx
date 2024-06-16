@@ -8,7 +8,7 @@ import MusiciansCarousal from '../components/landingpage/MusiciansCarousal'
 import MembersGallery from '../components/landingpage/MembersGallery'
 import CountUp from "react-countup";
 import { useEffect, useRef, useState } from 'react'
-import { ParallaxScroll } from '../components/global/ParallaxGallery'
+// import { ParallaxScroll } from '../components/global/ParallaxGallery'
 
 const LandingPage = () => {
 
@@ -96,13 +96,13 @@ const LandingPage = () => {
                     <div className='w-full px-0 md:px-20 lg:px-32 xl:px-40'>
                         <video src={ourCareerData?.bandVideo} muted autoPlay loop={true} className='rounded-sm w-full object-cover md:object-contain h-[50vh] md:h-auto max-h-screen'></video>
                     </div>
-                    <div className='block md:hidden'>
+                    <div className=''>
                         <MembersGallery />
                     </div>
                 </div>
-                <div className='hidden md:block my-40'>
+                {/* <div className='hidden md:block my-40'>
                     <ParallaxScroll images={musicianGallery?.map((data) => data?.image)} />
-                </div>
+                </div> */}
                 <div className='w-full mt-28 md:mt-10 pb-8 bottom-0 left-0'>
                     <Footer />
                 </div>
