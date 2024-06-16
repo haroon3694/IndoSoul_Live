@@ -110,7 +110,7 @@ export const ourCareerData: OurCareerDataType = {
         },
         {
             id: 2,
-            amount: 10,
+            amount: 12,
             title: 'years',
         },
     ],
