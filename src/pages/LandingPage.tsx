@@ -1,6 +1,6 @@
 import landingPageGradient from '../assets/images/bodyGradientImage.png'
 import expHeading from '../assets/icons/experiences.svg'
-import { experienceData, musicianGallery, ourCareerData } from '../data/landingPageData'
+import { experienceData, ourCareerData } from '../data/landingPageData'
 import Footer from '../components/global/Footer'
 import Hero from '../components/landingpage/Hero'
 import ExperienceCard from '../components/landingpage/ExperienceCard'
