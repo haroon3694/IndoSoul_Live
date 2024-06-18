@@ -51,6 +51,7 @@ export const experienceData: ExperienceDataType[] = [
             `A playlist of songs chosen carefully to align with the rituals/traditions`,
             `A unique musical film capturing your special moments, the rituals, the live performance, family and friends sharing your love and joy-a keepsake from us to you`,
         ],
+        links: ' https://www.youtube.com/watch?v=BMUCeFOK0N0'
     },
     {
         id: 1,
@@ -67,6 +68,7 @@ export const experienceData: ExperienceDataType[] = [
             `A custom setlist of film and classical hits`,
             `A special musical film capturing the live performance, the moods of the audiences and the essence of your event as a cherished memento`,
         ],
+        links: 'https://youtu.be/gaKe58vawCQ'
     },
     {
         id: 3,
@@ -85,6 +87,7 @@ export const experienceData: ExperienceDataType[] = [
             `A special musical film capturing the live performance`,
             `An exclusive 3-minute song performed by Karthick Iyer live (included in your special musical film)`,
         ],
+        links: 'https://www.youtube.com/watch?v=GSqdRX95quA'
     },
     {
         id: 4,
@@ -101,6 +104,7 @@ export const experienceData: ExperienceDataType[] = [
             `An exclusive 3-minute song composed by IndoSoul and performed by Karthick Iyer at your wedding (also included in your wedding musical)`,
 
         ],
+        links: 'https://www.youtube.com/watch?v=LBjgxQgHxxY'
     },
 ];
 
@@ -126,7 +130,7 @@ export const ourCareerData: OurCareerDataType = {
         {
             id: 0,
             image: karthik,
-            title: 'Karthick Iyer',
+            title: 'KARTHICK IYER',
             about: 'Karthick Iyer, frontman of IndoSoul has been playing the violin since the age of 8. One of the pioneers in the usage of electric violin in the Indian music scene, his vision is to take Indian classical music to a global audience. He has performed across the world in countries like US, Canada, UK, Australia, etc including iconic shows like Later with Jools Holland BBC, Glastonbury festival, MTV Coke Studio to mention a few. He has curated and released four original albums with IndoSoul apart from playing for film music directors like A.R. Rahman, Harris Jayaraj, Anirudh, Imman, etc.',
         },
         {

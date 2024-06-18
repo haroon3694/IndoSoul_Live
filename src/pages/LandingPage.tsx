@@ -51,7 +51,7 @@ const LandingPage = () => {
                     <div className='w-full flex justify-center items-center mb-10'>
                         <img src={expHeading} className='w-62 z-10' alt="" />
                     </div>
-                    <div className='text-white text-justify font-extralight text-[1.2rem] pb-5 mb-5 w-fit'>
+                    <div className='text-white text-center font-extralight text-[1.2rem] pb-5 mb-5 w-fit'>
                         Elevate your special occasions with the enchanting musical experiences crafted by House of IndoSoul.
                         Our offerings are designed to infuse every moment with a unique blend of tradition and contemporary
                         charm, creating unforgettable memories. Whether it's the sacred Muhurtham, lively pre-wedding festivities,

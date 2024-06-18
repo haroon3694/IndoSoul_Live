@@ -5,6 +5,7 @@ export interface ExperienceDataType {
     logo: string;
     heading: string | null;
     content: string[];
+    links: string;
 }
 
 export interface OurCareerDataType {
