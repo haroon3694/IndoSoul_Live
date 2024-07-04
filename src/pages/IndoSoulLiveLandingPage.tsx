@@ -1,13 +1,15 @@
-import landingPageGradient from '../assets/images/bodyGradientImage.png'
-import expHeading from '../assets/icons/experiences.svg'
-import { experienceData, ourCareerData } from '../data/landingPageData'
-import Footer from '../components/global/Footer'
-import Hero from '../components/landingpage/Hero'
-import ExperienceCard from '../components/landingpage/ExperienceCard'
-import MusiciansCarousal from '../components/landingpage/MusiciansCarousal'
-import MembersGallery from '../components/landingpage/MembersGallery'
+import landingPageGradient from '../assets/indosoul/images/bodyGradientImage.png'
+import expHeading from '../assets/indosoul/icons/experiences.svg'
+import { experienceData, ourCareerData } from '../data/landingPageDataIndoSoul'
+import Hero from '../components/indosoullandingpage/Hero'
+import ExperienceCard from '../components/indosoullandingpage/ExperienceCard'
+import MusiciansCarousal from '../components/indosoullandingpage/MusiciansCarousal'
+import MembersGallery from '../components/indosoullandingpage/MembersGallery'
 import CountUp from "react-countup";
 import { useEffect, useRef, useState } from 'react'
+import Footer from '../components/global/Footer'
+import Navbar from '../components/global/Navbar'
+import PreLoader from '../components/indosoullandingpage/PreLoader'
 // import { ParallaxScroll } from '../components/global/ParallaxGallery'
 
 const LandingPage = () => {
@@ -43,7 +45,8 @@ const LandingPage = () => {
     }, [experienceRefs]);
 
     return (
-        <div className='relative overflow-hidden'>
+        <div className='relative overflow-hidden'><PreLoader />
+            <Navbar indoSoul={true} />
             <Hero />
             <div className='w-full bg-black relative' style={{ backgroundImage: `url(${landingPageGradient})` }}>
                 <div className='absolute top-0 left-0 w-full h-[8vh] bg-gradient-to-b from-black' />
@@ -104,7 +107,7 @@ const LandingPage = () => {
                     <ParallaxScroll images={musicianGallery?.map((data) => data?.image)} />
                 </div> */}
                 <div className='w-full mt-28 md:mt-10 pb-8 bottom-0 left-0'>
-                    <Footer />
+                    <Footer indoSoul={true} />
                 </div>
             </div>
         </div>

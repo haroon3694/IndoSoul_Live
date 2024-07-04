@@ -24,6 +24,12 @@
   -webkit-backdrop-filter: blur(6.9px);
 }
 
+.glass-morphism-white {
+  background: rgba(227, 227, 227, 0.74);
+  backdrop-filter: blur(6.9px);
+  -webkit-backdrop-filter: blur(6.9px);
+}
+
 .slick-prev {
   left: -36px !important;
 }
@@ -43,4 +49,15 @@
   justify-content: center;
   align-items: center;
   padding-bottom: 2px;
+}
+
+.slick-dots li button:before {
+  color: orange;
+  width: 20px !important;
+}
+
+.gradient-text {
+  background-image: linear-gradient(45deg, #96D312, #E92F2F);
+  color: transparent;
+  background-clip: text;
 }
