@@ -49,7 +49,7 @@ const Footer = ({ indoSoulStyle }: { indoSoulStyle?: string }) => {
             <div className='flex flex-col justify-center items-center gap-4'>
                 <h1 className='text-md text-white'>+91 88258 59601</h1>
                 <PrimaryButton btnText='Talk to us' onClick={() => window.open("https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2Oy2TFgjxR4qp0qcY_WHvf_woG_VGqWEdygUfyDpSAEOXfseze-9WW1KUBLE3MS5hbQsJhnCMg", '_blank')} />
-                <Link to={`/privacy-policy`} className='text-md font-clashdisplay text-white uppercase'>Privacy Policy</Link>
+                <Link to={`/privacy-policy`} className='text-md font-clashdisplay text-white'>Privacy Policy</Link>
                 <div className='w-full justify-center md:w-fit flex items-center gap-10 md:gap-5 mt-2'>
                     {
                         footerData?.map((data) => (

@@ -20,13 +20,13 @@ import music_5 from '../assets/images/gallery/05.webp'
 import music_6 from '../assets/images/gallery/06.jpg'
 import music_7 from '../assets/images/gallery/07.webp'
 import music_8 from '../assets/images/gallery/08.jpg'
-import music_9 from '../assets/images/gallery/09.jpg'
-import music_10 from '../assets/images/gallery/10.jpg'
-import music_11 from '../assets/images/gallery/11.jpg'
-import music_12 from '../assets/images/gallery/12.jpg'
-import music_13 from '../assets/images/gallery/13.jpg'
-import music_14 from '../assets/images/gallery/14.jpg'
-import music_15 from '../assets/images/gallery/15.jpg'
+// import music_9 from '../assets/images/gallery/09.jpg'
+// import music_10 from '../assets/images/gallery/10.jpg'
+// import music_11 from '../assets/images/gallery/11.jpg'
+// import music_12 from '../assets/images/gallery/12.jpg'
+// import music_13 from '../assets/images/gallery/13.jpg'
+// import music_14 from '../assets/images/gallery/14.jpg'
+// import music_15 from '../assets/images/gallery/15.jpg'
 
 
 import aikiyamLogo from '../assets/images/experienceCards/akyam.png'
@@ -200,37 +200,33 @@ export const musicianGallery: MusicianGalleryType[] = [
         id: 7,
         image: music_8,
     },
-    {
-        id: 8,
-        image: music_8,
-    },
-    {
-        id: 9,
-        image: music_9,
-    },
-    {
-        id: 10,
-        image: music_10,
-    },
-    {
-        id: 11,
-        image: music_11,
-    },
-    {
-        id: 12,
-        image: music_12,
-    },
-    {
-        id: 13,
-        image: music_13,
-    },
-    {
-        id: 14,
-        image: music_14,
-    },
-    {
-        id: 15,
-        image: music_15,
-    },
+    // {
+    //     id: 9,
+    //     image: music_9,
+    // },
+    // {
+    //     id: 10,
+    //     image: music_10,
+    // },
+    // {
+    //     id: 11,
+    //     image: music_11,
+    // },
+    // {
+    //     id: 12,
+    //     image: music_12,
+    // },
+    // {
+    //     id: 13,
+    //     image: music_13,
+    // },
+    // {
+    //     id: 14,
+    //     image: music_14,
+    // },
+    // {
+    //     id: 15,
+    //     image: music_15,
+    // },
 
 ];
