@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -16,6 +18,10 @@
 
 .font-clashdisplay {
   font-family: 'Clash Display', sans-serif;
+}
+
+.font-manrope {
+  font-family: "Manrope", sans-serif;
 }
 
 .glass-morphism {
@@ -60,4 +66,11 @@
   background-image: linear-gradient(45deg, #96D312, #E92F2F);
   color: transparent;
   background-clip: text;
+}
+
+.gradient-border {
+  border-radius: 20px !important;
+  border: 2px solid transparent;
+  border-image: linear-gradient(to right, #96D312, #E92F2F);
+  border-image-slice: 1; 
 }

@@ -20,7 +20,7 @@ const Hero: React.FC = () => {
             setCurrentSlideIndex(next);
         },
         customPaging: (i: number) => (
-            <div className={`w-3.5 h-3.5 rounded-full ${currentSlideIndex === i ? 'bg-black' : 'bg-gray-400'}`} />
+            <div className={`w-3 h-3 rounded-full mt-8 ${currentSlideIndex === i ? 'bg-black' : 'bg-gray-400'}`} />
         )
     };
 
@@ -43,13 +43,13 @@ const Hero: React.FC = () => {
     ];
 
     return (
-        <div className='w-full relative mt-12'>
-            <div className='w-full h-screen'>
-                <Slider {...settings} className='w-full h-[90vh]'>
+        <div className='w-[99.99%] mx-auto relative overflow-hidden mt-0 md:mt-12'>
+            <div className='mx-auto w-full pb-20'>
+                <Slider {...settings} className='w-full'>
                     {
                         someData?.map((data) => (
                             <div key={data?.id} className='w-full h-full relative'>
-                                <img src={data?.image} className='w-full h-[87vh] object-cover' alt="" />
+                                <img src={data?.image} className='w-full h-screen object-cover' alt="" />
                                 <div className='absolute inset-0 bg-black opacity-5' />
                             </div>
                         ))
@@ -59,7 +59,7 @@ const Hero: React.FC = () => {
             <div className='absolute top-1/2 -translate-y-[50%] left-1/2 -translate-x-1/2 flex flex-col items-center gap-10 w-full px-6'>
                 <img src={logoMain} className='w-52 md:w-64' alt="" />
                 <div className='text-white flex flex-col items-center xl:text-nowrap text-md md:text-lg xl:text-xl md:gap-2 text-center'>
-                    <div className='text-[1.6rem] font-extralight font-clashdisplay'>Embracing Indian Heritage through Classical music</div>
+                    <div className='text-[1rem] uppercase font-clashdisplay tracking-widest'>Embracing Indian Heritage through Classical music</div>
                     <div className='w-full flex justify-center items-center pt-20 md:pt-5'>
                         <PrimaryButton bgColor='hover:bg-gradient-to-r from-[#96D312] to-[#E92F2F] transition-all duration-500 ease-in-out' btnText='Talk with us' onClick={() => window.open("https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2Oy2TFgjxR4qp0qcY_WHvf_woG_VGqWEdygUfyDpSAEOXfseze-9WW1KUBLE3MS5hbQsJhnCMg", '_blank')} />
                     </div>

@@ -7,15 +7,15 @@ const OurDescription: React.FC = () => {
     const descData = [
         {
             id: 0,
-            desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit cupiditate officia architecto, in officiis suscipit. Atque velit nihil ipsam minima. Eius labore, reiciendis sint atque culpa vero optio dolor, numquam molestias eos perspiciatis suscipit recusandae, aut nesciunt deleniti. Tempora velit temporibus minima ipsum nesciunt delectus eveniet distinctio repudiandae recusandae possimus.',
+            desc: 'Soul Sabha is a special musical video concept by IndoSoul that seeks to take our age old Carnatic music across to a wider audience and younger generations.',
         },
         {
             id: 1,
-            desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit cupiditate officia architecto, in officiis suscipit. Atque velit nihil ipsam minima. Eius labore, reiciendis sint atque culpa vero optio dolor, numquam molestias eos perspiciatis suscipit recusandae, aut nesciunt deleniti. Tempora velit temporibus minima ipsum nesciunt delectus eveniet distinctio repudiandae recusandae possimus.',
+            desc: 'We aim to create a space where traditional music blends with global influences while preserving its essence and integrity culminating in a unique musical experience. Our vision is to bridge cultural divides and celebrate the rich heritage of Indian music, especially through the lens of South Indian traditions.',
         },
         {
             id: 2,
-            desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit cupiditate officia architecto, in officiis suscipit. Atque velit nihil ipsam minima. Eius labore, reiciendis sint atque culpa vero optio dolor, numquam molestias eos perspiciatis suscipit recusandae, aut nesciunt deleniti. Tempora velit temporibus minima ipsum nesciunt delectus eveniet distinctio repudiandae recusandae possimus.',
+            desc: `Soul Sabha is all about collaborations with artist and musicians from the traditional space from all over India, SoulSabha isn't just   about music—it's about building a community of artists and music enthusiasts.`,
         },
     ];
 
@@ -27,15 +27,15 @@ const OurDescription: React.FC = () => {
                 <img src={logoMain} className='w-44' alt="" />
             </div>
         </div>
-        <div className='w-full px-72 mt-7'>
+        <div className='w-full px-10 md:px-20 lg:px-48 xl:px-96 mt-7'>
             {
                 descData?.map((data) => (
-                    <h1 key={data?.id} className='text-center mb-5'>{data?.desc}</h1>
+                    <h1 key={data?.id} className={`text-center mb-5 ${data?.id === 2 ? 'font-bold' : ''}`}>{data?.desc}</h1>
                 ))
             }
         </div>
-        <div className='w-full flex justify-center items-center mt-32'>
-            <img src={descImg} className='w-fll max-w-[1100px]' alt="" />
+        <div className='w-full flex justify-center items-center mt-32 px-5 lg:px-32 xl:px-40 2xl:px-72'>
+            <img src={descImg} className='w-full ' alt="" />
         </div>
     </div>
   )

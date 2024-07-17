@@ -35,13 +35,15 @@ const Navbar = ({ indoSoul, soulSabha }: { indoSoul?: boolean, soulSabha?: boole
                         </div>
                     </div>
                 ) : soulSabha ? (
-                    <div className='hidden md:block w-full py-1 fixed top-0 left-0 z-20 bg-black shadow-md'>
-                        <div className="w-full flex justify-end items-center px-10 gap-10 text-white">
-                            <h1 className='text-sm font-bold tracking-widest cursor-pointer ml-10'>PHONE NO.</h1>
-                            <h1 className='text-sm font-bold tracking-widest cursor-pointer ml-10'>EMAIL</h1>
-                            <PrimaryButton btnText='WATCH US LIVE' bgColor='hover:bg-gradient-to-r from-[#96D312] to-[#E92F2F] transition-all duration-500 ease-in-out' />
+                    <>
+                        <div className='hidden md:block w-full py-1 fixed top-0 left-0 z-20 bg-black shadow-md'>
+                            <div className="w-full flex justify-end items-center px-10 gap-10 text-white font-clashdisplay tracking-widest">
+                                <h1 className='text-sm font-bold tracking-widest cursor-pointer ml-10'>PHONE NO.</h1>
+                                <h1 className='text-sm font-bold tracking-widest cursor-pointer ml-10'>EMAIL</h1>
+                                <PrimaryButton btnText='WATCH US LIVE' bgColor='hover:bg-gradient-to-r from-[#96D312] to-[#E92F2F] transition-all duration-500 ease-in-out' />
+                            </div>
                         </div>
-                    </div>
+                    </>
                 ) : null
             }
         </>

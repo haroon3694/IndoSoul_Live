@@ -8,6 +8,7 @@ import instagramDark from '../../assets/icons/instagram_dark.svg'
 import facebookDark from '../../assets/icons/facebook_dark.svg'
 import spotifyDark from '../../assets/icons/spotify_dark.svg'
 import youtubeDark from '../../assets/icons/youtube_dark.svg'
+import appleMusic from '../../assets/icons/appleMusic.svg'
 import PrimaryButton from './PrimaryButton'
 import { Link } from 'react-router-dom'
 
@@ -35,19 +36,19 @@ const Footer = ({ indoSoul, indoSoulStyle, soulSabha, soulSabhaStyle }: { indoSo
                 title: 'Instagram'
             },
             {
-                id: 0,
+                id: 1,
                 logo: spotifyWhite,
                 link: 'https://open.spotify.com/artist/04czw5AgY218VUkgCtwRv9',
                 title: 'Spotify'
             },
             {
-                id: 0,
+                id: 2,
                 logo: youtubeWhite,
                 link: 'https://www.youtube.com/@IndoSoulLive',
                 title: 'Youtube'
             },
             {
-                id: 0,
+                id: 3,
                 logo: facebookWhite,
                 link: 'https://www.facebook.com/indosoullive?mibextid=hu50Ix',
                 title: 'Facebook'
@@ -56,24 +57,30 @@ const Footer = ({ indoSoul, indoSoulStyle, soulSabha, soulSabhaStyle }: { indoSo
         soulsabha: [
             {
                 id: 0,
+                logo: appleMusic,
+                link: 'https://www.instagram.com/indosoullive/?igsh=aGk0Znd6bnVnNWRz&utm_source=qr',
+                title: 'Apple Music'
+            },
+            {
+                id: 1,
                 logo: instagramDark,
                 link: 'https://www.instagram.com/indosoullive/?igsh=aGk0Znd6bnVnNWRz&utm_source=qr',
                 title: 'Instagram'
             },
             {
-                id: 0,
+                id: 2,
                 logo: spotifyDark,
                 link: 'https://open.spotify.com/artist/04czw5AgY218VUkgCtwRv9',
                 title: 'Spotify'
             },
             {
-                id: 0,
+                id: 3,
                 logo: youtubeDark,
                 link: 'https://www.youtube.com/@IndoSoulLive',
                 title: 'Youtube'
             },
             {
-                id: 0,
+                id: 4,
                 logo: facebookDark,
                 link: 'https://www.facebook.com/indosoullive?mibextid=hu50Ix',
                 title: 'Facebook'
@@ -108,17 +115,23 @@ const Footer = ({ indoSoul, indoSoulStyle, soulSabha, soulSabhaStyle }: { indoSo
                         <div className='flex flex-col md:flex-row gap-10 md:gap-20 items-center'>
                             <img src={logoSoulSabha} className='w-32' alt="" />
                         </div>
+                        <div className='flex md:hidden flex-col justify-center items-center gap-4 font-semibold text-sm font-clashdisplay'>
+                            <p className='cursor-pointer'>HOME</p>
+                            <p className='cursor-pointer'>ABOUT</p>
+                            <p className='cursor-pointer'>BOOKING</p>
+                            <p className='cursor-pointer'>CONTACT</p>
+                        </div>
                         {/* pr-5 in the div below to make it center aligned forcefully */}
-                        <div className='flex flex-col justify-end items-center pr-5'>
-                            <div className='w-fit justify-center flex items-center gap-20 mt-2'>
+                        <div className='flex flex-col justify-end items-center md:pr-5'>
+                            <div className='w-fit justify-center flex items-center gap-12 md:gap-20 mt-2'>
                                 {
                                     socialMedia?.soulsabha?.map((data) => (
-                                        <img src={data?.logo} onClick={() => window.open(data.link, '_blank')} key={data?.id} className='w-6 cursor-pointer' alt="" />
+                                        <img src={data?.logo} onClick={() => window.open(data.link, '_blank')} key={data?.id} className='w-4 md:w-6 cursor-pointer' alt="" />
                                     ))
                                 }
                             </div>
                         </div>
-                        <div className='flex flex-col justify-center items-end gap-4 font-semibold text-sm'>
+                        <div className='hidden md:flex flex-col justify-center items-end gap-4 font-semibold text-sm font-clashdisplay'>
                             <p className='cursor-pointer'>HOME</p>
                             <p className='cursor-pointer'>ABOUT</p>
                             <p className='cursor-pointer'>BOOKING</p>
