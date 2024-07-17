@@ -200,37 +200,33 @@ export const musicianGallery: MusicianGalleryType[] = [
         id: 7,
         image: music_8,
     },
-    {
-        id: 8,
-        image: music_8,
-    },
-    {
-        id: 9,
-        image: music_9,
-    },
-    {
-        id: 10,
-        image: music_10,
-    },
-    {
-        id: 11,
-        image: music_11,
-    },
-    {
-        id: 12,
-        image: music_12,
-    },
-    {
-        id: 13,
-        image: music_13,
-    },
-    {
-        id: 14,
-        image: music_14,
-    },
-    {
-        id: 15,
-        image: music_15,
-    },
+    // {
+    //     id: 9,
+    //     image: music_9,
+    // },
+    // {
+    //     id: 10,
+    //     image: music_10,
+    // },
+    // {
+    //     id: 11,
+    //     image: music_11,
+    // },
+    // {
+    //     id: 12,
+    //     image: music_12,
+    // },
+    // {
+    //     id: 13,
+    //     image: music_13,
+    // },
+    // {
+    //     id: 14,
+    //     image: music_14,
+    // },
+    // {
+    //     id: 15,
+    //     image: music_15,
+    // },
 
 ];

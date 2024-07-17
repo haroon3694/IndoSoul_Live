@@ -1,4 +1,5 @@
 
+import { Link } from 'react-router-dom';
 import PrimaryButton from './PrimaryButton'
 
 const Navbar = ({ indoSoul, soulSabha }: { indoSoul?: boolean, soulSabha?: boolean }) => {
