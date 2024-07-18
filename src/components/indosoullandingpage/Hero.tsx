@@ -1,5 +1,5 @@
-import hero from '../../assets/images/hero_landing.jpg'
-import logoMain from '../../assets/icons/logo-main.svg'
+import hero from '../../assets/indosoul/images/hero_landing.jpg'
+import logoMain from '../../assets/indosoul/icons/logo-main.svg'
 import PrimaryButton from '../global/PrimaryButton'
 
 const Hero = () => {

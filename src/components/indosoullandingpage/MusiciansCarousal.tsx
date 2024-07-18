@@ -1,5 +1,5 @@
-import musiciansHeading from '../../assets/icons/musicians.svg'
-import { ourCareerData } from '../../data/landingPageData'
+import musiciansHeading from '../../assets/indosoul/icons/musicians.svg'
+import { ourCareerData } from '../../data/landingPageDataIndoSoul'
 // import PrimaryButton from '../global/PrimaryButton'
 import Slider from "react-slick";
 
@@ -58,9 +58,9 @@ const MusiciansCarousal = () => {
                     ))
                 }
             </Slider>
-            <div className='w-full flex justify-center items-center pt-14 md:pt-20 pb-20'>
-                {/* <PrimaryButton btnText='TALK WITH US' /> */}
-            </div>
+            {/* <div className='w-full flex justify-center items-center pt-14 md:pt-20 pb-20'>
+                <PrimaryButton btnText='TALK WITH US' />
+            </div> */}
         </div>
     )
 }

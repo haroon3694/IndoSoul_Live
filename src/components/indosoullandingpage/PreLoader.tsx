@@ -1,6 +1,6 @@
 
 import { useEffect, useState } from 'react';
-import logoMain from '../../assets/icons/logo-main.svg'
+import logoMain from '../../assets/indosoul/icons/logo-main.svg'
 
 const PreLoader = () => {
 

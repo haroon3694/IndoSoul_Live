@@ -1,5 +1,5 @@
 import PrimaryButton from '../global/PrimaryButton'
-import { ExperienceDataType } from '../../types/landingPageDataType';
+import { ExperienceDataType } from '../../types/landingPageDataIndoSoulType';
 import { useEffect, useState } from 'react';
 import cross from '../../assets/icons/cross.svg'
 import { useScrollBlock } from '../../hooks/useScrollBlock'
