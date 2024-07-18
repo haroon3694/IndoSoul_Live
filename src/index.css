@@ -5,15 +5,29 @@
 @tailwind utilities;
 
 
-:root {
-  /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400; */
-}
-
 @font-face {
   font-family: 'BebasNeue';
   src: url('./assets/fonts/BebasNeue-Regular.otf');
+}
+
+
+/* Customize scrollbar */
+/* WebKit */
+::-webkit-scrollbar {
+  width: 6px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #c7c7c7; /* Color of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8a8a8a; /* Color of the scrollbar thumb */
+  border-radius: 6px; /* Rounded corners */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Hover color of the scrollbar thumb */
 }
 
 .font-clashdisplay {

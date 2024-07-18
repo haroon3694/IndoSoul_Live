@@ -58,7 +58,7 @@ const Footer = ({ indoSoul, indoSoulStyle, soulSabha, soulSabhaStyle }: { indoSo
             {
                 id: 0,
                 logo: appleMusic,
-                link: 'https://www.instagram.com/indosoullive/?igsh=aGk0Znd6bnVnNWRz&utm_source=qr',
+                link: 'https://music.apple.com/us/album/soul-sabha-season-1/1722636807',
                 title: 'Apple Music'
             },
             {
@@ -70,13 +70,13 @@ const Footer = ({ indoSoul, indoSoulStyle, soulSabha, soulSabhaStyle }: { indoSo
             {
                 id: 2,
                 logo: spotifyDark,
-                link: 'https://open.spotify.com/artist/04czw5AgY218VUkgCtwRv9',
+                link: 'https://open.spotify.com/album/7GMW8oc7PfUdfsQ0TJKshN?si=hoUsHsFbQF2M7o3laMzRyw',
                 title: 'Spotify'
             },
             {
                 id: 3,
                 logo: youtubeDark,
-                link: 'https://www.youtube.com/@IndoSoulLive',
+                link: 'https://youtu.be/QehzWUHyQcU?si=Jy058Rf-5PKSvmTJ',
                 title: 'Youtube'
             },
             {
@@ -111,15 +111,13 @@ const Footer = ({ indoSoul, indoSoulStyle, soulSabha, soulSabhaStyle }: { indoSo
                         </div>
                     </div>
                 ) : soulSabha ? (
-                    <div className={`w-full flex flex-col md:flex-row justify-between relative z-10 px-20 gap-10 md:gap-0 py-5 ${soulSabhaStyle}`}>
+                    <div className={`w-full flex flex-col md:flex-row justify-between relative z-10 px-20 gap-10 md:gap-0 py-10 ${soulSabhaStyle}`}>
                         <div className='flex flex-col md:flex-row gap-10 md:gap-20 items-center'>
                             <img src={logoSoulSabha} className='w-32' alt="" />
                         </div>
                         <div className='flex md:hidden flex-col justify-center items-center gap-4 font-semibold text-sm font-clashdisplay'>
-                            <p className='cursor-pointer'>HOME</p>
-                            <p className='cursor-pointer'>ABOUT</p>
-                            <p className='cursor-pointer'>BOOKING</p>
-                            <p className='cursor-pointer'>CONTACT</p>
+                            <h1 className='text-md text-black'>+91 88258 59601</h1>
+                            <PrimaryButton btnText='Talk to us' bgColor={`hover:scale-105 bg-gradient-to-r from-[#96D312] to-[#E92F2F] transition-all duration-500 ease-in-out`} onClick={() => window.open("https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2Oy2TFgjxR4qp0qcY_WHvf_woG_VGqWEdygUfyDpSAEOXfseze-9WW1KUBLE3MS5hbQsJhnCMg", '_blank')} />
                         </div>
                         {/* pr-5 in the div below to make it center aligned forcefully */}
                         <div className='flex flex-col justify-end items-center md:pr-5'>
@@ -132,10 +130,8 @@ const Footer = ({ indoSoul, indoSoulStyle, soulSabha, soulSabhaStyle }: { indoSo
                             </div>
                         </div>
                         <div className='hidden md:flex flex-col justify-center items-end gap-4 font-semibold text-sm font-clashdisplay'>
-                            <p className='cursor-pointer'>HOME</p>
-                            <p className='cursor-pointer'>ABOUT</p>
-                            <p className='cursor-pointer'>BOOKING</p>
-                            <p className='cursor-pointer'>CONTACT</p>
+                            <h1 className='text-md text-black'>+91 88258 59601</h1>
+                            <PrimaryButton btnText='Talk to us' bgColor={`hover:scale-105 bg-gradient-to-r from-[#96D312] to-[#E92F2F] transition-all duration-500 ease-in-out`} onClick={() => window.open("https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2Oy2TFgjxR4qp0qcY_WHvf_woG_VGqWEdygUfyDpSAEOXfseze-9WW1KUBLE3MS5hbQsJhnCMg", '_blank')} />
                         </div>
                     </div>
                 ) : null

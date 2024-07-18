@@ -1,19 +1,37 @@
 import React from 'react';
 import ExperienceCard from './ExperienceCard';
-import exp_1 from '../../assets/soulsabha/images/exp_1.png';
-import exp_2 from '../../assets/soulsabha/images/exp_2.png';
-import exp_3 from '../../assets/soulsabha/images/exp_3.png';
-import exp_4 from '../../assets/soulsabha/images/exp_4.png';
-import Abinaya from '../../assets/soulsabha/images/Abinaya.jpg';
-import Haricharan from '../../assets/soulsabha/images/Haricharan.jpg';
-import Spoorthi from '../../assets/soulsabha/images/Spoorthi-Rao.jpg';
 import SeasonHeader from './SeasonHeader';
 import CollaborateButton from './CollaborateButton';
+
 import instagramDark from '../../assets/icons/instagram_dark.svg'
 import facebookDark from '../../assets/icons/facebook_dark.svg'
 import spotifyDark from '../../assets/icons/spotify_dark.svg'
 import youtubeDark from '../../assets/icons/youtube_dark.svg'
 import appleMusic from '../../assets/icons/appleMusic.svg'
+
+import exp_1 from '../../assets/soulsabha/images/artists/vertical_images/01.png';
+import exp_2 from '../../assets/soulsabha/images/artists/vertical_images/02.png';
+import exp_3 from '../../assets/soulsabha/images/artists/vertical_images/03.png';
+import exp_4 from '../../assets/soulsabha/images/artists/vertical_images/04.png';
+
+import Abinaya from '../../assets/soulsabha/images/artists/table_artists/Abinaya.jpg';
+import Haricharan from '../../assets/soulsabha/images/artists/table_artists/Haricharan.jpg';
+import trichur from '../../assets/soulsabha/images/artists/table_artists/Trichur-Brothers.jpg';
+import Spoorthi from '../../assets/soulsabha/images/artists/table_artists/Spoorthi-Rao.jpg';
+
+import songsImage1 from '../../assets/soulsabha/images/artists/02_card/soulsabha-02_card-01_1000px.jpg'
+import songsImage2 from '../../assets/soulsabha/images/artists/02_card/soulsabha-02_card-02_1000px.jpg'
+import songsImage3 from '../../assets/soulsabha/images/artists/02_card/soulsabha-02_card-03_1000px.jpg'
+import songsImage4 from '../../assets/soulsabha/images/artists/02_card/soulsabha-02_card-04_1000px.jpg'
+import songsImage5 from '../../assets/soulsabha/images/artists/02_card/soulsabha-02_card-05_1000px.jpg'
+import songsImage6 from '../../assets/soulsabha/images/artists/02_card/soulsabha-02_card-06_1000px.jpg'
+import songsImage7 from '../../assets/soulsabha/images/artists/02_card/soulsabha-02_card-07_1000px.jpg'
+
+import visualArtsImage1 from '../../assets/soulsabha/images/artists/03_card/aikiyam-03_card-01_1000px.jpg'
+import visualArtsImage2 from '../../assets/soulsabha/images/artists/03_card/aikiyam-03_card-02_1000px.jpg'
+import visualArtsImage3 from '../../assets/soulsabha/images/artists/03_card/aikiyam-03_card-03_1000px.jpg'
+import visualArtsImage4 from '../../assets/soulsabha/images/artists/03_card/aikiyam-03_card-04_1000px.jpg'
+import visualArtsImage5 from '../../assets/soulsabha/images/artists/03_card/aikiyam-03_card-05_1000px.jpg'
 
 const SeasonOne: React.FC = () => {
 
@@ -43,9 +61,15 @@ const SeasonOne: React.FC = () => {
                 },
                 {
                     id: 3,
-                    artistImage: '',
+                    artistImage: trichur,
                     artistName: 'Trichur Brothers',
-                    youtubeLink: 'https://youtu.be/E58qLXBfLrs?si=x_p4HUYK7YwRCrjC',
+                    youtubeLink: '',
+                },
+                {
+                    id: 4,
+                    artistImage: '',
+                    artistName: 'Rajhesh Vaidhya',
+                    youtubeLink: 'https://youtube.com/@rajheshvaidhyaofficial',
                 },
             ],
             links: '',
@@ -54,21 +78,21 @@ const SeasonOne: React.FC = () => {
             id: 0,
             image: exp_2,
             title: 'Listening Sessions',
-            content: [exp_2, exp_2, exp_2, exp_2, exp_2, exp_2],
+            content: [songsImage1, songsImage2, songsImage3, songsImage4, songsImage5, songsImage6, songsImage7],
             links: '',
         },
         {
             id: 0,
             image: exp_3,
             title: 'Live Concerts',
-            content: [exp_3, exp_3, exp_3, exp_3, exp_3, exp_3],
+            content: [visualArtsImage1, visualArtsImage2, visualArtsImage3, visualArtsImage4, visualArtsImage5],
             links: '',
         },
         {
             id: 0,
             image: exp_4,
             title: 'Music & Visual Arts',
-            content: [exp_4, exp_4, exp_4, exp_4, exp_4, exp_4],
+            content: [''],
             links: '',
         },
     ];
@@ -77,7 +101,7 @@ const SeasonOne: React.FC = () => {
         {
             id: 0,
             logo: appleMusic,
-            link: 'https://www.instagram.com/indosoullive/?igsh=aGk0Znd6bnVnNWRz&utm_source=qr',
+            link: 'https://music.apple.com/us/album/soul-sabha-season-1/1722636807',
             title: 'Apple Music'
         },
         {
@@ -89,13 +113,13 @@ const SeasonOne: React.FC = () => {
         {
             id: 2,
             logo: spotifyDark,
-            link: 'https://open.spotify.com/artist/04czw5AgY218VUkgCtwRv9',
+            link: 'https://open.spotify.com/album/7GMW8oc7PfUdfsQ0TJKshN?si=hoUsHsFbQF2M7o3laMzRyw',
             title: 'Spotify'
         },
         {
             id: 3,
             logo: youtubeDark,
-            link: 'https://www.youtube.com/@IndoSoulLive',
+            link: 'https://youtu.be/QehzWUHyQcU?si=Jy058Rf-5PKSvmTJ',
             title: 'Youtube'
         },
         {
@@ -107,7 +131,7 @@ const SeasonOne: React.FC = () => {
     ]
 
     return (
-        <div className='w-full px-10 md:px-20 lg:px-48 xl:px-72 py-16'>
+        <div className='w-full px-10 md:px-28 2xl:px-60 py-16'>
             <SeasonHeader text={`soul sabha experience`} styles='my-10' />
             <div className='w-full grid grid-cols-2 md:grid-cols-4 gap-5 xl:gap-10 mb-24'>
                 {
@@ -117,7 +141,7 @@ const SeasonOne: React.FC = () => {
                 }
             </div>
             <div className='w-full flex justify-center items-center mb-16'>
-                <CollaborateButton text='collaborate with us' styles='' />
+                <CollaborateButton text='collaborate with us' styles='' onClick={() => window.open("https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2Oy2TFgjxR4qp0qcY_WHvf_woG_VGqWEdygUfyDpSAEOXfseze-9WW1KUBLE3MS5hbQsJhnCMg", '_blank')} />
             </div>
             <div className='w-full flex justify-center items-center'>
                 <div className='w-full max-w-[300px] justify-between flex items-center mt-2'>

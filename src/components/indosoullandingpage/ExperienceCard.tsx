@@ -21,7 +21,7 @@ const ExperienceCard = ({ id, image, logo, content, links }: ExperienceDataType)
                     <img src={logo}  className={`w-36 md:w-52 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2`} alt="" />
                 </div>
                 <div className='w-full flex justify-center items-center absolute bottom-10 left-0'>
-                    <PrimaryButton btnText='know more' onClick={() => window.open(links, '_blank')} />
+                    <PrimaryButton btnText='know more' onClick={() => setViewPopUp(true)} />
                 </div>
             </div>
             <div className={`${viewPopUp ? 'flex' : 'hidden'} w-full fixed bg-black bg-opacity-10 justify-center items-center h-screen inset-0 z-20 px-5`} onClick={() => setViewPopUp(false)}>
