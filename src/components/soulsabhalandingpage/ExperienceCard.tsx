@@ -1,8 +1,8 @@
 import PrimaryButton from '../global/PrimaryButton'
 import React, { useEffect, useState } from 'react';
 import { useScrollBlock } from '../../hooks/useScrollBlock'
-import youtubeIcon from '../../assets/soulsabha/images/youtube.svg';
-import spotifyIcon from '../../assets/soulsabha/images/spotify.svg';
+import youtubeIcon from '../../assets/soulsabha/icons/youtube.svg';
+import spotifyIcon from '../../assets/soulsabha/icons/spotify.svg';
 
 interface ExperienceCardProps {
     id: number;
@@ -40,9 +40,9 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ id, image, title, conte
                     <PrimaryButton btnText='know more' bgColor='hover:bg-gradient-to-r from-[#96D312] to-[#E92F2F] transition-all duration-500 ease-in-out' onClick={() => window.open(links, '_blank')} />
                 </div>
             </div>
-            <div className={`${viewPopUp ? 'flex' : 'hidden'} w-full fixed  justify-center items-center h-screen inset-0 z-20 px-5`} onClick={() => setViewPopUp(false)}>
+            <div className={`${viewPopUp ? 'hidden md:flex' : 'hidden'} w-full fixed  justify-center items-center h-screen inset-0 z-20 px-5 bg-black bg-opacity-60`} onClick={() => setViewPopUp(false)}>
                 <div className='w-full max-w-[1000px] rounded-lg glass-morphism-white relative py-16 md:py-0 overflow-hidden z-50 translate-y-6'>
-                    <div className='px-14 pt-14'>
+                    <div className='px-14 py-14'>
                         {
                             id === 0 && typeof content[0] !== 'string' ? (
                                 <div className='w-full'>
@@ -66,13 +66,13 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ id, image, title, conte
                                                         </div>
                                                     </div>
                                                     <div className='w-fit min-w-20 flex justify-center items-center'>
-                                                        <a href={data?.youtubeLink} target='_blank' className='text-sm font-semibold'>
-                                                            <img src={youtubeIcon} className='w-10 hover:scale-110 transition-transform duration-500 ease-in-out' alt="" />
+                                                        <a href={data?.youtubeLink?.length > 2 ? data?.youtubeLink : null} target='_blank' className='text-sm font-semibold'>
+                                                            <img src={youtubeIcon} className={`w-10 hover:scale-110 transition-transform duration-500 ease-in-out ${data?.youtubeLink?.length > 2 ? '' : 'opacity-40'}`} alt="" />
                                                         </a>
                                                     </div>
                                                     <div className='w-fit min-w-20 flex justify-center items-center'>
-                                                        <a href={data?.spotifyLink} target='_blank' className='text-sm font-semibold'>
-                                                            <img src={spotifyIcon} className='w-10 hover:scale-110 transition-transform duration-500 ease-in-out' alt="" />
+                                                        <a href={data?.spotifyLink?.length > 2 ? data?.spotifyLink : null} target='_blank' className='text-sm font-semibold'>
+                                                            <img src={spotifyIcon} className={`w-10 hover:scale-110 transition-transform duration-500 ease-in-out ${data?.spotifyLink?.length > 2 ? '' : 'opacity-40'}`} alt="" />
                                                         </a>
                                                     </div>
 
@@ -82,18 +82,92 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ id, image, title, conte
                                     </div>
                                 </div>
                             ) : (
-                                <div className='w-full grid grid-cols-3 gap-2 overflow-y-scroll h-[55vh]'>
+                                <div className=''>
                                     {
-                                        content?.map((data: string) => (
-                                            <img key={data} src={data} className='w-full' />
-                                        ))
+                                        content?.length > 2 ? (
+                                            <div className='w-full grid grid-cols-3 gap-2 overflow-y-scroll h-[55vh]'>
+                                                {
+                                                    content?.map((data: string) => (
+                                                        <img key={data} src={data} className='w-full rounded-lg' />
+                                                    ))
+                                                }
+                                            </div>
+                                        ) : (
+                                            <div className='w-full grid grid-cols-3 gap-2 overflow-y-scroll h-[55vh] rounded-lg'>
+                                                <div className='w-full aspect-square bg-gray-500' />
+                                                <div className='w-full aspect-square bg-gray-500' />
+                                                <div className='w-full aspect-square bg-gray-500' />
+                                                <div className='w-full aspect-square bg-gray-500' />
+                                                <div className='w-full aspect-square bg-gray-500' />
+                                            </div>
+                                        )
                                     }
                                 </div>
                             )
                         }
                     </div>
-                    <div className='w-full flex justify-center items-center py-2'>
-                        <PrimaryButton btnText='watch more' bgColor='hover:bg-gradient-to-r from-[#96D312] to-[#E92F2F] transition-all duration-500 ease-in-out text-black hover:text-white' onClick={() => window.open(links, '_blank')} />
+                </div>
+            </div >
+            <div className={`${viewPopUp ? 'flex md:hidden' : 'hidden'} w-full fixed  justify-center items-center h-screen inset-0 z-20 px-5 bg-black bg-opacity-60`} onClick={() => setViewPopUp(false)}>
+                <div className='w-full max-w-[1000px] rounded-2xl glass-morphism-white relative overflow-hidden z-50 translate-y-6'>
+                    <div className=''>
+                        {
+                            id === 0 && typeof content[0] !== 'string' ? (
+                                <div className='w-full pb-5'>
+                                    <div className='w-full pt-3'>
+                                        {
+                                            content?.map((data: any, i: number) => (
+                                                <div key={data?.id} className={`w-full py-5 px-3 sm:px-1 grid grid-cols-[62%_1fr_1fr] ${i === 0 ? '' : 'border-t border-[#808080]'}`}>
+                                                    <div className='flex items-center gap-3 pl-3'>
+                                                        <div>
+                                                            {
+                                                                data?.artistImage?.length > 2 ? <img src={data?.artistImage} className='w-12 object-contain rounded-full' alt="" /> : <div className='w-12 h-12 rounded-full bg-gray-300' />
+                                                            }
+                                                        </div>
+                                                        <div className='flex flex-col'>
+                                                            <h1 className='text-md tracking-wider'>{data?.artistName}</h1>
+                                                        </div>
+                                                    </div>
+                                                    <div className='w-full flex justify-center items-center'>
+                                                        <a href={data?.youtubeLink?.length > 2 ? data?.youtubeLink : null} target='_blank' className='text-sm font-semibold'>
+                                                            <img src={youtubeIcon} className={`w-8 hover:scale-110 transition-transform duration-500 ease-in-out ${data?.youtubeLink?.length > 2 ? '' : 'opacity-40'}`} alt="" />
+                                                        </a>
+                                                    </div>
+                                                    <div className='w-full flex justify-center items-center'>
+                                                        <a href={data?.spotifyLink?.length > 2 ? data?.youtubeLink : null} target='_blank' className='text-sm font-semibold'>
+                                                            <img src={spotifyIcon} className={`w-7 hover:scale-110 transition-transform duration-500 ease-in-out ${data?.spotifyLink?.length > 2 ? '' : 'opacity-40'}`} alt="" />
+                                                        </a>
+                                                    </div>
+
+                                                </div>
+                                            ))
+                                        }
+                                    </div>
+                                </div>
+                            ) : (
+                                <div className='p-3'>
+                                    {
+                                        content?.length > 2 ? (
+                                            <div className='w-full grid grid-cols-2 gap-2 overflow-y-scroll h-[55vh] rounded-lg'>
+                                                {
+                                                    content?.map((data: string) => (
+                                                        <img key={data} src={data} className='w-full rounded-lg' />
+                                                    ))
+                                                }
+                                            </div>
+                                        ) : (
+                                            <div className='w-full grid grid-cols-2 gap-2 overflow-y-scroll h-[55vh] rounded-lg'>
+                                                <div className='w-full aspect-square bg-stone-400' />
+                                                <div className='w-full aspect-square bg-stone-400' />
+                                                <div className='w-full aspect-square bg-stone-400' />
+                                                <div className='w-full aspect-square bg-stone-400' />
+                                                <div className='w-full aspect-square bg-stone-400' />
+                                            </div>
+                                        )
+                                    }
+                                </div>
+                            )
+                        }
                     </div>
                 </div>
             </div >

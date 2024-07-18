@@ -8,7 +8,7 @@ const MainLandingPage: React.FC = () => {
     const navigate = useNavigate();
 
   return (
-    <div className='w-full h-screen flex bg-black'>
+    <div className='w-full h-screen flex flex-col md:flex-row justify-center items-center gap-10 md:gap-0 bg-black'>
         <div className='w-full flex justify-center items-center' onClick={() => navigate(`/indo-soul-live`)}>
             <img src={indoSoulLogo} className='w-48 hover:scale-110 transition-all duration-500 ease-in-out' alt="" />
         </div>

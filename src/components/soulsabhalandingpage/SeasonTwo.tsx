@@ -61,9 +61,6 @@ const SeasonTwo: React.FC = () => {
                     ))
                 }
             </div>
-            {/* <div className='w-full flex justify-center items-center'>
-                <CollaborateButton text='collaborate with us' styles='' />
-            </div> */}
         </div>
     )
 }
