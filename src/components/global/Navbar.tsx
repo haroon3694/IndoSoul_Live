@@ -49,7 +49,7 @@ const Navbar = ({ indoSoul, soulSabha }: { indoSoul?: boolean, soulSabha?: boole
                                     </svg>
                                     <h1 className='text-sm font-manrope tracking-wider text-white hover:text-[#D10000] cursor-pointer transition-all duration-500 ease-in-out' onClick={handleButtonClick}>contact@indosoul.in</h1>
                                 </div>
-                                <PrimaryButton onClick={() => window.open("https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2Oy2TFgjxR4qp0qcY_WHvf_woG_VGqWEdygUfyDpSAEOXfseze-9WW1KUBLE3MS5hbQsJhnCMg", '_blank')} btnText='WATCH US LIVE' bgColor='hover:bg-gradient-to-r from-[#96D312] to-[#E92F2F] transition-all duration-500 ease-in-out' />
+                                <PrimaryButton onClick={() => window.open("https://www.youtube.com/playlist?list=PLribYRRTKTxcUsNldh4iCF2Gy9ekuSdUa", '_blank')} btnText='WATCH US LIVE' bgColor='hover:bg-gradient-to-r from-[#96D312] to-[#E92F2F] transition-all duration-500 ease-in-out' />
                             </div>
                         </div>
                     </>
