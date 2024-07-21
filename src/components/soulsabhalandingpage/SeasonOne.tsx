@@ -131,7 +131,7 @@ const SeasonOne: React.FC = () => {
     ]
 
     return (
-        <div className='w-full px-10 md:px-28 2xl:px-60 py-16'>
+        <div className='w-full px-5 sm:px-10  2xl:px-60 py-16'>
             <SeasonHeader text={`soul sabha experience`} styles='my-10' />
             <div className='w-full grid grid-cols-2 md:grid-cols-4 gap-5 xl:gap-10 mb-24'>
                 {

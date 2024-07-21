@@ -21,7 +21,7 @@ interface ArtistContentProps {
     spotifyLink: string;
 }
 
-const ExperienceCard: React.FC<ExperienceCardProps> = ({ id, image, title, content, links }) => {
+const ExperienceCard: React.FC<ExperienceCardProps> = ({ id, image, title, content }) => {
 
     const [viewPopUp, setViewPopUp] = useState(false);
     const [blockScroll, allowScroll] = useScrollBlock();
@@ -35,13 +35,14 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ id, image, title, conte
             <div key={id} onClick={() => setViewPopUp(true)} className='relative group overflow-hidden rounded-md'>
                 <img src={image} className='w-full group-hover:scale-150 group-hover: group-hover:translate-y-14 transition-all duration-500 ease-in-out' alt="" />
                 <div className='absolute inset-0 z-10 bg-black opacity-40'></div>
-                <h1 className='font-bebasNeue text-[40px] leading-none absolute bottom-36 text-center text-white left-1/2 -translate-x-1/2 z-[15] w-[160px]'>{title}</h1>
-                <div className='w-full flex justify-center items-center absolute bottom-10 left-0 right-0 z-[15]'>
-                    <PrimaryButton btnText='know more' bgColor='hover:bg-gradient-to-r from-[#96D312] to-[#E92F2F] transition-all duration-500 ease-in-out' onClick={() => window.open(links, '_blank')} />
+                <h1 className='font-bebasNeue text-[38px] md:text-[40px] leading-none absolute bottom-24 md:bottom-36 text-center text-white left-1/2 -translate-x-1/2 z-[15] w-[160px]'>{title}</h1>
+                <div className='w-full flex justify-center items-center absolute bottom-5 md:bottom-10 left-0 right-0 z-[15]'>
+                    <PrimaryButton btnText='know more' bgColor='hover:bg-gradient-to-r from-[#96D312] to-[#E92F2F] transition-all duration-500 ease-in-out' onClick={() => setViewPopUp(true)} />
                 </div>
             </div>
-            <div className={`${viewPopUp ? 'hidden md:flex' : 'hidden'} w-full fixed  justify-center items-center h-screen inset-0 z-20 px-5 bg-black bg-opacity-60`} onClick={() => setViewPopUp(false)}>
-                <div className='w-full max-w-[1000px] rounded-lg glass-morphism-white relative py-16 md:py-0 overflow-hidden z-50 translate-y-6'>
+            <div className={`${viewPopUp ? 'hidden md:flex' : 'hidden'} w-full fixed h-screen inset-0 z-20 px-5`}>
+                <div className=' bg-black bg-opacity-60 fixed h-sceen z-50 w-full inset-0' onClick={() => setViewPopUp(false)}></div>
+                <div className='w-full max-w-[1000px] rounded-lg glass-morphism-white py-16 md:py-0 overflow-hidden absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 z-50'>
                     <div className='px-14 py-14'>
                         {
                             id === 0 && typeof content[0] !== 'string' ? (
