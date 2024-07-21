@@ -119,8 +119,8 @@ const Footer = ({ indoSoul, indoSoulStyle, soulSabha, soulSabhaStyle }: { indoSo
                             <h1 className='text-md text-black'>+91 88258 59601</h1>
                             <PrimaryButton btnText='Talk to us' bgColor={`hover:scale-105 bg-gradient-to-r from-[#96D312] to-[#E92F2F] transition-all duration-500 ease-in-out`} onClick={() => window.open("https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2Oy2TFgjxR4qp0qcY_WHvf_woG_VGqWEdygUfyDpSAEOXfseze-9WW1KUBLE3MS5hbQsJhnCMg", '_blank')} />
                         </div>
-                        {/* pr-5 in the div below to make it center aligned forcefully */}
-                        <div className='flex flex-col justify-end items-center md:pr-5'>
+                        {/* pl-8 in the div below to make it center aligned forcefully */}
+                        <div className='flex flex-col justify-end items-center md:pl-8'>
                             <div className='w-fit justify-center flex items-center gap-12 md:gap-20 mt-2'>
                                 {
                                     socialMedia?.soulsabha?.map((data) => (
