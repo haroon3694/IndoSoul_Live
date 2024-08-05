@@ -27,11 +27,17 @@ import songsImage5 from '../../assets/soulsabha/images/artists/02_card/soulsabha
 import songsImage6 from '../../assets/soulsabha/images/artists/02_card/soulsabha-02_card-06_1000px.jpg'
 import songsImage7 from '../../assets/soulsabha/images/artists/02_card/soulsabha-02_card-07_1000px.jpg'
 
-import visualArtsImage1 from '../../assets/soulsabha/images/artists/03_card/aikiyam-03_card-01_1000px.jpg'
-import visualArtsImage2 from '../../assets/soulsabha/images/artists/03_card/aikiyam-03_card-02_1000px.jpg'
-import visualArtsImage3 from '../../assets/soulsabha/images/artists/03_card/aikiyam-03_card-03_1000px.jpg'
-import visualArtsImage4 from '../../assets/soulsabha/images/artists/03_card/aikiyam-03_card-04_1000px.jpg'
-import visualArtsImage5 from '../../assets/soulsabha/images/artists/03_card/aikiyam-03_card-05_1000px.jpg'
+import liveConcerts1 from '../../assets/soulsabha/images/artists/03_card/aikiyam-03_card-01_1000px.jpg'
+import liveConcerts2 from '../../assets/soulsabha/images/artists/03_card/aikiyam-03_card-02_1000px.jpg'
+import liveConcerts3 from '../../assets/soulsabha/images/artists/03_card/aikiyam-03_card-03_1000px.jpg'
+import liveConcerts4 from '../../assets/soulsabha/images/artists/03_card/aikiyam-03_card-04_1000px.jpg'
+import liveConcerts5 from '../../assets/soulsabha/images/artists/03_card/aikiyam-03_card-05_1000px.jpg'
+
+import visualArts1 from '../../assets/soulsabha/images/artists/04_card/music&visualarts-04_card-01_1000px.jpg';
+import visualArts2 from '../../assets/soulsabha/images/artists/04_card/music&visualarts-04_card-02_1000px.jpg';
+import visualArts3 from '../../assets/soulsabha/images/artists/04_card/music&visualarts-04_card-03_1000px.jpg';
+import visualArts4 from '../../assets/soulsabha/images/artists/04_card/music&visualarts-04_card-04_1000px.jpg';
+import visualArts5 from '../../assets/soulsabha/images/artists/04_card/music&visualarts-04_card-05_1000px.jpg';
 
 const SeasonOne: React.FC = () => {
 
@@ -75,24 +81,24 @@ const SeasonOne: React.FC = () => {
             links: '',
         },
         {
-            id: 0,
+            id: 1,
             image: exp_2,
             title: 'Listening Sessions',
             content: [songsImage1, songsImage2, songsImage3, songsImage4, songsImage5, songsImage6, songsImage7],
             links: '',
         },
         {
-            id: 0,
+            id: 2,
             image: exp_3,
             title: 'Live Concerts',
-            content: [visualArtsImage1, visualArtsImage2, visualArtsImage3, visualArtsImage4, visualArtsImage5],
+            content: [liveConcerts1, liveConcerts2, liveConcerts3, liveConcerts4, liveConcerts5],
             links: '',
         },
         {
-            id: 0,
+            id: 3,
             image: exp_4,
             title: 'Music & Visual Arts',
-            content: [''],
+            content: [visualArts1, visualArts2, visualArts3, visualArts4, visualArts5],
             links: '',
         },
     ];
