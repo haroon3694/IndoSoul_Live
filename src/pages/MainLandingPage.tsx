@@ -1,17 +1,32 @@
 import React from 'react'
-import logoIndosoul from '../assets/icons/indosoulLogoMainBlack.svg'
+import logoIndosoul from '../assets/icons/indosoulLogoMain.svg'
+import Hero from '../components/global/Hero'
+import heroImage from '../assets/landing/hero.png'
+import OurOfferings from '../components/landingpage/OurOfferings'
+import Events from '../components/landingpage/Events'
+import PreLoader from '../components/global/PreLoader'
 
 const MainLandingPage: React.FC = () => {
 
+  const heroImages = [
+    {
+      id: 0,
+      title: '',
+      image: heroImage
+    },
+    {
+      id: 1,
+      title: '',
+      image: heroImage
+    },
+  ];
+
   return (
-    <div className='w-[80%] mx-auto h-[80vh] flex justify-center items-center border-b border-black'>
-        <div className='flex flex-col justify-center items-center gap-28 mt-32'>
-          <img src={logoIndosoul} className='w-96' alt="" />
-          <div className='flex flex-col w-full items-center font-manrope'>
-            <h1 className='text-sm font-light tracking-widest'>Bringing Indian Music to the world & the World to Indian Music</h1>
-            <h1 className='text-sm font-semibold tracking-widest'>Live Performances | Indie Shows | Violin Education Platform | Music Production</h1>
-          </div>
-        </div>
+    <div className=''>
+      <PreLoader logoImage={logoIndosoul} bgColor='bg-black' />
+      <Hero heroImages={heroImages} logo={logoIndosoul} />
+      <OurOfferings />
+      <Events />
     </div>
   )
 }
