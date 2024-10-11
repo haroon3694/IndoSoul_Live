@@ -12,6 +12,7 @@ import liveLogo from '../../assets/indosoul/icons/logo-main.svg'
 import soulLogo from '../../assets/soulsabha/icons/logoMainSoulSabhaWhite.svg'
 import rootsLogo from '../../assets/indosoulroots/icons/indoSoulRootsLogo.svg'
 import flowLogo from '../../assets/flow/icons/flowLogo.svg'
+import { useNavigate } from 'react-router'
 
 interface PopUpData {
   id: number;
@@ -24,6 +25,8 @@ interface PopUpData {
 }
 
 const OurOfferings: React.FC = () => {
+
+  const navigate = useNavigate();
 
   const ourOfferings: PopUpData[] = [
     {
@@ -80,7 +83,7 @@ const OurOfferings: React.FC = () => {
       <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 justify-items-center place-items-center gap-10 px-10'>
         {
           ourOfferings?.map((data) => (
-            <OfferedExperienceCard data={data} buttonColor={data?.buttonColor} imageLogo />
+            <OfferedExperienceCard data={data} buttonColor={data?.buttonColor} imageLogo onCardClick={() => data.links && navigate(data.links)} />
           ))
         }
       </div>

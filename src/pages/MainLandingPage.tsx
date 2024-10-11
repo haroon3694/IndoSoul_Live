@@ -4,6 +4,7 @@ import Hero from '../components/global/Hero'
 import heroImage from '../assets/landing/hero.png'
 import OurOfferings from '../components/landingpage/OurOfferings'
 import Events from '../components/landingpage/Events'
+import PreLoader from '../components/global/PreLoader'
 
 const MainLandingPage: React.FC = () => {
 
@@ -22,6 +23,7 @@ const MainLandingPage: React.FC = () => {
 
   return (
     <div className=''>
+      <PreLoader logoImage={logoIndosoul} bgColor='bg-black' />
       <Hero heroImages={heroImages} logo={logoIndosoul} />
       <OurOfferings />
       <Events />
