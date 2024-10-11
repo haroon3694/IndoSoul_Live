@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "BebasNeue";
+  src: url("./assets/fonts/BebasNeue-Regular.otf");
+}
+
+:root {
+  --liveRed: #a91818;
+  --soulGreen: #96d112;
+  --rootsBrown: #c48f41;
+  --musicBlue: #21b2f1;
+  --flowGreen: #0fa677;
+  --white: #ffffff;
+  --aboutUsRed: #CE3100;
+}
+
+/* Customize scrollbar */
+/* WebKit */
+::-webkit-scrollbar {
+  width: 6px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #c7c7c7; /* Color of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8a8a8a; /* Color of the scrollbar thumb */
+  border-radius: 6px; /* Rounded corners */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Hover color of the scrollbar thumb */
+}
+
+.font-clashdisplay {
+  font-family: "Clash Display", sans-serif;
+}
+
+.font-manrope {
+  font-family: "Manrope", sans-serif;
+}
+
+.glass-morphism {
+  background: rgba(9, 8, 8, 0.74);
+  backdrop-filter: blur(6.9px);
+  -webkit-backdrop-filter: blur(6.9px);
+}
+
+.glass-morphism-white {
+  background: rgba(227, 227, 227, 0.74);
+  backdrop-filter: blur(6.9px);
+  -webkit-backdrop-filter: blur(6.9px);
+}
+
+.slick-prev {
+  left: -36px !important;
+}
+.slick-next:before,
+.slick-prev:before {
+  content: "" !important;
+}
+.next-slick-arrow,
+.prev-slick-arrow {
+  transform: translateY(-20px);
+  height: 50px;
+  width: 30px;
+  /* color: #000000; */
+  font-size: 35px;
+  /* background-color: #f1bec4; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2px;
+}
+
+.slick-dots li button:before {
+  color: orange;
+  width: 20px !important;
+}
+
+.gradient-text {
+  background-image: linear-gradient(45deg, #96d312, #e92f2f);
+  color: transparent;
+  background-clip: text;
+}
+
+.gradient-border {
+  border-radius: 20px !important;
+  border: 2px solid transparent;
+  border-image: linear-gradient(to right, #96d312, #e92f2f);
+  border-image-slice: 1;
+}
