@@ -25,11 +25,11 @@ const Hero: React.FC<HeroProps> = ({ heroImages, logo, logoText, singleHeroImage
 
     const findButton = () => {
         if (pathname === '/indo-soul-live') {
-            return <PrimaryButton styles='bg-white text-black text-xl tracking-[1.5px]' shadow shadowStyles='bg-white' btnText='Book Here' onClick={() => window.open("https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2Oy2TFgjxR4qp0qcY_WHvf_woG_VGqWEdygUfyDpSAEOXfseze-9WW1KUBLE3MS5hbQsJhnCMg", '_blank')} />;
+            return <PrimaryButton styles='bg-white text-black text-xl tracking-[1.5px]' shadow shadowStyles='bg-white' btnText='Enquire Here' onClick={() => window.open("https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2Oy2TFgjxR4qp0qcY_WHvf_woG_VGqWEdygUfyDpSAEOXfseze-9WW1KUBLE3MS5hbQsJhnCMg", '_blank')} />;
         } else if (pathname === '/soul-sabha') {
-            return <PrimaryButton btnText='book here' styles='text-white bg-gradient-to-r from-[#96d312] to-[#e92f2f]' shadow shadowStyles='bg-gradient-to-r from-[#96d312] to-[#e92f2f]' />;
+            return <PrimaryButton btnText='Enquire here' styles='text-white bg-gradient-to-r from-[#96d312] to-[#e92f2f]' shadow shadowStyles='bg-gradient-to-r from-[#96d312] to-[#e92f2f]' />;
         } else {
-            return null
+            return <PrimaryButton btnText='Enquire here' styles='text-white bg-gradient-to-r from-[#35D1AE] to-[#95D115]' shadow shadowStyles='bg-gradient-to-r from-[#35D1AE] to-[#95D115]' />;
         }
     }
 
@@ -74,7 +74,7 @@ const Hero: React.FC<HeroProps> = ({ heroImages, logo, logoText, singleHeroImage
             </div>
             <div className='absolute top-1/2 -translate-y-[20%] left-1/2 -translate-x-1/2 flex flex-col items-center w-full px-6 z-10'>
                 {
-                    logo ? <img src={logo} className='w-52 md:w-64 mb-10' alt="" /> : logoText ? <div className='text-white font-manrope font-light text-[4rem] tracking-wide text-center mt-60 mb-5'>{logoText}</div> : null
+                    logo ? <img src={logo} className={`${pathname === '/' ? 'w-80 md:w-96 mb-10' : 'w-52 md:w-96 mb-10'}`} alt="" /> : logoText ? <div className='text-white font-manrope font-light text-[4rem] tracking-wide text-center mt-60 mb-5'>{logoText}</div> : null
                 }
                 <div className='text-white flex flex-col items-center xl:text-nowrap text-md md:text-lg xl:text-xl md:gap-2 text-center'>
                     { heroText }

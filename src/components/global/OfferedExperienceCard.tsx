@@ -5,7 +5,7 @@ import { useLocation } from 'react-router';
 import IndoSoulPopUp from '../indosoullive/IndoSoulPopUp';
 import SoulSabhaPopUp from '../soulsabha/SoulSabhaPopUp';
 
-interface SoulSabhaPopUpData {
+interface PopUpData {
   id: number;
   image?: string;
   logo?: string;
@@ -24,13 +24,13 @@ interface ArtistContentProps {
 }
 
 interface OfferedExperienceCardProps {
-  data: SoulSabhaPopUpData;
+  data: PopUpData;
   textLogo?: boolean;
   imageLogo?: boolean;
   onCardClick?: () => void;
   onButtonClick?: () => void;
   infoPopup?: boolean;
-  buttonColor: string;
+  buttonColor: string | undefined;
 }
 
 const OfferedExperienceCard: React.FC<OfferedExperienceCardProps> = ({ data, textLogo, imageLogo, onCardClick, onButtonClick, infoPopup, buttonColor }) => {
@@ -47,15 +47,16 @@ const OfferedExperienceCard: React.FC<OfferedExperienceCardProps> = ({ data, tex
   return (
     <>
       <div key={data?.id} className='w-fit flex flex-col gap-4 items-center justify-center'>
-        <div className='w-64 md:w-56 h-[45vh] md:h-[55vh] rounded-xl relative overflow-hidden group' onClick={infoPopup ? () => setViewPopUp(true) : onCardClick}>
-          <img src={data?.image} className='w-64 md:w-56 h-[45vh] md:h-[55vh] rounded-xl object-cover group-hover:scale-150 group-hover:blur-lg transition-all duration-500 ease-in-out' alt="" />
+        <div className='w-64 md:w-60 h-[45vh] md:h-[55vh] rounded-xl relative overflow-hidden group' onClick={infoPopup ? () => setViewPopUp(true) : onCardClick}>
+          <img src={data?.image} className='w-64 md:w-60 h-[45vh] md:h-[55vh] rounded-xl object-cover group-hover:scale-150 group-hover:blur-lg transition-all duration-500 ease-in-out' alt="" />
           <div className='absolute inset-0 z-10 bg-gradient-to-b from-transparent to-black opacity-60 group-hover:opacity-100 transition-all duration-500 ease-in-out'></div>
           {
             textLogo ?
               <h1 className='font-bebasNeue text-[35px] leading-none absolute bottom-24 md:bottom-10 text-center text-white left-1/2 -translate-x-1/2 z-[15] w-[150px]'>{data?.title}</h1>
               : imageLogo ?
-                <div className='absolute bottom-24 md:bottom-10 left-1/2 -translate-x-1/2 z-[15] w-40 flex justify-center items-end'>
+                <div className='absolute bottom-5 sm:bottom-24 md:bottom-10 left-1/2 -translate-x-1/2 z-[15] w-40 flex flex-col justify-center items-center group-hover:-translate-y-[100%] transition-all duration-300 ease-in-out'>
                   <img className='w-full' src={data?.logo} alt="" />
+                  { pathname === '/' ? <p className='translate-y-20 sm:translate-y-32 md:translate-y-28 text-yellow-600 flex font-manrope'>Know More <span className='ml-1 mt-[0.5px]'>{`>`}</span> </p> : null }
                 </div>
                 : null
           }

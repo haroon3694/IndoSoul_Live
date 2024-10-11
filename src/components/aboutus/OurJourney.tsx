@@ -84,32 +84,12 @@ const OurJourney: React.FC = () => {
   const desktopSliderSettings = {
     dots: false,
     infinite: true,
-    // fade: true,
     speed: 300,
     slidesToShow: 4,
     slidesToScroll: 1,
     arrows: false,
     autoplay: true,
     pauseonhover: false,
-    // nextArrow: (
-    //   <div>
-    //     <div className="next-slick-arrow text-white">
-    //       <svg className="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-    //         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7" />
-    //       </svg>
-    //     </div>
-    //   </div>
-    // ),
-    // prevArrow: (
-    //   <div>
-    //     <div className="prev-slick-arrow text-white">
-    //       <svg className="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-    //         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 19-7-7 7-7" />
-    //       </svg>
-
-    //     </div>
-    //   </div>
-    // ),
   };
 
   const mobileSliderSettings = {
@@ -122,25 +102,6 @@ const OurJourney: React.FC = () => {
     arrows: false,
     autoplay: true,
     pauseonhover: true,
-    // nextArrow: (
-    //   <div>
-    //     <div className="next-slick-arrow text-black z-20 border border-red-500 -translate-x-2">
-    //       <svg className="w-6 h-6 text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24">
-    //         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7" />
-    //       </svg>
-    //     </div>
-    //   </div>
-    // ),
-    // prevArrow: (
-    //   <div>
-    //     <div className="prev-slick-arrow text-black z-20 border border-red-500 translate-x-2">
-    //       <svg className="w-6 h-6 text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24">
-    //         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 19-7-7 7-7" />
-    //       </svg>
-
-    //     </div>
-    //   </div>
-    // ),
   };
 
   return (
