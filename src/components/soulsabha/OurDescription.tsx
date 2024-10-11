@@ -1,7 +1,6 @@
 import React from 'react'
 import descImg from '../../assets/soulsabha/images/descImage.png'
 import soulSabhaLogoDark from '../../assets/soulsabha/icons/logoMainSoulSabha.svg'
-import SeasonHeader from '../global/SeasonHeader';
 import { descriptionData } from '../../data/soulSabhaData';
 
 const OurDescription: React.FC = () => {
