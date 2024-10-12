@@ -36,11 +36,7 @@ const Navbar = () => {
             return '#c48f41'
         } else if (pathname === '/indo-soul-music') {
             return '#02A4EA'
-        } 
-        // else if (pathname === '/about-us') {
-        //     return '#CE3100'
-        // }
-        else {
+        } else {
             return '#ffffff'
         }
     }
@@ -63,7 +59,7 @@ const Navbar = () => {
                                     <path d="M4 6L0.535898 -1.75695e-07L7.4641 4.29987e-07L4 6Z" fill={findFillColor()} />
                                 </svg>
                             </span>
-                            <div className={`absolute bottom-0 top-10 w-56 bg-[#282827] rounded-xl flex flex-col overflow-hidden transition-all duration-500 ease-in-out z-20 ${dropdownOpen ? 'h-60' : 'h-0 py-0'}`}>
+                            <div className={`absolute bottom-0 top-10 w-56 bg-[#282827] rounded-xl flex flex-col overflow-hidden transition-all duration-500 ease-in-out z-20 ${dropdownOpen ? 'h-72' : 'h-0 py-0'}`}>
                                 {
                                     navigationData?.map((data) => (
                                         <div key={data?.id} className='w-full border-b-white p-4 hover:bg-[#1c1c1b] transition-all duration-500 ease-in-out' onClick={() => navigate(data?.route)}>

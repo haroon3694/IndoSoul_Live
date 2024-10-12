@@ -81,7 +81,7 @@ const Events: React.FC = () => {
         <Slider {...desktopSliderSettings} className=''>
           {
             events?.map((data) => (
-              <div key={data?.id} className='max-w-[500px] p-3 bg-white border border-black rounded-[20px] relative'>
+              <div key={data?.id} className='max-w-[450px] p-3 bg-white border border-black rounded-[20px] relative'>
                 <div className='flex items-center'>
                   <img src={data?.image} className='w-36 rounded-[18px]' alt="" />
                   <div className='px-3'>
@@ -91,7 +91,6 @@ const Events: React.FC = () => {
                     <p className='text-sm'>{data?.desc}</p>
                   </div>
                 </div>
-                {/* <div className={`absolute w-full h-full opacity-30 rounded-full bottom-0 left-3 z-10 bg-black`} /> */}
               </div>
             ))
           }
@@ -120,7 +119,7 @@ const Events: React.FC = () => {
         </Slider>
       </div>
       <div className='w-full flex justify-center items-center'>
-      <PrimaryButton btnText='BOOK NOw' styles='bg-gradient-to-r from-[#31D0B4] to-[#96D112] text-white text-xl' shadow shadowStyles='bg-gradient-to-r from-[#0FA677] to-[#96D112]' />
+        <PrimaryButton btnText='BOOK NOw' styles='bg-gradient-to-r from-[#31D0B4] to-[#96D112] text-black text-xl' shadow shadowStyles='bg-gradient-to-r from-[#0FA677] to-[#96D112]' />
       </div>
     </div>
   )

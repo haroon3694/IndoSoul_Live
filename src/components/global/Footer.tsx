@@ -2,12 +2,9 @@ import logoIndosoul from '../../assets/icons/indosoulLogoMain.svg'
 import indoSoulLiveIcon from '../../assets/indosoul/icons/indoSoulLiveFooterLogo.svg'
 import logoMainSoulSabhaWhite from '../../assets/soulsabha/icons/logoMainSoulSabhaWhite.svg'
 import flowLogo from '../../assets/flow/icons/flowLogo.svg'
-import instagramWhite from '../../assets/icons/instagram_white.svg'
-import facebookWhite from '../../assets/icons/facebook_white.svg'
-import spotifyWhite from '../../assets/icons/spotify_white.svg'
-import youtubeWhite from '../../assets/icons/youtube_white.svg'
 import NavButton from './NavButton'
 import { useLocation, useNavigate } from 'react-router'
+import SocialMediaIcons from './SocialMediaIcons'
 
 const Footer = () => {
 
@@ -41,38 +38,6 @@ const Footer = () => {
         }
     }
 
-    const socialMedia: {
-        id: number;
-        logo: string;
-        link: string;
-        title: string;
-    }[] = [
-            {
-                id: 0,
-                logo: instagramWhite,
-                link: 'https://www.instagram.com/indosoullive/?igsh=aGk0Znd6bnVnNWRz&utm_source=qr',
-                title: 'Instagram'
-            },
-            {
-                id: 1,
-                logo: spotifyWhite,
-                link: 'https://open.spotify.com/artist/04czw5AgY218VUkgCtwRv9',
-                title: 'Spotify'
-            },
-            {
-                id: 2,
-                logo: youtubeWhite,
-                link: 'https://www.youtube.com/@IndoSoulLive',
-                title: 'Youtube'
-            },
-            {
-                id: 3,
-                logo: facebookWhite,
-                link: 'https://www.facebook.com/indosoullive?mibextid=hu50Ix',
-                title: 'Facebook'
-            },
-        ];
-
     return (
         <>
             {/* desktop footer */}
@@ -82,13 +47,7 @@ const Footer = () => {
                         <img src={findLogo()} className='w-32' alt="" />
                     </div>
                     <div className='w-full flex justify-center items-center gap-10'>
-                        <div className='w-fit justify-center md:w-fit flex items-center gap-20'>
-                            {
-                                socialMedia?.map((data) => (
-                                    <img src={data?.logo} onClick={() => window.open(data.link, '_blank')} key={data?.id} className='w-6 cursor-pointer' alt="" />
-                                ))
-                            }
-                        </div>
+                        <SocialMediaIcons />
                     </div>
                     <div className='w-fit min-w-32 flex flex-col justify-center items-center gap-1.5'>
                         <p className='font-manrope text-xs font-semibold cursor-pointer transition-all duration-500 ease-in-out text-white leading-none tracking-wider' onClick={() => navigate(`privacy-policy`)}>Privacy Policy</p>
@@ -105,13 +64,7 @@ const Footer = () => {
                         <img src={findLogo()} className='w-32' alt="" />
                     </div>
                     <div className='w-full flex justify-start items-center gap-10'>
-                        <div className='w-fit justify-start md:w-fit flex items-center gap-8'>
-                            {
-                                socialMedia?.map((data) => (
-                                    <img src={data?.logo} onClick={() => window.open(data.link, '_blank')} key={data?.id} className='w-6 cursor-pointer' alt="" />
-                                ))
-                            }
-                        </div>
+                        <SocialMediaIcons />
                     </div>
                     <div className='w-full flex justify-between items-center gap-1.5'>
                         <span>
