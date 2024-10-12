@@ -1,5 +1,5 @@
 import { DescriptionDataType, SeasonTwoDataType, SocialMediaDataType, SoulSabhaExperienceDataType, SoulSabhaGalleryImagesType, SoulSabhaHeroImagesType } from '../types/soulSabhaTypes'
-import heroImg1 from '../assets/soulsabha/images/heroimages/heroImage1.jpg'
+import heroImg1 from '../assets/soulsabha/images/heroimages/heroImage1.png'
 import heroImg2 from '../assets/soulsabha/images/heroimages/heroImage2.jpg'
 import heroImg3 from '../assets/soulsabha/images/heroimages/heroImage3.jpg'
 

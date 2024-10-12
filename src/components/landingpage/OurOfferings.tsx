@@ -80,7 +80,7 @@ const OurOfferings: React.FC = () => {
   return (
     <div className='my-32'>
       <SeasonHeader text={`our offerings`} styles='bg-clip-text text-transparent bg-gradient-to-r from-[#0FA677] to-[#96D112] tracking-none mb-8' />
-      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 justify-items-center place-items-center gap-10 px-10'>
+      <div className='grid grid-cols-1 sm:grid-cols-2 justify-items-center place-items-center md:flex justify-center items-center gap-10 px-10'>
         {
           ourOfferings?.map((data) => (
             <OfferedExperienceCard data={data} buttonColor={data?.buttonColor} imageLogo onCardClick={() => data.links && navigate(data.links)} />

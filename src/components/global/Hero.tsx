@@ -74,7 +74,7 @@ const Hero: React.FC<HeroProps> = ({ heroImages, logo, logoText, singleHeroImage
             </div>
             <div className='absolute top-1/2 -translate-y-[20%] left-1/2 -translate-x-1/2 flex flex-col items-center w-full px-6 z-10'>
                 {
-                    logo ? <img src={logo} className={`${pathname === '/' ? 'w-80 md:w-96 mb-10' : 'w-52 md:w-96 mb-10'}`} alt="" /> : logoText ? <div className='text-white font-manrope font-light text-[4rem] tracking-wide text-center mt-60 mb-5'>{logoText}</div> : null
+                    logo ? <img src={logo} className={`${pathname === '/' ? 'w-80 md:w-96 mb-10' : 'w-52 md:w-60 mb-5'}`} alt="" /> : logoText ? <div className='text-white font-manrope font-light text-[4rem] tracking-wide text-center mt-60 mb-5'>{logoText}</div> : null
                 }
                 <div className='text-white flex flex-col items-center xl:text-nowrap text-md md:text-lg xl:text-xl md:gap-2 text-center'>
                     { heroText }
