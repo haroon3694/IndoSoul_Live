@@ -30,6 +30,7 @@ export interface SeasonTwoDataType {
   seasonContent: {
     id: number;
     title: string;
+    icon: string;
     link: string;
   }[];
 }
