@@ -10,8 +10,6 @@ import vikram from '../assets/indosoul/images/musicianCarousal/vikram.png'
 import akshay from '../assets/indosoul/images/musicianCarousal/akshay.png'
 import venkat from '../assets/indosoul/images/musicianCarousal/venkat.png'
 
-import bandVideo from '../assets/indosoul/videos/bandVideo.webm'
-
 import music_1 from '../assets/indosoul/images/gallery/01.png'
 import music_2 from '../assets/indosoul/images/gallery/02.jpg'
 import music_3 from '../assets/indosoul/images/gallery/03.jpg'
@@ -46,23 +44,23 @@ export const experienceData: ExperienceDataType[] = [
         ],
         links: ' https://www.youtube.com/watch?v=BMUCeFOK0N0'
     },
-    {
-        id: 1,
-        title: 'Aarohana',
-        image: aarohanabg,
-        logo: aarohanaLogo,
-        heading: 'Setting the Perfect tunes for Your Wedding Festivities',
-        content: [
-            `Fasten your seat belts as this ride is going to take you to dizzying heights of the higher octave and deep bass notes and everywhere in between. An amazing mix of film or popular music with some classical melodies, this one promises a light, airy and fun musical journey.`,
-            `'Aarohana' offers an experience where it's not just about the music but creating an immersive experience that would be a treat to all your senses. With visually stunning stage arrangements, the band engages with your guests, encouraging them to participate in the musical celebrations, turning it into an experience of shared love, laughter and music.`,
-            `The experience includes:`,
-            `A lively ensemble of up to 10-12 musicians including vocalists, instrumentalists, choir singers`,
-            `An energetic and lively performance for a duration of two hours`,
-            `A custom setlist of film and classical hits`,
-            `A special musical film capturing the live performance, the moods of the audiences and the essence of your event as a cherished memento`,
-        ],
-        links: 'https://youtu.be/gaKe58vawCQ'
-    },
+    // {
+    //     id: 1,
+    //     title: 'Aarohana',
+    //     image: aarohanabg,
+    //     logo: aarohanaLogo,
+    //     heading: 'Setting the Perfect tunes for Your Wedding Festivities',
+    //     content: [
+    //         `Fasten your seat belts as this ride is going to take you to dizzying heights of the higher octave and deep bass notes and everywhere in between. An amazing mix of film or popular music with some classical melodies, this one promises a light, airy and fun musical journey.`,
+    //         `'Aarohana' offers an experience where it's not just about the music but creating an immersive experience that would be a treat to all your senses. With visually stunning stage arrangements, the band engages with your guests, encouraging them to participate in the musical celebrations, turning it into an experience of shared love, laughter and music.`,
+    //         `The experience includes:`,
+    //         `A lively ensemble of up to 10-12 musicians including vocalists, instrumentalists, choir singers`,
+    //         `An energetic and lively performance for a duration of two hours`,
+    //         `A custom setlist of film and classical hits`,
+    //         `A special musical film capturing the live performance, the moods of the audiences and the essence of your event as a cherished memento`,
+    //     ],
+    //     links: 'https://youtu.be/gaKe58vawCQ'
+    // },
     {
         id: 3,
         title: 'IndoSoul',
@@ -110,12 +108,17 @@ export const ourCareerData: OurCareerDataType = {
         },
         {
             id: 1,
-            amount: 100,
-            title: 'cities',
+            amount: 20,
+            title: 'views',
         },
         {
             id: 2,
-            amount: 12,
+            amount: 150,
+            title: 'followers',
+        },
+        {
+            id: 3,
+            amount: 10,
             title: 'years',
         },
     ],
@@ -157,7 +160,6 @@ export const ourCareerData: OurCareerDataType = {
             about: 'A trained singer, guitarist and music composer with foundation in Western Classical Piano from the KM Music Conservatory, Akshay Yesodharan has been a professional musician for the past ten years. He has toured with Mr. A.R. Rahman as part ten years. He has toured with Mr. A.R. Rahman as part of his KMMC Chamber Choir, in India as well as Germany for the Bollywood dreams four. His recent works for the South Indian film industry include the background score for a Tamil and Telegu film and vocals for a Tamil web series called The Story of Things.',
         },
     ],
-    bandVideo: bandVideo,
 };
 
 export const musicianGallery: MusicianGalleryType = {
