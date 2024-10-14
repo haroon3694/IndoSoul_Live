@@ -7,7 +7,7 @@ const Experiences: React.FC = () => {
       <div className='w-full flex justify-center items-center mb-16'>
         <h1 className='bg-clip-text text-transparent bg-gradient-to-r from-[#8B0000] to-[#CC0000] uppercase text-5xl leading-none font-bebasNeue tracking-widest'>experiences</h1>
       </div>
-      <div className='w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 justify-items-center gap-12 md:gap-5 xl:gap-10 px-16'>
+      <div className='w-full flex flex-wrap md:flex-nowrap justify-center items-center gap-12 md:gap-5 xl:gap-10 px-16'>
         {
           experienceData?.map((data) => (
             <OfferedExperienceCard data={data} buttonColor='liveRed' imageLogo infoPopup />

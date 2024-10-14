@@ -11,7 +11,6 @@ export interface ExperienceDataType {
 export interface OurCareerDataType {
     experience: CareerExperienceType[];
     musicians: CareerMusiciansType[];
-    bandVideo: string;
 }
 
 interface CareerExperienceType {
