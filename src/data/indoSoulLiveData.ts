@@ -1,5 +1,4 @@
 import aikiyambg from '../assets/indosoul/images/experienceCards/01.png'
-import aarohanabg from '../assets/indosoul/images/experienceCards/02.png'
 import third from '../assets/indosoul/images/experienceCards/03.png'
 import fourth from '../assets/indosoul/images/experienceCards/04.png'
 
@@ -21,7 +20,6 @@ import music_8 from '../assets/indosoul/images/gallery/08.jpg'
 
 
 import aikiyamLogo from '../assets/indosoul/images/experienceCards/akyam.svg'
-import aarohanaLogo from '../assets/indosoul/images/experienceCards/aarohana.svg'
 import ensambleLogo from '../assets/indosoul/images/experienceCards/ensemble.svg'
 import indoSoulLogo from '../assets/indosoul/images/experienceCards/indoSoul.svg'
 import { ExperienceDataType, MusicianGalleryType, OurCareerDataType } from '../types/indoSoulLiveType'
@@ -44,29 +42,11 @@ export const experienceData: ExperienceDataType[] = [
         ],
         links: ' https://www.youtube.com/watch?v=BMUCeFOK0N0'
     },
-    // {
-    //     id: 1,
-    //     title: 'Aarohana',
-    //     image: aarohanabg,
-    //     logo: aarohanaLogo,
-    //     heading: 'Setting the Perfect tunes for Your Wedding Festivities',
-    //     content: [
-    //         `Fasten your seat belts as this ride is going to take you to dizzying heights of the higher octave and deep bass notes and everywhere in between. An amazing mix of film or popular music with some classical melodies, this one promises a light, airy and fun musical journey.`,
-    //         `'Aarohana' offers an experience where it's not just about the music but creating an immersive experience that would be a treat to all your senses. With visually stunning stage arrangements, the band engages with your guests, encouraging them to participate in the musical celebrations, turning it into an experience of shared love, laughter and music.`,
-    //         `The experience includes:`,
-    //         `A lively ensemble of up to 10-12 musicians including vocalists, instrumentalists, choir singers`,
-    //         `An energetic and lively performance for a duration of two hours`,
-    //         `A custom setlist of film and classical hits`,
-    //         `A special musical film capturing the live performance, the moods of the audiences and the essence of your event as a cherished memento`,
-    //     ],
-    //     links: 'https://youtu.be/gaKe58vawCQ'
-    // },
     {
         id: 3,
         title: 'IndoSoul',
         image: third,
         logo: indoSoulLogo,
-        // heading: "Infusing a sacred sense of spirit and divinity into muhurthams and other traditional celebrations through music" ,
         heading: null,
         content: [
             `You are all set to take your next big step… And, what better than to celebrate it musically with all your loved ones by your side? From the enthusiastic folks on the dance floor the minute they hear a beat to the reluctant ones shaking an arm or two to group performances-IndoSoul promises to infuse vibrancy and energy into these experiences in its signature music style.`,

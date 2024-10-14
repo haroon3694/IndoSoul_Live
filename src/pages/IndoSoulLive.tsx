@@ -5,7 +5,6 @@ import indoSoluLiveLogo from '../assets/indosoul/icons/logo-main.svg'
 import liveBgImage from '../assets/indosoul/images/indosoulLiveBgImage.png'
 import CountUp from "react-countup";
 import Hero from '../components/global/Hero'
-import MusiciansCarousal from '../components/indosoullive/MusiciansCarousal'
 
 import bandVideo from '../assets/indosoul/videos/bandVideo.webm'
 import Experiences from '../components/indosoullive/Experiences';
