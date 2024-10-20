@@ -1,6 +1,6 @@
 import React from 'react'
 import Hero from '../components/global/Hero'
-import flowLogo from '../assets/flow/icons/flowLogo.svg'
+import flowLogo from '../assets/flow/icons/flowLogo.png'
 import PreLoader from '../components/global/PreLoader'
 import Description from '../components/flow/Description'
 import Catalog from '../components/flow/Catalog'

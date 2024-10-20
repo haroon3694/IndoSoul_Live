@@ -5,7 +5,7 @@ import PreLoader from "../components/global/PreLoader"
 import Experience from "../components/soulsabha/Experience"
 import NextSeason from "../components/soulsabha/NextSeason"
 import { soulSabhaGalleryImages, soulSabhaHeroImages } from "../data/soulSabhaData"
-import soulSabhaLogo from '../assets/soulsabha/icons/logoMainSoulSabhaWhite.svg'
+import soulSabhaLogo from '../assets/soulsabha/icons/soulSabhaLogo.png'
 import soulSabhaLogoDark from '../assets/soulsabha/icons/logoMainSoulSabha.svg'
 import soulSabhaBackground from '../assets/soulsabha/images/soulSabhaBackground.png'
 import BackgroundImageContainer from "../components/global/BackgroundImageContainer"

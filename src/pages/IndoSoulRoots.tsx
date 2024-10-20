@@ -1,5 +1,5 @@
 import React from 'react'
-import rootsLogo from '../assets/indosoulroots/icons/indoSoulRootsLogo.svg'
+import rootsLogo from '../assets/indosoulroots/icons/indoSoulRootsLogo.png'
 import PreLoader from '../components/global/PreLoader'
 import rootsHeroImage from '../assets/indosoulroots/images/rootsHero.png'
 import Hero from '../components/global/Hero'

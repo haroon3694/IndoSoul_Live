@@ -76,7 +76,7 @@ const OfferedExperienceCard: React.FC<OfferedExperienceCardProps> = ({ data, tex
                 : imageLogo ?
                   <div className='absolute bottom-5 sm:bottom-24 md:bottom-10 left-1/2 -translate-x-1/2 z-[15] w-40 flex flex-col justify-center items-center group-hover:-translate-y-[100%] transition-all duration-300 ease-in-out'>
                     <img className='w-full' src={data?.logo} alt="" />
-                    {pathname === '/' ? <p className='translate-y-20 sm:translate-y-32 md:translate-y-28 text-yellow-600 flex font-manrope'>Know More <span className='ml-1 mt-[0.5px]'>{`>`}</span> </p> : null}
+                    {pathname === '/' || pathname === '/indo-soul-live' ? <p className='translate-y-20 sm:translate-y-32 md:translate-y-28 text-yellow-600 flex font-manrope' style={{ color: findFillColor() }}>Know More <span className='ml-1 mt-[0.5px]'>{`>`}</span> </p> : null}
                   </div>
                   : null
             }

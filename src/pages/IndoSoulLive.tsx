@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { ourCareerData, musicianGallery } from '../data/indoSoulLiveData'
 import heroImageIndosoulLive from '../assets/indosoul/images/hero_landing.jpg'
-import indoSoluLiveLogo from '../assets/indosoul/icons/logo-main.svg'
+import indoSoluLiveLogo from '../assets/indosoul/icons/indosoulLiveLogo.png'
 import liveBgImage from '../assets/indosoul/images/indosoulLiveBgImage.png'
 import CountUp from "react-countup";
 import Hero from '../components/global/Hero'
@@ -123,7 +123,7 @@ const LandingPage = () => {
                 </div>
             </BackgroundImageContainer>
             </div>
-            <div className='w-full flex flex-col gap-20 lg:gap-40 px-10 md:px-0 mb-20 md:mb-52'>
+            <div className='w-full flex flex-col gap-20 lg:gap-40 md:px-0 mb-20 md:mb-52'>
                 {/* <MusiciansCarousal /> */}
                 <VideoComponent data={videoCarousaData} />
             </div>
