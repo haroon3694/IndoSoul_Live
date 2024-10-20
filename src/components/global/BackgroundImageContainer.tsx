@@ -9,7 +9,7 @@ interface BackgroundImageContainerProps {
 const BackgroundImageContainer: React.FC<BackgroundImageContainerProps> = ({ backgroundImage, children, bgSize }) => {
   return (
     <div 
-      className="w-full h-full max-h-screen bg-cover bg-center flex flex-col justify-center items-center"
+      className="w-full h-full max-h-screen lg:bg-cover bg-center flex flex-col justify-center items-center"
       style={{ backgroundImage: `url(${backgroundImage})`, backgroundSize: bgSize }}
     >
       {children}

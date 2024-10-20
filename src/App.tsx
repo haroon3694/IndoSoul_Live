@@ -12,6 +12,7 @@ import Flow from './pages/Flow';
 import IndoSoulRoots from './pages/IndoSoulRoots';
 import AboutUs from './pages/AboutUs';
 import ScrollToTop from './utils/ScrollToTop';
+import AcademyOfMusic from './pages/AcademyOfMusic';
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
         <Route path='/indo-soul-live' element={<IndoSoulLive />} />
         <Route path='/soul-sabha' element={<SoulSabha />} />
         <Route path='/flow' element={<Flow />} />
+        <Route path='/indo-soul-music' element={<AcademyOfMusic />} />
         <Route path='/indo-soul-roots' element={<IndoSoulRoots />} />
         <Route path='/privacy-policy' element={<PrivacyPolicy />} />
         <Route path='/about-us' element={<AboutUs />} />

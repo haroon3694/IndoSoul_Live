@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useLocation } from 'react-router'
 import PrimaryButton from '../global/PrimaryButton';
 import Slider from 'react-slick'
+import { findPrimaryButton } from '../../utils/helpers';
 
 interface HeroImage {
     id: number;
@@ -23,15 +24,7 @@ const Hero: React.FC<HeroProps> = ({ heroImages, logo, logoText, singleHeroImage
 
     const { pathname } = useLocation();
 
-    const findButton = () => {
-        if (pathname === '/indo-soul-live') {
-            return <PrimaryButton styles='bg-white text-black text-xl tracking-[1.5px]' shadow shadowStyles='bg-white' btnText='Enquire Here' onClick={() => window.open("https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2Oy2TFgjxR4qp0qcY_WHvf_woG_VGqWEdygUfyDpSAEOXfseze-9WW1KUBLE3MS5hbQsJhnCMg", '_blank')} />;
-        } else if (pathname === '/soul-sabha') {
-            return <PrimaryButton btnText='Enquire here' styles='text-white bg-gradient-to-r from-[#96d312] to-[#e92f2f]' shadow shadowStyles='bg-gradient-to-r from-[#96d312] to-[#e92f2f]' />;
-        } else {
-            return <PrimaryButton btnText='Enquire here' styles='text-white bg-gradient-to-r from-[#35D1AE] to-[#95D115]' shadow shadowStyles='bg-gradient-to-r from-[#35D1AE] to-[#95D115]' />;
-        }
-    }
+    const primaryButtonProps = findPrimaryButton(pathname);
 
     const settings = {
         dots: true,
@@ -74,13 +67,17 @@ const Hero: React.FC<HeroProps> = ({ heroImages, logo, logoText, singleHeroImage
             </div>
             <div className='absolute top-1/2 -translate-y-[20%] left-1/2 -translate-x-1/2 flex flex-col items-center w-full px-6 z-10'>
                 {
-                    logo ? <img src={logo} className={`${pathname === '/' ? 'w-80 md:w-96 mb-10' : 'w-52 md:w-60 mb-5'}`} alt="" /> : logoText ? <div className='text-white font-manrope font-light text-[4rem] tracking-wide text-center mt-60 mb-5'>{logoText}</div> : null
+                    logo ? <img src={logo} className={`w-80 md:w-96 mb-10`} alt="" /> : logoText ? <div className='text-white font-manrope font-light text-[4rem] tracking-wide text-center mt-60 mb-5'>{logoText}</div> : null
                 }
                 <div className='text-white flex flex-col items-center xl:text-nowrap text-md md:text-lg xl:text-xl md:gap-2 text-center'>
-                    { heroText }
-                    <div className='w-full flex justify-center items-center pt-20 md:pt-5'>
-                        { findButton() }
-                    </div>
+                    {heroText}
+                    {
+                        pathname === '/about-us' ? null : (
+                            <div className='w-full flex justify-center items-center pt-20 md:pt-5'>
+                                <PrimaryButton {...primaryButtonProps} />
+                            </div>
+                        )
+                    }
                 </div>
             </div>
         </div>

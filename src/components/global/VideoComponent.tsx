@@ -30,7 +30,7 @@ const VideoComponent: React.FC<VideoCarousalProps> = ({ data, header }) => {
         setCurrentSlideIndex(next);
     },
     customPaging: (i: number) => (
-        <div className={`w-3 h-3 rounded-full mt-8 ${currentSlideIndex === i ? 'bg-gray-600' : 'bg-gray-200'}`} />
+        <div className={`w-3 h-3 rounded-full mt-10 ${currentSlideIndex === i ? 'bg-gray-600' : 'bg-gray-200'}`} />
     )
   };
 
@@ -40,7 +40,9 @@ const VideoComponent: React.FC<VideoCarousalProps> = ({ data, header }) => {
       <Slider {...sliderSettings} className="w-full flex justify-center items-center">
         {
           data?.map((videoObj, i) => (
-              <video src={videoObj?.video} muted autoPlay loop={true} className={`rounded-sm w-full h-[80vh] object-cover ${currentSlideIndex === i ? '' : 'scale-95'}`}></video>
+             <div className={`rounded-sm h-[40vh] md:h-[80vh] ${currentSlideIndex === i ? 'px-10 md:px-14' : ''}`}>
+               <video src={videoObj?.video} muted autoPlay loop={true} className={`rounded-sm h-[40vh] md:h-[80vh] w-full object-cover ${currentSlideIndex === i ? '' : 'py-9 md:py-12'}`}></video>
+             </div>
           ))
         }
       </Slider>

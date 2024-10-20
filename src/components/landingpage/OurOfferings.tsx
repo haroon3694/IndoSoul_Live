@@ -8,10 +8,11 @@ import roots from '../../assets/landing/offerings/roots.png'
 import music from '../../assets/landing/offerings/music.png'
 import flow from '../../assets/landing/offerings/flow.png'
 
-import liveLogo from '../../assets/indosoul/icons/logo-main.svg'
-import soulLogo from '../../assets/soulsabha/icons/logoMainSoulSabhaWhite.svg'
-import rootsLogo from '../../assets/indosoulroots/icons/indoSoulRootsLogo.svg'
-import flowLogo from '../../assets/flow/icons/flowLogo.svg'
+import liveLogo from '../../assets/indosoul/icons/indosoulLiveLogo.png'
+import soulLogo from '../../assets/soulsabha/icons/soulSabhaLogo.png'
+import rootsLogo from '../../assets/indosoulroots/icons/indoSoulRootsLogo.png'
+import flowLogo from '../../assets/flow/icons/flowLogo.png'
+import musicLogo from '../../assets/academyofmusic/icons/academyOfMusicLogo.png'
 import { useNavigate } from 'react-router'
 
 interface PopUpData {
@@ -59,7 +60,7 @@ const OurOfferings: React.FC = () => {
     {
       id: 3,
       image: music,
-      logo: '',
+      logo: musicLogo,
       title: 'Academy Of Music',
       content: [''],
       links: '/indo-soul-music',
