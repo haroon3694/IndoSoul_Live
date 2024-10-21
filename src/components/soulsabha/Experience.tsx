@@ -6,9 +6,9 @@ import { soulSabhaExperienceData } from '../../data/soulSabhaData';
 const Experience: React.FC = () => {
 
     return (
-        <div className='w-full px-5 sm:px-10 2xl:px-60 md:pt-20 relative'>
-            <SeasonHeader text={`soul sabha experience`} styles='bg-clip-text text-transparent bg-gradient-to-r from-[#96d312] to-[#e92f2f] md:text-white mb-10 z-10 relative' />
-            <div className='w-full grid grid-cols-1 sm:grid-cols-2 md:flex justify-center justify-items-center items-center gap-10 xl:gap-10 mb-24 z-10 relative'>
+        <div className='w-full px-5 md:pt-20 relative'>
+            <SeasonHeader text={`soul sabha experience`} styles='bg-clip-text text-transparent bg-gradient-to-r from-[#96d312] to-[#e92f2f] md:text-white mb-10 z-10 relative text-center' />
+            <div className='w-full flex flex-wrap md:flex-nowrap justify-center items-center gap-12 md:gap-5 xl:gap-10 px-16 mb-24 z-10 relative'>
                 {
                     soulSabhaExperienceData?.map((data) => (
                         <OfferedExperienceCard key={data?.id} data={data} textLogo={true} infoPopup={true} buttonColor='soulGreen' />

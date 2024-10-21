@@ -16,7 +16,7 @@ const NextSeason: React.FC = () => {
                     ))
                 }
             </div>
-            <div className='w-full grid grid-cols-2 md:flex md:flex-row justify-center items-center gap-10 md:gap-4 px-10 sm:px-10 md:px-20 lg:px-48 xl:px-72 mb-36'>
+            <div className='w-full flex flex-wrap justify-center items-center gap-12 md:gap-5 xl:gap-10 px-10 mb-36'>
                 {
                     seasonTwoData?.seasonContent?.map((data) => (
                         <div key={data?.id} className='flex flex-col justify-center items-center text-center rounded-xl w-full px-5 md:px-0'>
