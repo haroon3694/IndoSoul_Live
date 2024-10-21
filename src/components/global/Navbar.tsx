@@ -18,7 +18,7 @@ const Navbar = () => {
 
     return (
         <>
-            <div className='w-full p-3 px-8 fixed top-0 left-0 z-20 hidden md:flex justify-center items-center text-white'>
+            <div className='w-full p-3 px-8 fixed top-0 left-0 z-20 hidden lg:flex justify-center items-center text-white'>
                 <div className='w-full bg-[#282827] flex justify-between items-center pl-10 rounded-full p-2'>
                     <div className='flex items-center gap-14 w-fit'>
                         <h1 className='font-manrope text-sm font-semibold cursor-pointer' onClick={() => navigate(`/`)}>Home</h1>

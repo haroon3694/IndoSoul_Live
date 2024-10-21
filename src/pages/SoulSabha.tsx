@@ -27,7 +27,7 @@ const SoulSabhaLandingPage = () => {
         <OurDescription />
         <div className="md:my-32">
           <div className="hidden md:block">
-            <BackgroundImageContainer backgroundImage={soulSabhaBackground} bgSize='100% 100%'>
+            <BackgroundImageContainer backgroundImage={soulSabhaBackground}>
               <Experience />
             </BackgroundImageContainer>
           </div>

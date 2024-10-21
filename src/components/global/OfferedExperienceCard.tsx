@@ -64,8 +64,8 @@ const OfferedExperienceCard: React.FC<OfferedExperienceCardProps> = ({ data, tex
     <>
       <div key={data?.id} className='w-fit flex flex-col gap-4 items-center justify-center cursor-pointer'>
         <div className='w-fit h-fit group group-hover:border border-red-500 transition-all duration-200 ease-in-out'>
-          <div className={`w-64 md:w-60 h-[45vh] md:h-[55vh] rounded-xl relative overflow-hidden group group-hover:border-[3px] transition-all duration-200 ease-in-out`} style={{ borderColor: findFillColor() }} onClick={infoPopup ? () => setViewPopUp(true) : onCardClick}>
-            <img src={data?.image} className='w-64 md:w-60 h-[45vh] md:h-[55vh] rounded-xl object-cover group-hover:scale-150 group-hover:blur-lg transition-all duration-500 ease-in-out' alt="" />
+          <div className={`min-w-64 h-[45vh] md:h-[40vh] xl:h-[50vh] rounded-xl relative overflow-hidden group group-hover:border-[3px] transition-all duration-200 ease-in-out`} style={{ borderColor: findFillColor() }} onClick={infoPopup ? () => setViewPopUp(true) : onCardClick}>
+            <img src={data?.image} className='min-w-64 h-[45vh] md:h-[40vh] xl:h-[50vh] rounded-xl object-cover group-hover:scale-150 group-hover:blur-lg transition-all duration-500 ease-in-out' alt="" />
             <div className='absolute inset-0 z-10 bg-gradient-to-b from-transparent to-black opacity-60 group-hover:opacity-100 transition-all duration-500 ease-in-out'></div>
             {
               textLogo ?

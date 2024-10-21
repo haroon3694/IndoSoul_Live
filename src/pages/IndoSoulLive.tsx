@@ -100,9 +100,9 @@ const LandingPage = () => {
                     <div className='flex flex-col md:flex-row justify-center md:items-center gap-10 md:gap-20 xl:gap-32 py-20 font-normal'>
                         {
                             ourCareerData?.experience?.map((data, index) => (
-                                <div key={data?.id} className='text-left md:text-center font-bebasNeue font-extralight'>
+                                <div key={data?.id} className=' font-bebasNeue font-extralight'>
 
-                                    <h1 className='text-white text-9xl lg:text-[8rem] font-extralight'>
+                                    <h1 className='text-white text-6xl font-extralight'>
                                         {
                                             isVisible ? (
                                                 <>
@@ -115,7 +115,7 @@ const LandingPage = () => {
                                             ) : null
                                         }
                                     </h1>
-                                    <h1 ref={experienceRefs[index]} className='text-white text-4xl uppercase ml-5 md:ml-0'>{data?.title}</h1>
+                                    <h1 ref={experienceRefs[index]} className='text-white text-2xl uppercase ml-5 md:ml-3'>{data?.title}</h1>
                                 </div>
                             ))
                         }
