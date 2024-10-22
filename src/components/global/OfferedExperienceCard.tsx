@@ -69,7 +69,7 @@ const OfferedExperienceCard: React.FC<OfferedExperienceCardProps> = ({ data, tex
             <div className='absolute inset-0 z-10 bg-gradient-to-b from-transparent to-black opacity-60 group-hover:opacity-100 transition-all duration-500 ease-in-out'></div>
             {
               textLogo ?
-                <span className='absolute bottom-24 md:bottom-10 left-1/2 -translate-x-1/2 z-[15] w-[150px] flex flex-col justify-center items-center group-hover:-translate-y-[100%] transition-all duration-300 ease-in-out'>
+                <span className={`absolute bottom-24 md:bottom-10 left-1/2 -translate-x-1/2 z-[15] ${data?.title?.length > 30 ? 'w-[200px]' : ' w-[140px]'} flex flex-col justify-center items-center group-hover:-translate-y-[100%] transition-all duration-300 ease-in-out`}>
                   <h1 className='font-bebasNeue text-[35px] leading-none text-center text-white'>{data?.title}</h1>
                   {pathname !== '/' ? <p className='translate-y-20 sm:translate-y-32 md:translate-y-28 flex font-manrope' style={{ color: findFillColor() }}>Know More <span className='ml-1 mt-[0.5px]'>{`>`}</span> </p> : null}
                 </span>
