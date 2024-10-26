@@ -1,6 +1,7 @@
 import React from 'react'
 import SeasonHeader from '../global/SeasonHeader'
 import separator from '../../assets/aboutus/icons/separator.svg'
+import SVGPageSeparator from '../global/SVGPageSeparator';
 
 const Musicians: React.FC = () => {
 
@@ -40,7 +41,7 @@ const Musicians: React.FC = () => {
   return (
     <div>
       <SeasonHeader text={`musicians`} styles='bg-clip-text text-transparent bg-gradient-to-r from-[#F44007] to-[#1E1E1E] tracking-none mb-8' />
-      <div className='w-full mb-28'>
+      <div className='w-full'>
         <div className='w-full px-5 lg:px-0 lg:w-1/2 mx-auto grid grid-cols-2 md:grid-cols-3 gap-x-4 sm:gap-x-20 gap-y-4 sm:gap-y-8'>
           {
             musiciansData?.map((data) => (
@@ -59,7 +60,7 @@ const Musicians: React.FC = () => {
           }
         </div>
       </div>
-      <img src={separator} className='w-full mb-28' alt="" />
+      <SVGPageSeparator separator={separator} />
     </div>
   )
 }
