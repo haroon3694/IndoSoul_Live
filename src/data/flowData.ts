@@ -3,7 +3,7 @@ import heroImage from '../assets/flow/images/flowHero.png'
 import catalogImage1 from '../assets/flow/images/catalogImages/01.png'
 import catalogImage2 from '../assets/flow/images/catalogImages/02.png'
 import catalogImage3 from '../assets/flow/images/catalogImages/03.png'
-import catalogImage4 from '../assets/flow/images/catalogImages/04.png'
+// import catalogImage4 from '../assets/flow/images/catalogImages/04.png'
 import { CatalogDataType, DescriptionDataType, FlowHeroImagesType } from '../types/flowTypes'
 
 export const flowHeroImages: FlowHeroImagesType[] = [
@@ -52,11 +52,11 @@ export const catalogData: CatalogDataType[] = [
     content: '',
     links: '',
   },
-  {
-    id: 3,
-    image: catalogImage4,
-    title: '',
-    content: '',
-    links: '',
-  },
+  // {
+  //   id: 3,
+  //   image: catalogImage4,
+  //   title: '',
+  //   content: '',
+  //   links: '',
+  // },
 ];

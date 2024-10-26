@@ -4,18 +4,44 @@ import flowLogo from '../assets/flow/icons/flowLogo.png'
 import PreLoader from '../components/global/PreLoader'
 import Description from '../components/flow/Description'
 import Catalog from '../components/flow/Catalog'
-import { soulSabhaGalleryImages } from '../data/soulSabhaData'
-import ArtistGallery from '../components/global/ArtistGallery'
+import bandVideo from '../assets/indosoul/videos/bandVideo.webm'
 import Requirement from '../components/flow/Requirement'
 import { flowHeroImages } from '../data/flowData'
+import VideoCarousal from '../components/global/VideoCarousal'
 
 const Flow: React.FC = () => {
 
-  const { visualArtsImages, listiningSongsImages } = soulSabhaGalleryImages;
+  const videoCarousaData = [
+    {
+        id: 0,
+        title: 'video 1',
+        video: bandVideo,
+    },
+    {
+        id: 1,
+        title: 'video 2',
+        video: bandVideo,
+    },
+    {
+        id: 2,
+        title: 'video 3',
+        video: bandVideo,
+    },
+    {
+        id: 3,
+        title: 'video 4',
+        video: bandVideo,
+    },
+    {
+        id: 4,
+        title: 'video 5',
+        video: bandVideo,
+    },
+];
 
   const heroText = (
     <div className='max-w-md text-wrap'>
-      <h1 className='text-[1rem] leading-10 tracking-widest'>When creativity meets craftsmanship to give expression to an emotion, music is born</h1>
+      <h1 className='text-[1rem] leading-6 tracking-widest'>When creativity meets craftsmanship to give expression to an emotion, music is born</h1>
     </div>
   );
 
@@ -26,7 +52,9 @@ const Flow: React.FC = () => {
       <Description />
       <Catalog />
       <Requirement />
-      <ArtistGallery imagesLTR={visualArtsImages} imagesRTL={listiningSongsImages} />
+      <div className='mb-32'>
+        <VideoCarousal data={videoCarousaData} />
+      </div>
     </div>
   )
 }
