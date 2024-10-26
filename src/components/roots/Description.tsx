@@ -1,3 +1,5 @@
+import rootsLogo from '../../assets/indosoulroots/icons/roots-logo.svg'
+
 const Description = () => {
 
   const descriptionData = [
@@ -25,6 +27,9 @@ const Description = () => {
 
   return (
     <div className='pt-16 pb-20'>
+      <div className="w-full flex justify-center items-center mb-20 px-10">
+        <img src={rootsLogo} className='w-full max-w-[800px]' alt="" />
+      </div>
       <div className='w-full px-10 md:px-20 lg:px-48 xl:px-80 mt-5'>
         {
           descriptionData?.map((data) => (

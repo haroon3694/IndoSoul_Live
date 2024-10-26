@@ -12,7 +12,7 @@ interface data {
   video: string;
 }
 
-const VideoComponent: React.FC<VideoCarousalProps> = ({ data, header }) => {
+const VideoCarousal: React.FC<VideoCarousalProps> = ({ data, header }) => {
 
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
 
@@ -50,4 +50,4 @@ const VideoComponent: React.FC<VideoCarousalProps> = ({ data, header }) => {
   )
 }
 
-export default VideoComponent
+export default VideoCarousal
