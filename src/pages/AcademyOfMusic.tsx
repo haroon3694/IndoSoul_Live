@@ -6,7 +6,7 @@ import PreLoader from '../components/global/PreLoader'
 import Purpose from '../components/music/Purpose'
 import MusicOfferings from '../components/music/MusicOfferings'
 import Educators from '../components/music/Educators'
-import VideoComponent from '../components/global/VideoComponent'
+import VideoCarousal from '../components/global/VideoCarousal'
 import bandVideo from '../assets/indosoul/videos/bandVideo.webm'
 import ArtistGallery from '../components/global/ArtistGallery'
 import { musicianGallery } from '../data/indoSoulLiveData'
@@ -68,7 +68,7 @@ const AcademyOfMusic: React.FC = () => {
       <CourseContent />
       <Educators />
       <div className='mb-40'>
-        <VideoComponent data={videoCarousaData} />
+        <VideoCarousal data={videoCarousaData} />
       </div>
       <ArtistGallery imagesLTR={musicianGallery.leftToRight} imagesRTL={musicianGallery.rightToLeft} />
     </div>

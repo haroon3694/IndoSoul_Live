@@ -9,7 +9,7 @@ import Hero from '../components/global/Hero'
 import bandVideo from '../assets/indosoul/videos/bandVideo.webm'
 import Experiences from '../components/indosoullive/Experiences';
 import ArtistGallery from '../components/global/ArtistGallery';
-import VideoComponent from '../components/global/VideoComponent';
+import VideoCarousal from '../components/global/VideoCarousal';
 import PreLoader from '../components/global/PreLoader';
 import BackgroundImageContainer from '../components/global/BackgroundImageContainer';
 
@@ -125,7 +125,7 @@ const LandingPage = () => {
             </div>
             <div className='w-full flex flex-col gap-20 lg:gap-40 md:px-0 mb-20 md:mb-52'>
                 {/* <MusiciansCarousal /> */}
-                <VideoComponent data={videoCarousaData} />
+                <VideoCarousal data={videoCarousaData} />
             </div>
             <ArtistGallery imagesLTR={musicianGallery.leftToRight} imagesRTL={musicianGallery.rightToLeft} />
         </div>
