@@ -26,7 +26,7 @@ export const navigationData = [
     },
     {
       id: 5,
-      title: 'Flow',
+      title: 'Flow with Karthik Iyer',
       route: '/flow',
     },
     {

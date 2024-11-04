@@ -4,9 +4,10 @@ import OurDescription from "../components/soulsabha/OurDescription"
 import PreLoader from "../components/global/PreLoader"
 import Experience from "../components/soulsabha/Experience"
 import NextSeason from "../components/soulsabha/NextSeason"
-import { soulSabhaGalleryImages, soulSabhaHeroImages } from "../data/soulSabhaData"
+import { soulSabhaGalleryImages } from "../data/soulSabhaData"
 import soulSabhaLogo from '../assets/soulsabha/icons/soulSabhaLogo.png'
-import soulSabhaLogoDark from '../assets/soulsabha/icons/logoMainSoulSabha.svg'
+import soulSabhaLogoDark from '../assets/soulsabha/icons/logoMainSoulSabha.png'
+import soulSabhaHeroImage from '../assets/soulsabha/images/heroImage.jpg'
 import soulSabhaBackground from '../assets/soulsabha/images/soulSabhaBackground.png'
 import BackgroundImageContainer from "../components/global/BackgroundImageContainer"
 import PreviousSeason from "../components/soulsabha/PreviousSeason"
@@ -23,17 +24,12 @@ const SoulSabhaLandingPage = () => {
     <div className="font-manrope">
       <PreLoader logoImage={soulSabhaLogoDark} />
       <div className="bg-[#FCFBF6]">
-        <Hero heroImages={soulSabhaHeroImages} logo={soulSabhaLogo} heroText={heroText} />
+        <Hero singleHeroImage={soulSabhaHeroImage} logo={soulSabhaLogo} heroText={heroText} />
         <OurDescription />
-        <div className="md:my-32">
-          <div className="hidden md:block">
-            <BackgroundImageContainer backgroundImage={soulSabhaBackground}>
-              <Experience />
-            </BackgroundImageContainer>
-          </div>
-          <div className="md:hidden">
+        <div className="mt-10 mb-20 md:my-32">
+          <BackgroundImageContainer backgroundImage={soulSabhaBackground}>
             <Experience />
-          </div>
+          </BackgroundImageContainer>
         </div>
         <NextSeason />
         <PreviousSeason />

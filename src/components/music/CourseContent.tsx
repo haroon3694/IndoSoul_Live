@@ -31,18 +31,18 @@ const CourseContent: React.FC = () => {
   ];
 
   return (
-    <div className='w-full mb-32'>
-      <SeasonHeader text='what you will learn' styles='bg-clip-text text-transparent bg-gradient-to-r from-[#10688E] to-[#02A4EA] mb-8' />
-      <div className='flex flex-wrap justify-center items-center gap-10 mb-28'>
+    <div className='w-full mb-20'>
+      <SeasonHeader text='what you will learn' styles='bg-clip-text text-transparent bg-gradient-to-r from-[#10688E] to-[#02A4EA] mb-3 md:mb-8' />
+      <div className='flex flex-wrap justify-center items-center gap-10 mb-20'>
         {
           technicalOfferings?.map((data) => (
-            <div className='w-fit flex flex-col justify-center items-center gap-4' key={data?.id}>
-              <div key={data?.id} className='w-52 aspect-square relative rounded-2xl group overflow-hidden'>
-                <img src={data?.image} className='w-full rounded-2xl group-hover:scale-[200%] group-hover:blur-md transition-all duration-500 ease-in-out' alt="" />
+            <div className='w-fit flex flex-col justify-center items-center gap-2 md:gap-4' key={data?.id}>
+              <div key={data?.id} className='w-[70%] md:w-52 aspect-square relative rounded-2xl group overflow-hidden'>
+                <img src={data?.image} className='w-full rounded-2xl group-hover:scale-[120%] transition-all duration-300 ease-in-out' alt="" />
               </div>
-              <div className='w-56 text-center'>
+              <div className='w-64 md:w-56 text-center'>
                 <h1 className='text-lg mb-1 font-semibold'>{data?.title}</h1>
-                <p className='text-sm w-fit'>{data?.desc}</p>
+                <p className='text-xs leading-5 font-medium w-fit'>{data?.desc}</p>
               </div>
             </div>
           ))

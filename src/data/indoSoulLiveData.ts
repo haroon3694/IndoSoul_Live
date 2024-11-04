@@ -1,6 +1,6 @@
 import aikiyambg from '../assets/indosoul/images/experienceCards/01.png'
-import third from '../assets/indosoul/images/experienceCards/03.png'
-import fourth from '../assets/indosoul/images/experienceCards/04.png'
+import third from '../assets/indosoul/images/experienceCards/02.png'
+import fourth from '../assets/indosoul/images/experienceCards/03.png'
 
 import karthik from '../assets/indosoul/images/musicianCarousal/karthik.png'
 import ramkumar from '../assets/indosoul/images/musicianCarousal/ramkumar.png'
@@ -18,11 +18,27 @@ import music_6 from '../assets/indosoul/images/gallery/06.jpg'
 import music_7 from '../assets/indosoul/images/gallery/07.webp'
 import music_8 from '../assets/indosoul/images/gallery/08.jpg'
 
+import heroImageIndosoulLive from '../assets/indosoul/images/hero_landing.png'
 
 import aikiyamLogo from '../assets/indosoul/images/experienceCards/akyam.svg'
 import ensambleLogo from '../assets/indosoul/images/experienceCards/ensemble.svg'
 import indoSoulLogo from '../assets/indosoul/images/experienceCards/indoSoul.svg'
-import { ExperienceDataType, MusicianGalleryType, OurCareerDataType } from '../types/indoSoulLiveType'
+import { ExperienceDataType, OurCareerDataType } from '../types/indoSoulLiveType'
+import { MusicianGalleryType } from '../types/globalTypes'
+
+
+export const heroImages = [
+    {
+        id: 0,
+        image: heroImageIndosoulLive,
+        title: '',
+    },
+    {
+        id: 1,
+        image: heroImageIndosoulLive,
+        title: '',
+    },
+];
 
 export const experienceData: ExperienceDataType[] = [
     {
@@ -43,7 +59,7 @@ export const experienceData: ExperienceDataType[] = [
         links: ' https://www.youtube.com/watch?v=BMUCeFOK0N0'
     },
     {
-        id: 3,
+        id: 1,
         title: 'IndoSoul',
         image: third,
         logo: indoSoulLogo,
@@ -61,7 +77,7 @@ export const experienceData: ExperienceDataType[] = [
         links: 'https://www.youtube.com/watch?v=GSqdRX95quA'
     },
     {
-        id: 4,
+        id: 2,
         title: 'IndoSoul Ensemble',
         image: fourth,
         logo: ensambleLogo,

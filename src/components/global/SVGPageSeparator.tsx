@@ -6,7 +6,7 @@ interface PageSeparatorProps {
 
 const SVGPageSeparator: React.FC<PageSeparatorProps> = ({ separator }) => {
   return (
-    <div className='w-full my-28 fflex justify-center items-center'>
+    <div className='w-full my-14 md:my-28 fflex justify-center items-center'>
       <img src={separator} className='w-full' alt="" />
     </div>
   )

@@ -34,29 +34,22 @@ export const catalogData: CatalogDataType[] = [
   {
     id: 0,
     image: catalogImage1,
-    title: '',
+    title: 'Films',
     content: '',
     links: '',
   },
   {
     id: 1,
     image: catalogImage2,
-    title: '',
+    title: 'Podcasts',
     content: '',
     links: '',
   },
   {
     id: 2,
     image: catalogImage3,
-    title: '',
+    title: 'Ad Jingles',
     content: '',
     links: '',
   },
-  // {
-  //   id: 3,
-  //   image: catalogImage4,
-  //   title: '',
-  //   content: '',
-  //   links: '',
-  // },
 ];

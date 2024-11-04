@@ -1,25 +1,8 @@
-import { DescriptionDataType, SeasonTwoDataType, SocialMediaDataType, SoulSabhaExperienceDataType, SoulSabhaGalleryImagesType, SoulSabhaHeroImagesType } from '../types/soulSabhaTypes'
+import { ArtistDataType, DescriptionDataType, SeasonTwoDataType, SocialMediaDataType, SoulSabhaExperienceDataType, SoulSabhaHeroImagesType } from '../types/soulSabhaTypes'
 import heroImg1 from '../assets/soulsabha/images/heroimages/heroImage1.png'
 import heroImg2 from '../assets/soulsabha/images/heroimages/heroImage2.jpg'
 import heroImg3 from '../assets/soulsabha/images/heroimages/heroImage3.jpg'
 
-import songsImage1 from '../assets/soulsabha/images/artists/02_card/soulsabha-02_card-01_1000px.jpg'
-import songsImage2 from '../assets/soulsabha/images/artists/02_card/soulsabha-02_card-02_1000px.jpg'
-import songsImage3 from '../assets/soulsabha/images/artists/02_card/soulsabha-02_card-03_1000px.jpg'
-import songsImage4 from '../assets/soulsabha/images/artists/02_card/soulsabha-02_card-04_1000px.jpg'
-import songsImage5 from '../assets/soulsabha/images/artists/02_card/soulsabha-02_card-05_1000px.jpg'
-import songsImage6 from '../assets/soulsabha/images/artists/02_card/soulsabha-02_card-06_1000px.jpg'
-import songsImage7 from '../assets/soulsabha/images/artists/02_card/soulsabha-02_card-07_1000px.jpg'
-
-import visualArtsImage1 from '../assets/soulsabha/images/artists/03_card/aikiyam-03_card-01_1000px.jpg'
-import visualArtsImage2 from '../assets/soulsabha/images/artists/03_card/aikiyam-03_card-02_1000px.jpg'
-import visualArtsImage3 from '../assets/soulsabha/images/artists/03_card/aikiyam-03_card-03_1000px.jpg'
-import visualArtsImage4 from '../assets/soulsabha/images/artists/03_card/aikiyam-03_card-04_1000px.jpg'
-import visualArtsImage5 from '../assets/soulsabha/images/artists/03_card/aikiyam-03_card-05_1000px.jpg'
-
-import exp_2 from '../assets/soulsabha/images/artists/vertical_images/02.png';
-import exp_3 from '../assets/soulsabha/images/artists/vertical_images/03.png';
-import exp_4 from '../assets/soulsabha/images/artists/vertical_images/04.png';
 
 import songsImageSingle1 from '../assets/soulsabha/images/artists/02_card/soulsabha-02_card-01_1000px.jpg'
 import songsImageSingle2 from '../assets/soulsabha/images/artists/02_card/soulsabha-02_card-02_1000px.jpg'
@@ -35,6 +18,20 @@ import visualArtsImageSingle3 from '../assets/soulsabha/images/artists/03_card/a
 import visualArtsImageSingle4 from '../assets/soulsabha/images/artists/03_card/aikiyam-03_card-04_1000px.jpg'
 import visualArtsImageSingle5 from '../assets/soulsabha/images/artists/03_card/aikiyam-03_card-05_1000px.jpg'
 
+import exp_2 from '../assets/soulsabha/images/artists/vertical_images/01.png';
+import exp_3 from '../assets/soulsabha/images/artists/vertical_images/02.png';
+import exp_4 from '../assets/soulsabha/images/artists/vertical_images/03.png';
+
+import galleryImage1 from '../assets/soulsabha/images/gallery/01.png'
+import galleryImage2 from '../assets/soulsabha/images/gallery/02.png'
+import galleryImage3 from '../assets/soulsabha/images/gallery/03.png'
+import galleryImage4 from '../assets/soulsabha/images/gallery/04.png'
+import galleryImage5 from '../assets/soulsabha/images/gallery/05.png'
+import galleryImage6 from '../assets/soulsabha/images/gallery/06.png'
+import galleryImage7 from '../assets/soulsabha/images/gallery/07.png'
+import galleryImage8 from '../assets/soulsabha/images/gallery/08.png'
+import galleryImage9 from '../assets/soulsabha/images/gallery/09.png'
+
 import instagramDark from '../assets/icons/instagram_dark.svg'
 import facebookDark from '../assets/icons/facebook_dark.svg'
 import spotifyDark from '../assets/icons/spotify_dark.svg'
@@ -45,6 +42,14 @@ import mic from '../assets/soulsabha/icons/soulSabhaMic.svg'
 import hear from '../assets/soulsabha/icons/soulSabhaHear.svg'
 import speaker from '../assets/soulsabha/icons/soulSabhaSpeaker.svg'
 import rupee from '../assets/soulsabha/icons/soulSabhaRupee.svg'
+
+import artist_1 from '../assets/soulsabha/images/artists/square-images/01.png'
+import artist_2 from '../assets/soulsabha/images/artists/square-images/02.png'
+import artist_3 from '../assets/soulsabha/images/artists/square-images/03.png'
+import artist_4 from '../assets/soulsabha/images/artists/square-images/04.png'
+import artist_5 from '../assets/soulsabha/images/artists/square-images/05.png'
+
+import { GalleryImagesType } from '../types/globalTypes'
 
 export const soulSabhaHeroImages: SoulSabhaHeroImagesType[] = [
     {
@@ -64,22 +69,28 @@ export const soulSabhaHeroImages: SoulSabhaHeroImagesType[] = [
     },
 ];
 
-export const soulSabhaGalleryImages: SoulSabhaGalleryImagesType = {
+export const soulSabhaGalleryImages: GalleryImagesType = {
     listiningSongsImages: [
-        songsImage1,
-        songsImage5,
-        songsImage4,
-        songsImage7,
-        songsImage2,
-        songsImage6,
-        songsImage3,
+        galleryImage1,
+        galleryImage2,
+        galleryImage3,
+        galleryImage4,
+        galleryImage5,
+        galleryImage6,
+        galleryImage7,
+        galleryImage8,
+        galleryImage9,
     ],
     visualArtsImages: [
-        visualArtsImage1,
-        visualArtsImage4,
-        visualArtsImage2,
-        visualArtsImage5,
-        visualArtsImage3,
+        galleryImage2,
+        galleryImage5,
+        galleryImage1,
+        galleryImage3,
+        galleryImage7,
+        galleryImage9,
+        galleryImage6,
+        galleryImage8,
+        galleryImage4,
     ],
 };
 
@@ -192,4 +203,47 @@ export const socialMediaData: SocialMediaDataType[] = [
         link: 'https://www.facebook.com/indosoullive?mibextid=hu50Ix',
         title: 'Facebook'
     },
+];
+
+export const artistData: ArtistDataType[] = [
+  {
+    id: 0,
+    image: artist_1,
+    title: 'Abiyana',
+    season: 'season 01',
+    youtubeLink: 'https://youtube.com/@abishen',
+    spotifyLink: 'https://youtube.com/@abishen',
+  },
+  {
+    id: 1,
+    image: artist_3,
+    title: 'Haricharan',
+    season: 'season 01',
+    youtubeLink: 'https://youtube.com/@haricharanmusic',
+    spotifyLink: 'https://youtube.com/@haricharanmusic',
+  },
+  {
+    id: 2,
+    image: artist_4,
+    title: 'Spoorthi',
+    season: 'season 01',
+    youtubeLink: 'https://youtube.com/@spoorthirao',
+    spotifyLink: 'https://youtube.com/@spoorthirao',
+  },
+  {
+    id: 3,
+    image: artist_2,
+    title: 'Trichur Brothers',
+    season: 'season 01',
+    youtubeLink: '',
+    spotifyLink: '',
+  },
+  {
+    id: 4,
+    image: artist_5,
+    title: 'Rajhesh Vaidhya',
+    season: 'season 01',
+    youtubeLink: 'https://youtube.com/@rajheshvaidhyaofficial',
+    spotifyLink: 'https://youtube.com/@rajheshvaidhyaofficial',
+  },
 ];

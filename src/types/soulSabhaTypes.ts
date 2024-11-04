@@ -4,11 +4,6 @@ export interface SoulSabhaHeroImagesType {
   title: string;
 }
 
-export interface SoulSabhaGalleryImagesType {
-  listiningSongsImages: string[];
-  visualArtsImages: string[];
-}
-
 export interface DescriptionDataType {
   id: number;
   desc: string;
@@ -41,3 +36,12 @@ export interface SocialMediaDataType {
   link: string;
   title: string;
 };
+
+export interface ArtistDataType {
+  id: number;
+  image: string;
+  title: string;
+  season: string;
+  youtubeLink: string;
+  spotifyLink: string;
+}

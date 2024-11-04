@@ -1,10 +1,14 @@
-import { useState } from 'react';
-import { useLocation, useNavigate } from 'react-router';
+// ... existing imports ...
+import { useState, useEffect, useRef } from 'react';
 import NavButton from './NavButton';
-import { navigationData } from '../../data/navigationData';
+import { useLocation, useNavigate } from 'react-router';
 import { findFillColor, getNavButtonProps } from '../../utils/helpers';
+import { navigationData } from '../../data/navigationData';
 
 const Navbar = () => {
+    // ... existing state and hooks ...
+    const [isVisible, setIsVisible] = useState(true);
+    const [lastScrollY, setLastScrollY] = useState(0);
 
     const handleEmailClick = () => { window.location.href = 'mailto:contact@indosoul.in' };
 
@@ -16,9 +20,58 @@ const Navbar = () => {
 
     const navButtonProps = getNavButtonProps(pathname);
 
+    const timeoutId: React.MutableRefObject<null | number> = useRef(null);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const currentScrollY = window.scrollY;
+
+            // Initial check to hide navbar if page loads scrolled down
+            if (window.scrollY > 100) {
+                setIsVisible(false);
+            }
+
+            // Clear any existing timeout
+            if (timeoutId.current) {
+                clearTimeout(timeoutId.current);
+            }
+
+            if (currentScrollY <= 100) {
+                // Always show navbar when at the top
+                setIsVisible(true);
+            } else {
+                // If scrolling up, show the navbar
+                if (currentScrollY < lastScrollY) {
+                    setIsVisible(true);
+
+                    // Hide after 2 seconds
+                    timeoutId.current = setTimeout(() => {
+                        setIsVisible(false);
+                        timeoutId.current = null;
+                    }, 2000);
+                } else {
+                    // If scrolling down, hide immediately
+                    setIsVisible(false);
+                }
+            }
+
+            setLastScrollY(currentScrollY);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+            if (timeoutId.current) {
+                clearTimeout(timeoutId.current);
+            }
+        };
+    }, [lastScrollY]);
+
     return (
         <>
-            <div className='w-full p-3 px-8 fixed top-0 left-0 z-20 hidden lg:flex justify-center items-center text-white'>
+            <div className={`w-full p-3 px-8 fixed top-0 left-0 z-30 hidden lg:flex justify-center items-center text-white transition-transform duration-300 ${isVisible ? 'translate-y-0' : '-translate-y-full'
+                }`}>
                 <div className='w-full bg-[#282827] flex justify-between items-center pl-10 rounded-full p-2'>
                     <div className='flex items-center gap-14 w-fit'>
                         <h1 className='font-manrope text-sm font-semibold cursor-pointer' onClick={() => navigate(`/`)}>Home</h1>
@@ -72,4 +125,4 @@ const Navbar = () => {
     )
 }
 
-export default Navbar
+export default Navbar;

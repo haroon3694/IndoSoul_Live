@@ -16,16 +16,13 @@
   --musicBlue: #21b2f1;
   --flowGreen: #0fa677;
   --white: #ffffff;
-  --aboutUsRed: #CE3100;
+  --aboutUsRed: #F44007;
 }
 
 
 body {
   font-family: "Manrope", sans-serif;
 }
-
-
-
 
 
 
@@ -107,3 +104,44 @@ body {
   border-image: linear-gradient(to right, #96d312, #e92f2f);
   border-image-slice: 1;
 }
+
+
+.loader {
+  width: 70px;
+  height: 35px;
+  position: relative;
+  overflow: hidden;
+}
+.loader:before {
+  content: "";
+  width: 57px;
+  height: 57px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: 5px solid #0000;
+  border-color: #fff #fff #0000 #0000;
+  border-radius: 50%;
+  box-sizing: border-box;
+  animation: rotate 3s ease-in-out infinite;
+  transform: rotate(-200deg);
+}
+@keyframes rotate {
+  0% {
+    border-width: 10px;
+  }
+  25% {
+    border-width: 3px;
+  }
+  50% {
+    transform: rotate(115deg);
+    border-width: 10px;
+  }
+  75% {
+    border-width: 3px;
+  }
+  100% {
+    border-width: 10px;
+  }
+}
+    

@@ -36,7 +36,7 @@ const SocialMediaIconsColor: React.FC<SocialMediaIconsColor> = ({ gap }) => {
     ];
 
   return (
-    <div className={`w-fit justify-center md:w-fit flex items-center gap-5 md:gap-${gap ? gap : '20'}`}>
+    <div className={`w-fit justify-center md:w-fit flex items-center gap-${gap ? gap : '20'}`}>
       {
         socialMedia?.map((data, i) => (
           <img src={data?.logo} onClick={() => window.open(data.link, '_blank')} key={data?.id} className={`${i === 0 ? 'w-5' : 'w-6 mt-1'} cursor-pointer`} alt="" />

@@ -25,8 +25,3 @@ interface CareerMusiciansType {
     title: string;
     about: string;
 }
-
-export interface MusicianGalleryType {
-    leftToRight: string[];
-    rightToLeft: string[];
-}

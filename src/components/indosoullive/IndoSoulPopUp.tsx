@@ -3,8 +3,9 @@ import cross from '../../assets/icons/cross.svg'
 
 const IndoSoulPopUp = ({ viewPopUp, setViewPopUp, data }: { viewPopUp: boolean, setViewPopUp: (viewPopUp: boolean) => void, data: any }) => {
   return (
+    <>
     <div className={`${viewPopUp ? 'flex' : 'hidden'} w-full fixed bg-black bg-opacity-10 justify-center items-center h-screen inset-0 z-20 px-5`} onClick={() => setViewPopUp(false)}>
-      <div className='w-full max-w-[1100px] rounded-lg glass-morphism relative py-16 md:py-10 overflow-hidden z-50 mt-10'>
+      <div className='w-full max-w-[1100px] rounded-lg glass-morphism relative py-16 md:py-10 overflow-hidden z-50 sm:mt-10'>
         <div className='h-[70vh] md:h-[60vh] px-10 lg:px-20 overflow-y-scroll'>
           <div className='w-full flex justify-center items-center '>
             <img src={data?.logo} className={`w-36 md:w-52`} alt="" />
@@ -26,6 +27,7 @@ const IndoSoulPopUp = ({ viewPopUp, setViewPopUp, data }: { viewPopUp: boolean, 
         </div>
       </div>
     </div>
+    </>
   )
 }
 

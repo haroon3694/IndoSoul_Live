@@ -1,8 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
-import { ourCareerData, musicianGallery } from '../data/indoSoulLiveData'
-import heroImageIndosoulLive from '../assets/indosoul/images/hero_landing.jpg'
+import { ourCareerData, musicianGallery, heroImages } from '../data/indoSoulLiveData'
 import indoSoluLiveLogo from '../assets/indosoul/icons/indosoulLiveLogo.png'
-import liveBgImage from '../assets/indosoul/images/indosoulLiveBgImage.png'
+import liveBgImage from '../assets/indosoul/images/indosoulLiveBgImage.jpg'
 import CountUp from "react-countup";
 import Hero from '../components/global/Hero'
 
@@ -45,19 +44,6 @@ const LandingPage = () => {
         };
     }, [experienceRefs]);
 
-    const heroImages = [
-        {
-            id: 0,
-            image: heroImageIndosoulLive,
-            title: '',
-        },
-        {
-            id: 1,
-            image: heroImageIndosoulLive,
-            title: '',
-        },
-    ];
-
     const heroText = (
         <h1 className="text-[1rem] uppercase tracking-widest">Embracing Indian Heritage through Classical music</h1>
     )
@@ -94,36 +80,36 @@ const LandingPage = () => {
             <PreLoader logoImage={indoSoluLiveLogo} bgColor='bg-black' />
             <Hero heroImages={heroImages} logo={indoSoluLiveLogo} heroText={heroText} />
             <Experiences />
-            <div className='my-36'>
-            <BackgroundImageContainer backgroundImage={liveBgImage} bgSize='100% 100%'>
-                <div className='w-full z-10 relative px-5 sm:px-10 md:px-20 lg:px-32 xl:px-64'>
-                    <div className='flex flex-col md:flex-row justify-center md:items-center gap-10 md:gap-20 xl:gap-32 py-20 font-normal'>
-                        {
-                            ourCareerData?.experience?.map((data, index) => (
-                                <div key={data?.id} className=' font-bebasNeue font-extralight'>
+            <div className='mt-36 mb-32 md:mb-40'>
+                <BackgroundImageContainer backgroundImage={liveBgImage} bgSize='100% 100%'>
+                    <div className='w-full z-10 relative px-5 sm:px-10 md:px-20 lg:px-32 xl:px-64'>
+                        <div className='flex flex-col md:flex-row justify-center items-center gap-10 md:gap-20 xl:gap-32 py-20 font-normal'>
+                            {
+                                ourCareerData?.experience?.map((data, index) => (
+                                    <div key={data?.id} className=' font-bebasNeue font-extralight'>
 
-                                    <h1 className='text-white text-6xl font-extralight'>
-                                        {
-                                            isVisible ? (
-                                                <>
-                                                    <CountUp
-                                                        start={0}
-                                                        end={data?.amount}
-                                                        duration={3}
-                                                    /> {index === 1 ? 'M' : null}{`+`}
-                                                </>
-                                            ) : null
-                                        }
-                                    </h1>
-                                    <h1 ref={experienceRefs[index]} className='text-white text-2xl uppercase ml-5 md:ml-3'>{data?.title}</h1>
-                                </div>
-                            ))
-                        }
+                                        <h1 className='text-white text-6xl font-medium'>
+                                            {
+                                                isVisible ? (
+                                                    <>
+                                                        <CountUp
+                                                            start={0}
+                                                            end={data?.amount}
+                                                            duration={3}
+                                                        /> {index === 1 ? 'M' : null}{`+`}
+                                                    </>
+                                                ) : null
+                                            }
+                                        </h1>
+                                        <h1 ref={experienceRefs[index]} className='text-white text-2xl uppercase text-center font-medium tracking-wider'>{data?.title}</h1>
+                                    </div>
+                                ))
+                            }
+                        </div>
                     </div>
-                </div>
-            </BackgroundImageContainer>
+                </BackgroundImageContainer>
             </div>
-            <div className='w-full flex flex-col gap-20 lg:gap-40 md:px-0 mb-20 md:mb-52'>
+            <div className='w-full flex flex-col gap-20 lg:gap-40 md:px-0 mb-32 md:mb-52'>
                 {/* <MusiciansCarousal /> */}
                 <VideoCarousal data={videoCarousaData} />
             </div>
