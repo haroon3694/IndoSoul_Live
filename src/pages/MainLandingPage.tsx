@@ -24,7 +24,7 @@ const MainLandingPage: React.FC = () => {
       <OurOfferings />
       <Events />
       <BackgroundImageContainer backgroundImage={bgContainerImage} bgSize='100%'>
-        <div className='py-16'>
+        <div className='py-16 md:py-24'>
           <SeasonHeader text={`experience indosoul`} styles='bg-clip-text text-transparent bg-gradient-to-r from-[#0FA677] to-[#96D112] tracking-none mb-3 md:mb-8' />
           <SocialMediaIcons />
         </div>
