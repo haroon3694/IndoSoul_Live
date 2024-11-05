@@ -30,14 +30,14 @@ const InfiniteScroll: React.FC<InfiniteScrollProps> = ({ images, scrollRight = t
   }, [scrollRight]);
 
   return (
-    <div className="w-full overflow-hidden whitespace-nowrap my-4" ref={scrollContainerRef}>
+    <div className="w-full overflow-hidden whitespace-nowrap my-2" ref={scrollContainerRef}>
       <div className="flex" style={{ display: 'inline-flex' }}>
         {images.concat(images).map((image, index) => (
           <img
             key={index}
             src={image}
             alt={`Image ${index}`}
-            className="w-52 md:w-80 h-52 md:h-80 object-contain rounded-lg mx-2"
+            className="w-40 md:w-80 h-40 md:h-80 object-contain rounded-lg mx-2"
           />
         ))}
       </div>

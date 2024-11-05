@@ -44,7 +44,7 @@ const ArtistCard: React.FC<ArtistCardProps> = ({ data }) => {
   }, []);
 
   return (
-    <div className='w-fit relative' key={data?.id}>
+    <div className='w-fit relative pb-16 md:pb-0' key={data?.id}>
       <div className='relative mb-5 overflow-hidden rounded-xl group'>
         <span className='absolute min-w-40 z-10 top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 text-md text-white flex flex-col justify-center items-center gap-0.5 font-manrope opacity-0 group-hover:opacity-90 transition-all duration-200 ease-in-out'>
           <h1 className='font-semibold'>{data?.title}</h1>
@@ -55,10 +55,11 @@ const ArtistCard: React.FC<ArtistCardProps> = ({ data }) => {
       </div>
       <div className='flex justify-center items-center relative'>
         <PrimaryButton btnText='listen' styles='bg-[#96d312] text-black text-xl' shadow shadowStyles='bg-[#96d312]' onClick={() => openPopUp(data?.id)} />
-        <div ref={popupRef} className={`absolute top-[130%] w-[80%] md:w-[69%] px-2 left-1/2 -translate-x-[40%] ${selectedArtistId === data?.id ? 'block' : 'hidden'} transition-all duration-200 ease-in-out`}>
-          <div className='w-full relative flex justify-center items-center gap-14 bg-white shadow-xl p-2 rounded-lg'>
+        <div ref={popupRef} className={`absolute top-[130%] w-[80%] md:w-[69%] px-2 left-1/2 -translate-x-[45%] scale-0 ${selectedArtistId === data?.id ? 'scale-100' : ''} transition-all duration-200 ease-in-out`}>
+          <div className='w-full relative flex justify-center items-center gap-14 bg-white p-2 rounded-lg'>
             <img src={spotifyIcon} className='w-6' alt="" onClick={() => window.open(data.spotifyLink, '_blank')} />
             <img src={youtubeIcon} className='w-6' alt="" onClick={() => window.open(data.youtubeLink, '_blank')} />
+            <div className='absolute bg-gray-200 w-full h-full rounded-lg z-[-1] -bottom-2.5 -right-2.5'></div>
           </div>
         </div>
       </div>

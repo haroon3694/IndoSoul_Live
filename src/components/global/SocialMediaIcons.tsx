@@ -39,7 +39,7 @@ const SocialMediaIcons: React.FC = () => {
     ];
 
   return (
-    <div className='w-fit justify-center md:w-fit flex items-center gap-10 md:gap-20'>
+    <div className='w-fit justify-center md:w-fit flex items-center gap-16 md:gap-20'>
       {
         socialMedia?.map((data) => (
           <img src={data?.logo} onClick={() => window.open(data.link, '_blank')} key={data?.id} className='w-6 cursor-pointer' alt="" />

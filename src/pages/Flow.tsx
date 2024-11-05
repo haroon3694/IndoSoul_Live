@@ -52,7 +52,7 @@ const Flow: React.FC = () => {
       <Description />
       <Catalog />
       <Requirement />
-      <div className='mb-32'>
+      <div className='mb-16 md:mb-32'>
         <VideoCarousal data={videoCarousaData} />
       </div>
     </div>

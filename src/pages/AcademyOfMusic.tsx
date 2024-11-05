@@ -9,7 +9,7 @@ import Educators from '../components/music/Educators'
 import VideoCarousal from '../components/global/VideoCarousal'
 import bandVideo from '../assets/indosoul/videos/bandVideo.webm'
 import ArtistGallery from '../components/global/ArtistGallery'
-import { musicianGallery } from '../data/indoSoulLiveData'
+import { musicianGallery } from '../data/academyOfMusicData'
 import CourseContent from '../components/music/CourseContent'
 
 const AcademyOfMusic: React.FC = () => {
@@ -67,7 +67,7 @@ const AcademyOfMusic: React.FC = () => {
       <MusicOfferings />
       <CourseContent />
       <Educators />
-      <div className='mb-40'>
+      <div className='mb-28 md:mb-40'>
         <VideoCarousal data={videoCarousaData} />
       </div>
       <ArtistGallery imagesLTR={musicianGallery.leftToRight} imagesRTL={musicianGallery.rightToLeft} />

@@ -57,7 +57,7 @@ export const findPrimaryButton = (pathname: string): PrimaryButtonProps => {
   } else {
     return {
       btnText: 'Enquire here',
-      styles: 'text-white bg-gradient-to-r from-[#35D1AE] to-[#95D115]',
+      styles: 'text-black bg-gradient-to-r from-[#35D1AE] to-[#95D115]',
       shadow: true,
       shadowStyles: 'bg-gradient-to-r from-[#35D1AE] to-[#95D115]'
     };
@@ -121,6 +121,8 @@ export const findFillColor = (pathname: string): string => {
     return '#c48f41'
   } else if (pathname === '/indo-soul-music') {
     return '#02A4EA'
+  }  else if (pathname === '/about-us') {
+    return '#F44007'
   } else {
     return '#ffffff'
   }

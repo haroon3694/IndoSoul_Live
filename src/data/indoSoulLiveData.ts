@@ -1,6 +1,6 @@
 import aikiyambg from '../assets/indosoul/images/experienceCards/01.png'
-import third from '../assets/indosoul/images/experienceCards/03.png'
-import fourth from '../assets/indosoul/images/experienceCards/04.png'
+import third from '../assets/indosoul/images/experienceCards/02.png'
+import fourth from '../assets/indosoul/images/experienceCards/03.png'
 
 import karthik from '../assets/indosoul/images/musicianCarousal/karthik.png'
 import ramkumar from '../assets/indosoul/images/musicianCarousal/ramkumar.png'
@@ -18,16 +18,34 @@ import music_6 from '../assets/indosoul/images/gallery/06.jpg'
 import music_7 from '../assets/indosoul/images/gallery/07.webp'
 import music_8 from '../assets/indosoul/images/gallery/08.jpg'
 
+import heroImageIndosoulLive from '../assets/indosoul/images/hero_landing.png'
 
-import aikiyamLogo from '../assets/indosoul/images/experienceCards/akyam.svg'
-import ensambleLogo from '../assets/indosoul/images/experienceCards/ensemble.svg'
-import indoSoulLogo from '../assets/indosoul/images/experienceCards/indoSoul.svg'
-import { ExperienceDataType, MusicianGalleryType, OurCareerDataType } from '../types/indoSoulLiveType'
+import aikiyamLogo from '../assets/indosoul/icons/aikyam.png'
+import ensambleLogo from '../assets/indosoul/icons/ensemble.png'
+import indoSoulLogo from '../assets/indosoul/icons/indosoul.png'
+
+import { ExperienceDataType, OurCareerDataType } from '../types/indoSoulLiveType'
+import { MusicianGalleryType } from '../types/globalTypes'
+
+
+export const heroImages = [
+    {
+        id: 0,
+        image: heroImageIndosoulLive,
+        title: '',
+    },
+    {
+        id: 1,
+        image: heroImageIndosoulLive,
+        title: '',
+    },
+];
 
 export const experienceData: ExperienceDataType[] = [
     {
         id: 0,
         title: 'Akiyam',
+        cardText: 'Muhurthams by Indosoul',
         image: aikiyambg,
         logo: aikiyamLogo,
         heading: 'Infusing a sacred sense of spirit and divinity into muhurthams and other traditional celebrations through music',
@@ -43,8 +61,9 @@ export const experienceData: ExperienceDataType[] = [
         links: ' https://www.youtube.com/watch?v=BMUCeFOK0N0'
     },
     {
-        id: 3,
+        id: 1,
         title: 'IndoSoul',
+        cardText: 'Weddings by Indosoul',
         image: third,
         logo: indoSoulLogo,
         heading: null,
@@ -61,11 +80,12 @@ export const experienceData: ExperienceDataType[] = [
         links: 'https://www.youtube.com/watch?v=GSqdRX95quA'
     },
     {
-        id: 4,
+        id: 2,
         title: 'IndoSoul Ensemble',
+        cardText: 'Corporate shows by Indosoul',
         image: fourth,
         logo: ensambleLogo,
-        heading: 'The Perfect Symphony for Every event of Your 3 day Grand Indian Wedding ',
+        heading: 'The Perfect Symphony for Every event of Your 3 day Grand Indian Wedding ',
         content: [
             `You are unique and so is your story of love. Your journey of coming together with your special someone would be set to tune accompanied by the right beats-right from the first time you met to the day you decided to start a journey together. Your very own unique or 'Adwitiya' musical recorded for posterity. Not just the music but the sound and lighting effects would be customised to narrate your story in a unique manner.`,
             `The experience includes:`,

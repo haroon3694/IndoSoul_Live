@@ -31,12 +31,9 @@ const Footer = () => {
             </div>
 
             {/* mobile footer */}
-            <div className={`block md:hidden w-full p-3 sm:p-5 ${pathname === '/indo-soul-live' ? 'bg-black' : ''}`}>
-                <div className='w-full bg-[#282827] flex flex-col items-center gap-10 p-4 sm:p-5 px-7 sm:px-10 rounded-2xl'>
-                    <div className='w-full flex gap-10 justify-start items-center mt-5'>
-                        <img src={findLogo(pathname)} className='w-32' alt="" />
-                    </div>
-                    <div className='w-full flex justify-start items-center gap-10'>
+            <div className={`block md:hidden w-full pb-3 px-3 pt-1 sm:p-5 ${pathname === '/indo-soul-live' ? 'bg-black' : ''}`}>
+                <div className='w-full bg-[#282827] flex flex-col items-center p-5 sm:p-5 px-7 sm:px-10 rounded-2xl'>
+                    <div className='w-full flex justify-center items-center gap-10 mb-10'>
                         <SocialMediaIcons />
                     </div>
                     <div className='w-full flex justify-between items-center gap-1.5'>

@@ -6,6 +6,7 @@ export interface ExperienceDataType {
     heading: string | null;
     content: string[];
     links: string;
+    cardText: string;
 }
 
 export interface OurCareerDataType {
@@ -24,9 +25,4 @@ interface CareerMusiciansType {
     image: string;
     title: string;
     about: string;
-}
-
-export interface MusicianGalleryType {
-    leftToRight: string[];
-    rightToLeft: string[];
 }
