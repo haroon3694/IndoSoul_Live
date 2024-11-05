@@ -1,4 +1,4 @@
-import logoIndosoul from '../assets/icons/indosoulLogoMain.svg'
+import logoIndosoul from '../assets/icons/indosoulLogoMain.png'
 import indoSoulLiveIcon from '../assets/indosoul/icons/indoSoulLiveFooterLogo.svg'
 import logoMainSoulSabhaWhite from '../assets/soulsabha/icons/soulSabhaLogo.png'
 import flowLogo from '../assets/flow/icons/flowLogo.png'

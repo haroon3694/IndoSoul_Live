@@ -10,7 +10,7 @@ import SoulCircle from '../components/landingpage/SoulCircle'
 import ArtistGallery from '../components/global/ArtistGallery'
 import { musicianGallery } from '../data/landingPageData'
 import heroImage from '../assets/landing/images/heroimages/hero.jpg'
-import logoIndosoul from '../assets/icons/indosoulLogoMain.svg'
+import logoIndosoul from '../assets/icons/indosoulLogoMain.png'
 import bgContainerImage from '../assets/landing/images/landingBgContainer.jpg'
 
 const MainLandingPage: React.FC = () => {

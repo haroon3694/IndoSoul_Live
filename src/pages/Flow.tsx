@@ -41,7 +41,7 @@ const Flow: React.FC = () => {
 
   const heroText = (
     <div className='max-w-md text-wrap'>
-      <h1 className='text-[1rem] leading-6 tracking-widest'>When creativity meets craftsmanship to give expression to an emotion, music is born</h1>
+      <h1 className='text-[1rem] leading-5 tracking-widest'>When creativity meets craftsmanship to give expression to an emotion, music is born</h1>
     </div>
   );
 
