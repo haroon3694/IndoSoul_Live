@@ -15,9 +15,9 @@ const Footer = () => {
         <>
             {/* desktop footer */}
             <div className={`hidden md:block w-full p-5 ${pathname === '/indo-soul-live' ? 'bg-black' : ''}`}>
-                <div className='w-full bg-[#282827] flex items-center p-5 px-10 rounded-2xl'>
+                <div className='w-full bg-[#282827] flex justify-between items-center p-5 pr-10 pl-5 rounded-2xl'>
                     <div className='flex gap-10 items-center w-fit'>
-                        <img src={findLogo(pathname)} className='w-32' alt="" />
+                        <img src={findLogo(pathname)} className='w-32 md:w-44' alt="" />
                     </div>
                     <div className='w-full flex justify-center items-center gap-10'>
                         <SocialMediaIcons />
