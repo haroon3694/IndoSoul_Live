@@ -72,7 +72,7 @@ const Navbar = () => {
         <>
             <div className={`w-full p-3 px-8 fixed top-0 left-0 z-30 hidden lg:flex justify-center items-center text-white transition-transform duration-300 ${isVisible ? 'translate-y-0' : '-translate-y-full'
                 }`}>
-                <div className='w-full bg-[#282827] flex justify-between items-center pl-10 rounded-full p-2'>
+                <div className='w-full bg-navBlack flex justify-between items-center pl-10 rounded-full p-2'>
                     <div className='flex items-center gap-14 w-fit'>
                         <h1 className='font-manrope text-sm font-semibold cursor-pointer' onClick={() => navigate(`/`)}>Home</h1>
                         <h1 className='font-manrope text-sm font-semibold cursor-pointer flex items-center gap-2 relative' onClick={() => setDropdownOpen(!dropdownOpen)}>Offerings
@@ -81,7 +81,7 @@ const Navbar = () => {
                                     <path d="M4 6L0.535898 -1.75695e-07L7.4641 4.29987e-07L4 6Z" fill={findFillColor(pathname)} />
                                 </svg>
                             </span>
-                            <div className={`absolute bottom-0 top-10 w-56 bg-[#282827] rounded-xl flex flex-col overflow-hidden transition-all duration-500 ease-in-out z-20 ${dropdownOpen ? 'h-72' : 'h-0 py-0'}`}>
+                            <div className={`absolute bottom-0 top-10 w-56 bg-navBlack rounded-xl flex flex-col overflow-hidden transition-all duration-500 ease-in-out z-20 ${dropdownOpen ? 'h-72' : 'h-0 py-0'}`}>
                                 {
                                     navigationData?.map((data) => (
                                         <div key={data?.id} className='w-full border-b-white p-4 hover:bg-[#1c1c1b] transition-all duration-500 ease-in-out' onClick={() => navigate(data?.route)}>

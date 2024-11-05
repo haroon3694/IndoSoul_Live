@@ -14,7 +14,8 @@ import aniruddha from '../assets/academyofmusic/images/educators/aniruddha.png'
 import ganesh from '../assets/academyofmusic/images/educators/ganesh.png'
 import venkat from '../assets/academyofmusic/images/educators/venkat.png'
 import hemanth from '../assets/academyofmusic/images/educators/hemanth.png'
-import navnaeeth from '../assets/academyofmusic/images/educators/navneeth.png'
+import navneet from '../assets/academyofmusic/images/educators/navneet.png'
+import karthik from '../assets/academyofmusic/images/educators/karthik.png'
 
 import { MusicianGalleryType } from '../types/globalTypes'
 
@@ -50,7 +51,7 @@ export const educators = [
     id: 0,
     artistName: "Sreenivasan Ganesh",
     image: ganesh,
-    desc: "G. Sreenivaasan has been learning Carnatic Music for the past 15 years and holds degrees in Masters of Music (Carnatic Violin), Bachelor's in Music (Carnatic Vocal), and Bachelor's in Visual Communication."
+    desc: "G. Sreenivaasan has been learning Carnatic Music for the past 15 years and have been featured on TV channels like Podhigai, Sun, and Jaya, as well as on the 'IndianRaga' YouTube channel. Sreenivaasan is a full-time musician, music tutor, performer, recording artist, music programmer, and composer."
   },
   {
     id: 1,
@@ -62,24 +63,31 @@ export const educators = [
     id: 2,
     artistName: "Aditya",
     image: aditya,
-    desc: `Aditya, currently heading the Indosoul Academy of Music has his roots in Carnatic music. "Making classical music fun to learn" is one of the principles he abides by. The co-founding member of Chennai's first electric violin duo band - Resound, Aditya has performed across India.`
+    desc: `Aditya, currently heading the Indosoul Academy of Music has his roots in Carnatic music. "Making classical music fun to learn" is one of the principles he abides by. The co-founding member of Chennai's first electric violin duo band - Resound.
+`
   },
   {
     id: 3,
     artistName: "Venkat",
     image: venkat,
-    desc: `Karaikal S. Venkatasubramanian is a versatile musician trained by his mother, Smt Hema Sivasubramanian, and violin virtuoso Prof T.N. Krishnan. He has performed worldwide as a soloist, accompanist for Carnatic concerts, fusion shows, and dance performances. Venkatasubramanian also teaches music, conducts seminars, and composes. He has received numerous awards, including the "Vaani Kalaa Nipunaa" from Sri Thyaga Brahma Gaana Sabha, Vani Mahal, and holds master's degrees in music and information technology.`
+    desc: `Karaikal S. Venkatasubramanian is a versatile musician trained by his mother, Smt Hema Sivasubramanian, and violin virtuoso Prof T.N. Krishnan. He has received numerous awards, including the "Vaani Kalaa Nipunaa" from Sri Thyaga Brahma Gaana Sabha, Vani Mahal.`
   },
   {
     id: 4,
     artistName: "Heemanth",
     image: hemanth,
-    desc: "Hemanthraj Muliyil grew up in Calicut, Kerala, and graduated from Malabar Christian College in 1974. He became a professional violinist in 1970, accompanying leading playback singers and playing at major concerts. As a member of the Calicut Musical Association, he was trained by conductor and pianist Lancelot Thomas and performed major classical works for violin and piano. In 1982, he moved to Chennai and joined the film industry, playing for maestros like Illayaraja, A.R. Rahman, and other leading music directors in India. He was part of the Madras Philharmonic and Choral Society and the Madras String Quartet, performing across India, Singapore, and the UK, and collaborating on albums with international artists like Gill Apap and John Keishwan."
+    desc: "Hemanthraj Muliyil grew up in Calicut, Kerala, and as a member of the Calicut Musical Association, he was trained by conductor and pianist Lancelot Thomas. In 1982, he moved to Chennai and joined the film industry, playing for maestros like Illayaraja, A.R. Rahman, and other leading music directors in India"
   },
   {
     id: 5,
     artistName: "Navneeth",
-    image: navnaeeth,
-    desc: "Navaneeth Swaminathan is a professional violinist with extensive experience teaching Carnatic and Western music to students worldwide. He is a Grade 8 Western Violinist from Trinity College of Music, London, and a seasoned performing and recording artist who has traveled across India for high-profile events, collaborating with top musicians, artists, and bands. Navaneeth is also the co-founder and lead violinist of “Resound The Violin Duo,” Chennai's first electric violin duo, and heads the “NS Collective,” a Carnatic instrumental fusion band based in Chennai."
-  }
+    image: navneet,
+    desc: "Navaneeth Swaminathan is a professional violinist with extensive experience teaching Carnatic and Western music to students worldwide. He is a Grade 8 Western Violinist from Trinity College of Music, London, and is also the co-founder and lead violinist of “Resound The Violin Duo”."
+  },
+  {
+    id: 6,
+    artistName: "Karthik",
+    image: karthik,
+    desc: "With over 25 years of practicing the Acoustic & Electric violin, Karthick Iyer started out as a carnatic violinist. He founded IndoSoul, a Carnatic contemporary band releasing four albums in 10 years and has worked with top music directors like A.R. Rahman."
+  },
 ];

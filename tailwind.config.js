@@ -17,6 +17,7 @@ export default {
         flowGreen: '(--flowGreen)',
         indoWhite: '(--white)',
         aboutUsRed: '#F44007',
+        navBlack: '#282827'
       },
       gradientColorStops: {
         soulGradient: 'bg-gradient-to-r from-[#96d312] to-[#e92f2f]',

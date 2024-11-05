@@ -145,8 +145,8 @@ export const journeyData: OurJourneyType[] = [
     id: 3,
     year: '2016',
     image: year_2016,
-    description: 'Lorem ispum dolor sit',
-    tour: 'Lorem ipsum',
+    description: '-',
+    tour: '-',
   },
   {
     id: 4,
@@ -194,8 +194,8 @@ export const journeyData: OurJourneyType[] = [
     id: 10,
     year: '2019',
     image: year_2019,
-    description: `Lorem ipsum dolor sit`,
-    tour: 'Lorem ipsum',
+    description: `-`,
+    tour: '-',
   },
   {
     id: 11,

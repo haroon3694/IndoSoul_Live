@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { useLocation } from 'react-router';
 import Slider from 'react-slick'
 
 interface SmallCarousalProps {
@@ -42,25 +41,6 @@ const SmallCarousal: React.FC<SmallCarousalProps> = ({ carousalData, event, info
     },
   }
 
-  const [showFullText, setShowFullText] = useState<{ [key: number]: boolean }>({});
-  const { pathname } = useLocation();
-
-  const truncateWords = (text: string, maxWords: number) => {
-    const words = text?.split(' ') || [];
-    if (words.length > maxWords) {
-      return {
-        isTruncated: true,
-        truncatedText: words.slice(0, maxWords).join(' ') + '...',
-        fullText: text
-      };
-    }
-    return {
-      isTruncated: false,
-      truncatedText: text,
-      fullText: text
-    };
-  };
-
   return (
     <div className='w-full'>
       <div className='hidden md:block mb-14'>
@@ -88,38 +68,28 @@ const SmallCarousal: React.FC<SmallCarousalProps> = ({ carousalData, event, info
               //     ) : null}
               //   </div>
               // </div>
-              <div key={data?.id} className={`w-full p-5 rounded-xl ${pathname === '/indo-soul-music' ? 'min-h-[40vh]' : ''}  ${i === activeSlide ? 'border-2 border-[#373737]' : 'scale-90 grayscale'}`}>
-                <div className={`w-fit mx-auto flex justify-center items-center relative ${i === activeSlide ? 'mb-8' : 'mb-4'}`}>
-                  <img src={data?.image} className='w-full max-w-64 rounded-xl z-20 relative' alt="" />
-                  {activeSlide === i ? <div className='w-full max-w-64 h-full bg-gray-200 absolute top-4 left-4 rounded-[20px] z-10' /> : null}
-                </div>
-                {event ? (
-                  <div className='w-[70%] mx-auto text-center'>
-                    <h1 className='text-xl font-bold'>{data?.event}</h1>
-                    <p className='text-sm font-semibold'>{data?.venue}</p>
-                    <p className='mb-1 text-xs font-semibold'>{data?.date}</p>
-                    <p className='text-xs font-medium'>{data?.desc}</p>
+              <div key={data?.id} className={`w-full p-5 rounded-2xl ${i === activeSlide ? 'border-2 border-[#373737]' : 'scale-[80%] grayscale'}`}>
+                <div className={`w-full h-full flex flex-col xl:flex-row justify-start items-center ${i === activeSlide ? 'gap-5' : 'gap-5'}`}>
+                  <div className={`w-full max-w-32 xl:max-w-40 relative ${i === activeSlide ? '' : ''}`}>
+                    <img src={data?.image} className='w-full max-w-32 xl:max-w-40 rounded-xl z-20 relative' alt="" />
+                    {/* {activeSlide === i ? <div className='w-full max-w-32 xl:max-w-40 h-full bg-gray-200 absolute top-4 left-4 rounded-[20px] z-10' /> : null} */}
                   </div>
-                ) : info ? (
-                  <div className='w-[70%] mx-auto text-center'>
-                    <h1 className='text-lg leading-none mb-1 font-semibold'>{data?.artistName}</h1>
-                    <div>
-                      <p className='text-xs font-medium w-fit'>
-                        {showFullText[i]
-                          ? truncateWords(data?.desc, 40).fullText
-                          : truncateWords(data?.desc, 40).truncatedText}
-                      </p>
-                      {truncateWords(data?.desc, 40).isTruncated && (
-                        <button
-                          onClick={() => setShowFullText(prev => ({ ...prev, [i]: !prev[i] }))}
-                          className='text-xs text-blue-600 hover:text-blue-800 font-medium ml-1'
-                        >
-                          {showFullText[i] ? 'Read Less' : 'Read More'}
-                        </button>
-                      )}
+                  {event ? (
+                    <div className='w-full'>
+                      <h1 className='text-xl font-bold'>{data?.event}</h1>
+                      <p className='text-sm font-semibold'>{data?.venue}</p>
+                      <p className='mb-1 text-xs font-semibold'>{data?.date}</p>
+                      <p className='text-xs font-medium'>{data?.desc}</p>
                     </div>
-                  </div>
-                ) : null}
+                  ) : info ? (
+                    <div className='w-full text-center xl:text-left'>
+                      <h1 className='text-lg leading-none mb-1 font-semibold'>{data?.artistName}</h1>
+                      <div className='2xl:pr-4'>
+                        <p className='text-xs font-medium w-fit'>{data?.desc}</p>
+                      </div>
+                    </div>
+                  ) : null}
+                </div>
               </div>
             ))
           }
@@ -145,8 +115,8 @@ const SmallCarousal: React.FC<SmallCarousalProps> = ({ carousalData, event, info
                           <p className='text-xs font-medium leading-5'>{data?.desc}</p>
                         </div>
                       ) : info ? (
-                        <div className={`px-3 text-center mt-3`}>
-                          <h1 className='text-xl font-bold mb-3'>{data?.artistName}</h1>
+                        <div className={`text-center mt-3`}>
+                          <h1 className='text-xl font-bold mb-1'>{data?.artistName}</h1>
                           <p className='text-xs font-medium leading-5'>{data?.desc}</p>
                         </div>
                       ) : null

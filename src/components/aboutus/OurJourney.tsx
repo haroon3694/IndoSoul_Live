@@ -11,7 +11,7 @@ const OurJourney: React.FC = () => {
     dots: false,
     infinite: true,
     speed: 300,
-    slidesToShow: 4,
+    slidesToShow: 5,
     slidesToScroll: 1,
     arrows: false,
     autoplay: true,
@@ -42,7 +42,7 @@ const OurJourney: React.FC = () => {
               if (i === 0) {
                 return (
                   <div key={data.id} className={`relative h-[20vh] flex justify-center items-center mt-64 bg-white z-5 min-w-72`}>
-                    <p className='font-bold text-sm text-aboutUsRed absolute top-1/2 -translate-y-1/2 left-1/4 -translate-x-1/2 animate-bounce'>Drag right to scroll {`>`}</p>
+                    {/* <p className='font-bold text-sm text-aboutUsRed absolute top-1/2 -translate-y-1/2 left-1/4 -translate-x-1/2 animate-bounce'>Drag right to scroll {`>`}</p> */}
                   </div>
                 )
               } else {
@@ -77,7 +77,7 @@ const OurJourney: React.FC = () => {
                             <path d="M21.8108 0.695312C9.89795 0.695312 0.206299 10.387 0.206299 22.2998C0.206299 34.2126 9.89795 43.9042 21.8108 43.9042C33.7236 43.9042 43.4152 34.2126 43.4152 22.2998C43.4152 10.387 33.7236 0.695312 21.8108 0.695312ZM21.8108 40.9673C11.5191 40.9673 3.14327 32.5915 3.14327 22.2998C3.14327 12.0081 11.5156 3.63228 21.8108 3.63228C32.106 3.63228 40.4783 12.0081 40.4783 22.2998C40.4783 32.5915 32.1024 40.9673 21.8108 40.9673Z" />
                           </svg>
                         </span>
-                        <h1 className='text-6xl font-bebasNeue font-light group-hover:text-red-500 transition-all duration-100 ease-in-out'>{data?.year}</h1>
+                        <h1 className='text-6xl font-bebasNeue font-light text-red-500 transition-all duration-100 ease-in-out'>{data?.year}</h1>
                         <h1 className='text-md leading-5 font-semibold tewt-wrap max-w-60'>{data?.description}</h1>
                       </div>
                     </div>
@@ -92,7 +92,7 @@ const OurJourney: React.FC = () => {
                             <path d="M21.8108 0.695312C9.89795 0.695312 0.206299 10.387 0.206299 22.2998C0.206299 34.2126 9.89795 43.9042 21.8108 43.9042C33.7236 43.9042 43.4152 34.2126 43.4152 22.2998C43.4152 10.387 33.7236 0.695312 21.8108 0.695312ZM21.8108 40.9673C11.5191 40.9673 3.14327 32.5915 3.14327 22.2998C3.14327 12.0081 11.5156 3.63228 21.8108 3.63228C32.106 3.63228 40.4783 12.0081 40.4783 22.2998C40.4783 32.5915 32.1024 40.9673 21.8108 40.9673Z" />
                           </svg>
                         </span>
-                        <h1 className='text-6xl font-bebasNeue font-light group-hover:text-red-500 transition-all duration-100 ease-in-out'>{data?.year}</h1>
+                        <h1 className='text-6xl font-bebasNeue font-light text-red-500 transition-all duration-100 ease-in-out'>{data?.year}</h1>
                         <h1 className='text-md leading-5 font-semibold tewt-wrap max-w-60'>{data?.description}</h1>
                       </div>
                     </div>
@@ -104,9 +104,12 @@ const OurJourney: React.FC = () => {
           }
         </Slider>
         <div className={`fixed inset-0 z-10 ${showInfoPopUpId === null ? 'hidden' : ''}`} onClick={() => setShowInfoPopUpId(null)}></div>
+        <div className={`z-[-1] absolute top-20 left-20 flex justify-center items-center mt-64 bg-white z-5 min-w-72`}>
+          <p className='font-bold text-sm text-aboutUsRed animate-bounce'>Drag right to scroll {`>`}</p>
+        </div>
       </div>
 
-      <div className='block sm:hidden mb-24 w-full'>
+      <div className='block sm:hidden mb-28 w-full'>
         <SeasonHeader text={`our journey`} styles='w-full bg-clip-text text-center text-transparent bg-gradient-to-r from-[#F44007] to-[#1E1E1E] tracking-none mb-1 md:mb-8' />
         <Slider {...mobileSliderSettings} className='w-full flex justify-center gap-4 items-center'>
           {

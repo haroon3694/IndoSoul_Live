@@ -6,7 +6,7 @@ const Description = () => {
   const [showAll, setShowAll] = useState(false);
 
   return (
-    <div className='pt-16 mb-10 md:pb-20'>
+    <div className='pt-16 mb-10 md:pb-10'>
       <div className="w-full flex justify-center items-center mb-10 md:mb-20 px-10">
         <img src={rootsLogo} className='w-full max-w-[800px]' alt="" />
       </div>

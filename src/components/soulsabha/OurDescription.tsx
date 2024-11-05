@@ -5,7 +5,7 @@ import { descriptionData } from '../../data/soulSabhaData';
 const OurDescription: React.FC = () => {
     return (
         <div className='pt-20'>
-            <div className='flex flex-col md:flex-row justify-center items-center gap-0 md:gap-10'>
+            <div className='flex flex-col md:flex-row justify-center items-center gap-0'>
                 <div className='w-full md:w-fit flex flex-col justify-center items-center'>
                     <h1 className='uppercase text-[50px] md:text-[65px] font-bebasNeue leading-none -translate-x-2 mb-3'>What is</h1>
                     <img src={soulSabhaLogoDark} className='w-64 md:w-80 -translate-y-7' alt="" />

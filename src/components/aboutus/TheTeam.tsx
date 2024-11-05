@@ -13,9 +13,9 @@ const TheTeam: React.FC = () => {
           {
             teamData?.map((data) => (
               <div className='w-full flex flex-col group'>
-                <div className='w-full aspect-square bg-aboutUsRed rounded-[30px] group-hover:p-0.5 transition-all duration-200 ease-in-out mb-3'>
+                <div className='w-full aspect-square bg-aboutUsRed rounded-[20px] group-hover:p-0.5 transition-all duration-200 ease-in-out mb-3'>
                   <div className='w-full h-full aspect-square'>
-                    <img src={data?.image} className='w-full h-full' alt="Musicain" />
+                    <img src={data?.image} className='w-full h-full rounded-[20px]' alt="Musicain" />
                   </div>
                 </div>
                 <div className='w-full flex flex-col items-center text-center'>
