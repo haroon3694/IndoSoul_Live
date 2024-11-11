@@ -15,28 +15,27 @@ const MusicOfferings: React.FC = () => {
       image: offeringImage01,
       title: 'online classes & focus sessions',
       content: '',
-      links: '',
+      links: 'https://youtube.com/@indosoul_academy',
     },
     {
       id: 1,
       image: offeringImage02,
       title: 'offline workshops',
       content: '',
-      links: '',
+      links: 'https://youtube.com/@indosoul_academy',
     },
     {
       id: 2,
       image: offeringImage03,
       title: 'self-paced courses',
       content: '',
-      links: '',
+      links: 'https://youtube.com/@indosoul_academy',
     },
   ];
 
   return (
     <div className='mb-20 md:mb-28'>
 
-      {/* desktop view */}
       <div className=''>
         <BackgroundImageContainer backgroundImage={musicBgImage}>
           <div className='w-full relative py-24'>

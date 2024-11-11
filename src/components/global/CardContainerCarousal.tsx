@@ -1,7 +1,7 @@
 import React from 'react'
 import OfferedExperienceCard from './OfferedExperienceCard'
 import Slider from 'react-slick';
-import { findFillColor } from '../../utils/helpers';
+import { findFillColor, navigateToLink } from '../../utils/helpers';
 import { useLocation, useNavigate } from 'react-router';
 
 interface CardContainerCarousalProps {
@@ -34,10 +34,20 @@ const CardContainerCarousal: React.FC<CardContainerCarousalProps> = ({ data }) =
     return pathname !== '/indo-soul-live' && pathname !== '/'
   }
 
-  const navigateUrl = (link: string) => {
-    return navigate(link);
-  }
-
+  const handleClick = (link: string) => {
+    if (pathname === '/') {
+      return navigate(link);
+    } else {
+      switch (pathname) {
+        case '/indo-soul-music':
+          navigateToLink(link);
+          break;
+      
+        default:
+          break;
+      }
+    }
+  };
 
   return (
     <div>
@@ -45,8 +55,8 @@ const CardContainerCarousal: React.FC<CardContainerCarousalProps> = ({ data }) =
         {
           data?.map((data: any) => (
             <OfferedExperienceCard
-              onCardClick={() => navigateUrl(data?.links)}
               key={data?.id}
+              onCardClick={() => handleClick(data?.links)}
               data={data}
               buttonColor={pathname !== '/' ? findFillColor(pathname) : findFillColor(data?.links)}
               imageLogo={setLogoType('image')}
@@ -63,11 +73,12 @@ const CardContainerCarousal: React.FC<CardContainerCarousalProps> = ({ data }) =
               <div className='px-2 flex justify-center items-center'>
                 <OfferedExperienceCard
                   key={data?.id}
+                  onCardClick={() => navigateToLink(data?.links)}
                   data={data}
                   buttonColor={findFillColor(pathname)}
                   imageLogo={setLogoType('image')}
                   textLogo={setLogoType('text')}
-                  infoPopup
+                  infoPopup={false}
                 />
               </div>
             ))

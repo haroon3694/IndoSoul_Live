@@ -139,3 +139,7 @@ export const findLogo = (pathname: string): string => {
     return logoIndosoul;
   }
 };
+
+export const navigateToLink = (link: string) => {
+  window.open(link, '_blank');
+};

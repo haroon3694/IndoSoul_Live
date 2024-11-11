@@ -17,10 +17,11 @@ const SmallCarousal: React.FC<SmallCarousalProps> = ({ carousalData, event, info
     speed: 300,
     centerMode: true,
     slidesToShow: 3,
-    slidesToScroll: 1,
+    slidesToScroll: 0.1,
     arrows: false,
+    cssEase: 'linear',
     autoplay: true,
-    pauseonhover: false,
+    pauseonhover: true,
     afterChange: (activeSlide: number) => {
       setActiveSlide(activeSlide);
     },
@@ -43,7 +44,7 @@ const SmallCarousal: React.FC<SmallCarousalProps> = ({ carousalData, event, info
 
   return (
     <div className='w-full'>
-      <div className='hidden md:block mb-14'>
+      <div className='hidden md:block mb-10'>
         <Slider {...desktopSliderSettings} className=''>
           {
             carousalData?.map((data: any, i: number) => (
@@ -68,7 +69,8 @@ const SmallCarousal: React.FC<SmallCarousalProps> = ({ carousalData, event, info
               //     ) : null}
               //   </div>
               // </div>
-              <div key={data?.id} className={`w-full p-5 rounded-2xl ${i === activeSlide ? 'border-2 border-[#373737]' : 'scale-[80%] grayscale'}`}>
+              <div className='w-full relative min-h-[30vh]'>
+                <div key={data?.id} className={`w-full p-5 rounded-2xl relative ${i === activeSlide ? 'border-2 border-[#373737] bg-white' : 'scale-[80%] grayscale'}`}>
                 <div className={`w-full h-full flex flex-col xl:flex-row justify-start items-center ${i === activeSlide ? 'gap-5' : 'gap-5'}`}>
                   <div className={`w-full max-w-32 xl:max-w-40 relative ${i === activeSlide ? '' : ''}`}>
                     <img src={data?.image} className='w-full max-w-32 xl:max-w-40 rounded-xl z-20 relative' alt="" />
@@ -90,6 +92,8 @@ const SmallCarousal: React.FC<SmallCarousalProps> = ({ carousalData, event, info
                     </div>
                   ) : null}
                 </div>
+              </div>
+                {activeSlide === i ? <div className='w-full bottom-5 bg-gray-200 absolute top-4 left-4 rounded-3xl z-[-1]' /> : null}
               </div>
             ))
           }
