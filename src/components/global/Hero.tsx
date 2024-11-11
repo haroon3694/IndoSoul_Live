@@ -48,7 +48,7 @@ const Hero: React.FC<HeroProps> = ({ heroImages, logo, logoText, singleHeroImage
                 {
                     singleHeroImage ? (
                         <div className='w-full h-full relative'>
-                            <img src={singleHeroImage} className='w-full h-[90vh] md:h-screen object-cover' alt="" />
+                            <img src={singleHeroImage} className={`w-full h-[90vh] md:h-screen object-cover ${pathname === '/soul-sabha' ? 'object-cover object-right md:object:cover' : ''}`} alt="" />
                             <div className='absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-90' />
                         </div>
                     ) : (

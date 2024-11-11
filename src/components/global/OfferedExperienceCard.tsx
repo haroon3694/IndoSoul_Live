@@ -53,36 +53,30 @@ const OfferedExperienceCard: React.FC<OfferedExperienceCardProps> = ({ data, tex
       <div key={data?.id} className='flex flex-col gap-4 items-center justify-center cursor-pointer'>
         <div className='h-fit group transition-all duration-200 ease-in-out'>
 
-          <div className={`hidden md:block w-full h-[60vh] md:h-[40vh] xl:h-[50vh] rounded-xl relative overflow-hidden group group-hover:border-[3px] transition-all duration-200 ease-in-out`} style={{ borderColor: findFillColor(pathname) }} onClick={infoPopup ? () => setViewPopUp(true) : onCardClick}>
-            <img src={data?.image} className='w-full h-[60vh] md:h-[40vh] xl:h-[50vh] rounded-xl object-cover group-hover:scale-150 group-hover:blur-lg transition-all duration-500 ease-in-out' alt="" />
-            <div className='absolute inset-0 z-10 bg-gradient-to-b from-transparent to-black opacity-60 group-hover:opacity-100 transition-all duration-500 ease-in-out'></div>
-            {
-              textLogo ?
-                <span className={`absolute bottom-24 md:bottom-10 left-1/2 -translate-x-1/2 z-[15] ${data?.title?.length > 30 ? 'w-[200px]' : ' w-[140px]'} flex flex-col justify-center items-center group-hover:-translate-y-[100%] transition-all duration-300 ease-in-out`}>
-                  <h1 className='font-bebasNeue text-[35px] leading-none text-center text-white'>{data?.title}</h1>
-                  {pathname !== '/' ? <p className='translate-y-20 sm:translate-y-32 md:translate-y-28 flex font-manrope font-medium' style={{ color: findFillColor(pathname) }}>Know more <span className='ml-1 mt-[0.5px]'>{`>`}</span> </p> : null}
-                </span>
-                : imageLogo ?
-                  <div className={`absolute bottom-5 sm:bottom-24 md:bottom-10 left-1/2 -translate-x-1/2 z-[15] w-40 flex flex-col justify-center items-center group-hover:-translate-y-[100%] transition-all duration-300 ease-in-out`}>
-                    <img className={`w-full ${pathname === '/indo-soul-live' ? 'translate-y-32 transition-all duration-200 ease-in-out group-hover:translate-y-40 scale-[130%]' : 'scale-110 translate-y-10'}`} src={data?.logo} alt="" />
-                    {/* {pathname === '/' || pathname === '/indo-soul-live' ? <p className='translate-y-20 sm:translate-y-32 md:translate-y-28 text-yellow-600 flex font-manrope font-medium' style={{ color: findFillColor(pathname) }}>Know more <span className='ml-1 mt-[0.5px]'>{`>`}</span> </p> : null} */}
-                    {pathname === '/' ? 
-                    <p className='translate-y-20 sm:translate-y-32 md:translate-y-32 text-yellow-600 flex font-manrope font-medium' style={{ color: findFillColor(pathname) }}>Know more <span className='ml-1 mt-[0.5px]'>{`>`}</span> </p>
-                    :
-                    pathname === '/indo-soul-live' ? (
-                      <div className='translate-y-20 sm:translate-y-32 md:translate-y-52 text-white flex font-manrope font-medium flex-col justify-center items-center'>
-                        <p className='text-LiveRed text-sm h-10 text-center mb-14'>{data?.cardText}</p>
-                        <p className='' style={{ color: findFillColor(pathname) }}>
-                          Know more <span className='ml-1 mt-[0.5px]'>{`>`}</span>
-                        </p> 
-                      </div>
-                    ): null}
+          <div className='hidden md:block w-fit relative group overflow-hidden rounded-[27px] border-2' style={{ borderColor: findFillColor(pathname) }} onClick={infoPopup ? () => setViewPopUp(true) : onCardClick}>
+            <div className='w-fit h-fit overflow-hidden rounded-3xl relative'>
+              <img src={data?.image} className={`w-full rounded-3xl group-hover:scale-[130%] group-hover:blur-xl transition-all duration-200 ease-in-out object-cover ${pathname === '/' ? 'max-w-[300px] lg:max-w-[350px] xl:max-w-[300px] md:h-[30vh] lg:h-[40vh] xl:h-[50vh]' : 'max-w-[250px] lg:max-w-[350px] xl:max-w-[300px] h-[35vh] lg:h-[50vh]'}`} alt="" />
+              <div className="absolute w-full h-full bg-gradient-to-t from-black to-transparent top-0"></div>
+            </div>
+            <div className={`absolute w-full h-full flex flex-col justify-end items-center pb-5 top-1/3 group-hover:top-0 transition-all duration-200 ease-in-out rounded-[22px]`}>
+              <div className={`w-full flex flex-col justify-center items-center gap-20 xl:gap-32 relative`}>
+                <div className='-translate-y'>
+                  {textLogo ? <h1 className={`font-bebasNeue text-[35px] leading-none text-center text-white ${data?.title?.length > 30 ? 'w-[200px]' : ' w-[140px]'}`}>{data?.title}</h1> : imageLogo ? <img src={data?.logo} className='w-full max-w-[200px]' alt="" /> : null}
+                </div>
+                {pathname === '/indo-soul-live' ? (
+                  <div className='absolute top-1/2 text-white flex font-manrope font-medium flex-col justify-center items-center'>
+                    <p className='text-LiveRed text-sm h-10 text-center mb-14'>{data?.cardText}</p>
+                    <p className='' style={{ color: findFillColor(pathname) }}>
+                      Know more <span className='ml-1 mt-[0.5px]'>{`>`}</span>
+                    </p>
                   </div>
-                  : null
-            }
+                ) : null}
+                <p className='flex font-manrope font-medium' style={{ color: findFillColor(pathname) }}>Know more <span className='ml-1 mt-[0.5px]'>{`>`}</span> </p>
+              </div>
+            </div>
           </div>
 
-          <div className='w-full relative md:hidden'>
+          <div className='w-full relative md:hidden' onClick={infoPopup ? () => setViewPopUp(true) : onCardClick}>
             <img src={data?.image} className='w-full h-[60vh] object-cover rounded-2xl' alt="" />
             {
               textLogo ?

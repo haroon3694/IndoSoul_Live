@@ -1,6 +1,6 @@
 import React from 'react'
 import Hero from '../components/global/Hero'
-import heroImageAcademyOfMusic from '../assets/academyofmusic/images/musicHero.png'
+import heroImageAcademyOfMusic from '../assets/academyofmusic/images/musicHero.jpg'
 import logo from '../assets/academyofmusic/icons/academyOfMusicLogo.png'
 import PreLoader from '../components/global/PreLoader'
 import Purpose from '../components/music/Purpose'
@@ -13,19 +13,6 @@ import { musicianGallery } from '../data/academyOfMusicData'
 import CourseContent from '../components/music/CourseContent'
 
 const AcademyOfMusic: React.FC = () => {
-
-  const heroImages = [
-    {
-      id: 0,
-      image: heroImageAcademyOfMusic,
-      title: '',
-    },
-    {
-      id: 1,
-      image: heroImageAcademyOfMusic,
-      title: '',
-    },
-  ];
 
   const heroText = (
     <h1 className="text-[1rem] uppercase tracking-widest">UNLOCK YOUR MUSICAL POTENTIAL WITH INDOSOUL ACADEMY</h1>
@@ -61,7 +48,7 @@ const AcademyOfMusic: React.FC = () => {
 
   return (
     <div>
-      <Hero heroImages={heroImages} heroText={heroText} logo={logo} />
+      <Hero singleHeroImage={heroImageAcademyOfMusic} heroText={heroText} logo={logo} />
       <PreLoader logoImage={logo} bgColor='bg-black' />
       <Purpose />
       <MusicOfferings />

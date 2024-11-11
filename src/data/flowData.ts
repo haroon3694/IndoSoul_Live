@@ -1,4 +1,4 @@
-import heroImage from '../assets/flow/images/flowHero.png'
+import heroImage from '../assets/flow/images/flowHero.jpg'
 
 import catalogImage1 from '../assets/flow/images/catalogImages/01.png'
 import catalogImage2 from '../assets/flow/images/catalogImages/02.png'

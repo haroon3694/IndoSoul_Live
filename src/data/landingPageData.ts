@@ -1,4 +1,3 @@
-
 import heroImage from '../assets/landing/images/heroimages/hero.jpg'
 
 import live from '../assets/landing/images/offerings/live.png'
@@ -138,27 +137,19 @@ export const events: EventsData[] = [
 
 export const musicianGallery: MusicianGalleryType = {
   leftToRight: [
-      music_1,
-      music_2,
-      music_3,
-      music_7,
-      music_8,
-      music_9,
-      music_10,
-      music_4,
-      music_5,
-      music_6,
+    music_1,
+    music_2,
+    music_8,
+    music_3,
+    music_4,
+    music_5,
   ],
   rightToLeft: [
-      music_4,
-      music_5,
-      music_9,
-      music_1,
-      music_6,
-      music_7,
-      music_8,
-      music_2,
-      music_3,
-      music_10,
+    music_6,
+    music_7,
+    music_8,
+    music_9,
+    music_2,
+    music_10,
   ],
 };
