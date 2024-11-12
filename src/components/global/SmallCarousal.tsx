@@ -48,33 +48,11 @@ const SmallCarousal: React.FC<SmallCarousalProps> = ({ carousalData, event, info
         <Slider {...desktopSliderSettings} className=''>
           {
             carousalData?.map((data: any, i: number) => (
-              // <div key={data?.id} className={`w-fit p-3 ${activeSlide === i ? 'scale-110 px-5' : 'scale-90 opacity-65 grayscale'}`}>
-              //   <div className={`w-fit text-center p-3 bg-white rounded-[26px] gap-5 relative flex flex-col jx items-center ${activeSlide === i ? '' : ''}`}>
-              //     <div className={`w-fit relative ${activeSlide === i ? 'mb-2' : ''}`}>
-              //       <img src={data?.image} className='w-40 rounded-[18px] z-20 relative' alt="" />
-              //       {activeSlide === i ? <div className='w-full h-full bg-gray-200 absolute top-4 left-4 rounded-[20px] z-10' /> : null}
-              //     </div>
-              //     {event ? (
-              //       <div className=''>
-              //         <h1 className='text-xl font-bold'>{data?.event}</h1>
-              //         <p className='text-sm font-semibold'>{data?.venue}</p>
-              //         <p className='mb-1 text-xs font-semibold'>{data?.date}</p>
-              //         <p className='text-xs font-medium'>{data?.desc}</p>
-              //       </div>
-              //     ) : info ? (
-              //       <div className=''>
-              //         <h1 className='text-lg leading-none mb-1 font-semibold'>{data?.artistName}</h1>
-              //         <p className='text-xs font-medium w-fit'>{data?.desc}</p>
-              //       </div>
-              //     ) : null}
-              //   </div>
-              // </div>
-              <div className='w-full relative min-h-[30vh]'>
+              <div className='w-full relative pb-10'>
                 <div key={data?.id} className={`w-full p-5 rounded-2xl relative ${i === activeSlide ? 'border-2 border-[#373737] bg-white' : 'scale-[80%] grayscale'}`}>
                 <div className={`w-full h-full flex flex-col xl:flex-row justify-start items-center ${i === activeSlide ? 'gap-5' : 'gap-5'}`}>
                   <div className={`w-full max-w-32 xl:max-w-40 relative ${i === activeSlide ? '' : ''}`}>
                     <img src={data?.image} className='w-full max-w-32 xl:max-w-40 rounded-xl z-20 relative' alt="" />
-                    {/* {activeSlide === i ? <div className='w-full max-w-32 xl:max-w-40 h-full bg-gray-200 absolute top-4 left-4 rounded-[20px] z-10' /> : null} */}
                   </div>
                   {event ? (
                     <div className='w-full'>

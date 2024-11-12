@@ -66,9 +66,6 @@ const OfferedExperienceCard: React.FC<OfferedExperienceCardProps> = ({ data, tex
                 {pathname === '/indo-soul-live' ? (
                   <div className='absolute top-1/2 text-white flex font-manrope font-medium flex-col justify-center items-center'>
                     <p className='text-LiveRed text-sm h-10 text-center mb-14'>{data?.cardText}</p>
-                    <p className='' style={{ color: findFillColor(pathname) }}>
-                      Know more <span className='ml-1 mt-[0.5px]'>{`>`}</span>
-                    </p>
                   </div>
                 ) : null}
                 <p className='flex font-manrope font-medium' style={{ color: findFillColor(pathname) }}>Know more <span className='ml-1 mt-[0.5px]'>{`>`}</span> </p>
