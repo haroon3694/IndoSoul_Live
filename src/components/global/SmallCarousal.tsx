@@ -10,18 +10,19 @@ interface SmallCarousalProps {
 const SmallCarousal: React.FC<SmallCarousalProps> = ({ carousalData, event, info }) => {
 
   const [activeSlide, setActiveSlide] = useState(0);
+  const [activeSlideMobile, setActiveSlideMobile] = useState(0);
 
   const desktopSliderSettings = {
     dots: false,
     infinite: true,
-    speed: 300,
+    speed: 500,
     centerMode: true,
     slidesToShow: 3,
     slidesToScroll: 0.1,
     arrows: false,
     cssEase: 'linear',
     autoplay: true,
-    pauseonhover: true,
+    pauseOnHover: false,
     afterChange: (activeSlide: number) => {
       setActiveSlide(activeSlide);
     },
@@ -36,9 +37,9 @@ const SmallCarousal: React.FC<SmallCarousalProps> = ({ carousalData, event, info
     slidesToScroll: 1,
     arrows: false,
     autoplay: true,
-    pauseonhover: false,
+    pauseOnHover: false,
     beforeChange: (activeSlide: number) => {
-      setActiveSlide(activeSlide);
+      setActiveSlideMobile(activeSlide);
     },
   }
 
@@ -71,7 +72,7 @@ const SmallCarousal: React.FC<SmallCarousalProps> = ({ carousalData, event, info
                   ) : null}
                 </div>
               </div>
-                {activeSlide === i ? <div className='w-full bottom-5 bg-gray-200 absolute top-4 left-4 rounded-3xl z-[-1]' /> : null}
+                {i === activeSlide ? <div className='w-full bottom-5 bg-gray-200 absolute top-4 left-4 rounded-3xl z-[-1]' /> : null}
               </div>
             ))
           }
@@ -81,12 +82,12 @@ const SmallCarousal: React.FC<SmallCarousalProps> = ({ carousalData, event, info
         <Slider {...mobileSliderSettings} className=''>
           {
             carousalData?.map((data: any, i: number) => (
-              <div key={data?.id} className={`p-2  ${activeSlide === i ? '' : ''}`}>
+              <div key={data?.id} className={`p-2  ${activeSlideMobile === i ? '' : ''}`}>
                 <div key={data?.id} className='p-3 bg-white rounded-[20px] relative'>
                   <div className='flex flex-col justify-center items-center'>
-                    <div className={`w-fit relative ${activeSlide === i ? '' : ''}`}>
+                    <div className={`w-fit relative ${activeSlideMobile === i ? '' : ''}`}>
                       <img src={data?.image} className='w-full rounded-[18px] z-20 relative' alt="" />
-                      {/* {activeSlide === i && <div className='w-full h-full bg-gray-200 absolute top-4 left-4 rounded-[20px] z-10' />} */}
+                      {/* {activeSlideMobile === i && <div className='w-full h-full bg-gray-200 absolute top-4 left-4 rounded-[20px] z-10' />} */}
                     </div>
                     {
                       event ? (

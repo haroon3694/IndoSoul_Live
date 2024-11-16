@@ -84,7 +84,7 @@ const Navbar = () => {
                             <div className={`absolute bottom-0 top-10 w-56 bg-navBlack rounded-xl flex flex-col overflow-hidden transition-all duration-500 ease-in-out z-20 ${dropdownOpen ? 'h-72' : 'h-0 py-0'}`}>
                                 {
                                     navigationData?.map((data) => (
-                                        <div key={data?.id} className='w-full border-b-white p-4 hover:bg-[#1c1c1b] transition-all duration-500 ease-in-out' onClick={() => navigate(data?.route)}>
+                                        <div key={data?.id} className={`w-full border-b-white p-4 hover:bg-[#1c1c1b] transition-all duration-500 ease-in-out`} style={{ color: pathname === data?.route ? findFillColor(pathname) : 'whitesmoke' }} onClick={() => navigate(data?.route)}>
                                             <h1 className='font-manrope text-xs'>{data?.title}</h1>
                                         </div>
                                     ))
