@@ -1,9 +1,9 @@
 export const navigationData = [
-    {
-      id: 0,
-      title: 'Home',
-      route: '/',
-    },
+    // {
+    //   id: 0,
+    //   title: 'Home',
+    //   route: '/',
+    // },
     {
       id: 1,
       title: 'Indosoul Live',
@@ -26,7 +26,7 @@ export const navigationData = [
     },
     {
       id: 5,
-      title: 'Flow with Karthik Iyer',
+      title: 'Flow with Karthick Iyer',
       route: '/flow',
     },
     {

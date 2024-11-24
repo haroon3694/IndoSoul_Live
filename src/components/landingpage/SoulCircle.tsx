@@ -9,7 +9,7 @@ const SoulCircle: React.FC = () => {
       <div className='w-fit max-w-[900px] text-center font-manrope mx-auto px-8 sm:px-10 flex flex-col justify-center items-center'>
         <h1 className='text-xl font-semibold mb-2'>Be a part of the soul circle</h1>
         <p className='text-xs leading-5 tracking-wider mb-5 font-medium'>Soul Circle is a rapidly expanding community of listeners, fans, and music enthusiasts who enjoy behind-the-scenes access to music production, exclusive content, special offers on ticket prices, and more.</p>
-        <PrimaryButton btnText='BOOK NOw' styles='bg-gradient-to-r from-[#31D0B4] to-[#96D112] text-black text-xl' shadow shadowStyles='bg-gradient-to-r from-[#0FA677] to-[#96D112]' />
+        <PrimaryButton onClick={() => window.open("https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2Oy2TFgjxR4qp0qcY_WHvf_woG_VGqWEdygUfyDpSAEOXfseze-9WW1KUBLE3MS5hbQsJhnCMg", '_blank')} btnText='JOIN NOW' styles='bg-gradient-to-r from-[#31D0B4] to-[#96D112] text-black text-xl' shadow shadowStyles='bg-gradient-to-r from-[#0FA677] to-[#96D112]' />
       </div>
     </div>
   )

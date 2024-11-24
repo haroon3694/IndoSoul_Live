@@ -15,14 +15,16 @@ const SmallCarousal: React.FC<SmallCarousalProps> = ({ carousalData, event, info
   const desktopSliderSettings = {
     dots: false,
     infinite: true,
-    speed: 500,
+    speed: 300,
     centerMode: true,
     slidesToShow: 3,
     slidesToScroll: 0.1,
-    arrows: false,
     cssEase: 'linear',
-    autoplay: true,
+    autoplay: false,
     pauseOnHover: false,
+    arrows: true,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
     afterChange: (activeSlide: number) => {
       setActiveSlide(activeSlide);
     },
@@ -50,7 +52,7 @@ const SmallCarousal: React.FC<SmallCarousalProps> = ({ carousalData, event, info
           {
             carousalData?.map((data: any, i: number) => (
               <div className='w-full relative pb-10'>
-                <div key={data?.id} className={`w-full p-5 rounded-2xl relative ${i === activeSlide ? 'border-2 border-[#373737] bg-white' : 'scale-[80%] grayscale'}`}>
+                <div key={data?.id} className={`w-full p-5 rounded-2xl relative ${i === activeSlide ? 'border-2 border-[#373737] bg-white' : 'scale-[80%]'}`}>
                 <div className={`w-full h-full flex flex-col xl:flex-row justify-start items-center ${i === activeSlide ? 'gap-5' : 'gap-5'}`}>
                   <div className={`w-full max-w-32 xl:max-w-40 relative ${i === activeSlide ? '' : ''}`}>
                     <img src={data?.image} className='w-full max-w-32 xl:max-w-40 rounded-xl z-20 relative' alt="" />
@@ -117,3 +119,23 @@ const SmallCarousal: React.FC<SmallCarousalProps> = ({ carousalData, event, info
 }
 
 export default SmallCarousal
+
+function SampleNextArrow(props: any) {
+  const { style, onClick } = props;
+  return (
+      <div className={`next-slick-arrow z-50 absolute top-1/2 right-8 text-4xl cursor-pointer`}
+          style={{ ...style, display: "block" }}
+          onClick={onClick}
+      > {`>`} </div>
+  );
+}
+
+function SamplePrevArrow(props: any) {
+  const { style, onClick } = props;
+  return (
+      <div className={`next-slick-arrow z-50 absolute top-1/2 left-8 text-4xl cursor-pointer`}
+          style={{ ...style, display: "block" }}
+          onClick={onClick}
+      > {`<`} </div>
+  );
+}

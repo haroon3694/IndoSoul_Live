@@ -74,7 +74,7 @@ const Hero: React.FC<HeroProps> = ({ heroImages, logo, logoText, singleHeroImage
                     {
                         pathname === '/about-us' ? null : (
                             <div className={`w-full flex justify-center items-center ${pathname === '/' ? '-translate-y-4' : ' pt-6 md:pt-5'}`}>
-                                <PrimaryButton {...primaryButtonProps} />
+                                <PrimaryButton {...primaryButtonProps} onClick={() => window.open("https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2Oy2TFgjxR4qp0qcY_WHvf_woG_VGqWEdygUfyDpSAEOXfseze-9WW1KUBLE3MS5hbQsJhnCMg", '_blank')} />
                             </div>
                         )
                     }

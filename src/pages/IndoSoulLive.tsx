@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { ourCareerData, musicianGallery, heroImages } from '../data/indoSoulLiveData'
+import { ourCareerData, musicianGallery } from '../data/indoSoulLiveData'
 import indoSoluLiveLogo from '../assets/indosoul/icons/indosoulLiveLogo.png'
 import liveBgImage from '../assets/indosoul/images/indosoulLiveBgImage.jpg'
 import CountUp from "react-countup";
@@ -11,6 +11,7 @@ import ArtistGallery from '../components/global/ArtistGallery';
 import VideoCarousal from '../components/global/VideoCarousal';
 import PreLoader from '../components/global/PreLoader';
 import BackgroundImageContainer from '../components/global/BackgroundImageContainer';
+import heroImageIndosoulLive from '../assets/indosoul/images/hero_landing.png'
 
 const LandingPage = () => {
 
@@ -78,7 +79,7 @@ const LandingPage = () => {
     return (
         <div className='relative overflow-hidden bg-black'>
             <PreLoader logoImage={indoSoluLiveLogo} bgColor='bg-black' />
-            <Hero heroImages={heroImages} logo={indoSoluLiveLogo} heroText={heroText} />
+            <Hero singleHeroImage={heroImageIndosoulLive} logo={indoSoluLiveLogo} heroText={heroText} />
             <Experiences />
             <div className='mt-36 mb-32 md:mb-40'>
                 <BackgroundImageContainer backgroundImage={liveBgImage} bgSize='100% 100%'>

@@ -33,7 +33,7 @@ import { AboutUsDetailsType, OurJourneyType } from "../types/aboutUsTypes";
 export const musiciansData: AboutUsDetailsType[] = [
   {
     id: 0,
-    name: 'Karthik Iyer',
+    name: 'Karthick Iyer',
     designation: 'Frontman & Creative Head',
     image: karthik,
   },

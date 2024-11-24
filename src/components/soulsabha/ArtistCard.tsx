@@ -46,12 +46,12 @@ const ArtistCard: React.FC<ArtistCardProps> = ({ data }) => {
   return (
     <div className='w-fit relative pb-16 md:pb-0' key={data?.id}>
       <div className='relative mb-5 overflow-hidden rounded-xl group'>
-        <span className='absolute min-w-40 z-10 top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 text-md text-white flex flex-col justify-center items-center gap-0.5 font-manrope opacity-0 group-hover:opacity-90 transition-all duration-200 ease-in-out'>
-          <h1 className='font-semibold'>{data?.title}</h1>
-          <h1 className='font-semibold uppercase'>{data?.season}</h1>
+        <span className='absolute min-w-40 z-10 top-[80%] group-hover:top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 text-md text-white flex flex-col justify-center items-center gap-0.5 font-manrope opacit transition-all duration-200 ease-in-out'>
+          <h1 className='font-semibold text-lg group-hover:text-xl transition-all duration-200 ease-in-out text-center leading-4 '>{data?.title}</h1>
+          {/* <h1 className='font-semibold uppercase'>{data?.season}</h1> */}
         </span>
         { data?.image ? <img src={data?.image} className='w-full max-w-60 aspect-square group-hover:blur-xl transition-all duration-200 ease-in-out' alt="" /> : <div className='w-60 aspect-square bg-gray-300'></div> }
-        <div className='absolute z-0 inset-0 bg-black opacity-0 group-hover:opacity-40 transition-all duration-200 ease-in-out' />
+        <div className='absolute z-0 inset-0 bg-black opacity-10 group-hover:opacity-40 transition-all duration-200 ease-in-out' />
       </div>
       <div className='flex justify-center items-center relative'>
         <PrimaryButton btnText='listen' styles='bg-[#96d312] text-black text-xl' shadow shadowStyles='bg-[#96d312]' onClick={() => openPopUp(data?.id)} />

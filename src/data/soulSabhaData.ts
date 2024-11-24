@@ -201,7 +201,7 @@ export const artistData: ArtistDataType[] = [
   {
     id: 0,
     image: artist_1,
-    title: 'Abiyana',
+    title: 'Spoorthi Rao',
     season: 'season 01',
     youtubeLink: 'https://youtube.com/@abishen',
     spotifyLink: 'https://youtube.com/@abishen',
@@ -209,7 +209,7 @@ export const artistData: ArtistDataType[] = [
   {
     id: 1,
     image: artist_3,
-    title: 'Haricharan',
+    title: 'Haricharan Seshadri',
     season: 'season 01',
     youtubeLink: 'https://youtube.com/@haricharanmusic',
     spotifyLink: 'https://youtube.com/@haricharanmusic',
@@ -217,7 +217,7 @@ export const artistData: ArtistDataType[] = [
   {
     id: 2,
     image: artist_4,
-    title: 'Spoorthi',
+    title: 'Abinaya Shenbagaraj',
     season: 'season 01',
     youtubeLink: 'https://youtube.com/@spoorthirao',
     spotifyLink: 'https://youtube.com/@spoorthirao',
