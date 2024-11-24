@@ -10,7 +10,11 @@ const Navbar = () => {
     const [isVisible, setIsVisible] = useState(true);
     const [lastScrollY, setLastScrollY] = useState(0);
 
-    const handleEmailClick = () => { window.location.href = 'mailto:contact@indosoul.in' };
+    const handleEmailClick = () => {
+        window.location.href = pathname === '/indo-soul-music' 
+            ? 'mailto:contact@indosoulacademy.com'
+            : 'mailto:contact@indosoul.in';
+    };
 
     const { pathname } = useLocation();
 
@@ -74,7 +78,7 @@ const Navbar = () => {
                 }`}>
                 <div className='w-full bg-navBlack flex justify-between items-center pl-10 rounded-full p-2'>
                     <div className='flex items-center gap-14 w-fit'>
-                        <h1 className='font-manrope text-sm font-semibold cursor-pointer' onClick={() => navigate(`/`)}>Home</h1>
+                        { pathname !== '/' ? <h1 className='font-manrope text-sm font-semibold cursor-pointer' onClick={() => navigate(`/`)}>Home</h1> : null }
                         <h1 className='font-manrope text-sm font-semibold cursor-pointer flex items-center gap-2 relative' onClick={() => setDropdownOpen(!dropdownOpen)}>Offerings
                             <span className='mt-1'>
                                 <svg width="8" height="6" className={`transition-all duration-500 ease-in-out ${!dropdownOpen ? '' : 'rotate-180'}`} viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -101,7 +105,11 @@ const Navbar = () => {
                                     fill={findFillColor(pathname)}
                                 />
                             </svg>
-                            <a href="tel:8825859601" className='font-manrope text-sm font-semibold cursor-pointer transition-all duration-500 ease-in-out'>+91 88258 59601</a>
+                            {
+                                pathname === '/indo-soul-music' ? 
+                                <a href="tel:8850411961" className='font-manrope text-sm font-semibold cursor-pointer transition-all duration-500 ease-in-out'>+91 88504 11961</a>
+                                : <a href="tel:8754477925" className='font-manrope text-sm font-semibold cursor-pointer transition-all duration-500 ease-in-out'>+91 87544 77925</a>
+                            }
                         </span>
                         <span className='flex items-center gap-2 leading-none'>
                             <svg width="17" height="17" className='mt-[3px]' viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -115,7 +123,12 @@ const Navbar = () => {
                                     </clipPath>
                                 </defs>
                             </svg>
-                            <h1 className='font-manrope text-sm font-semibold cursor-pointer' onClick={handleEmailClick}>contact@indosoul.in</h1>
+                            {
+                                pathname == '/indo-soul-music' ?
+                                <h1 className='font-manrope text-sm font-semibold cursor-pointer' onClick={handleEmailClick}>contact@indosoulacademy.com</h1>
+                                :
+                                <h1 className='font-manrope text-sm font-semibold cursor-pointer' onClick={handleEmailClick}>contact@indosoul.in</h1>
+                            }
                         </span>
                         <NavButton {...navButtonProps} />
                     </div>
