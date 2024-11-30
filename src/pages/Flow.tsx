@@ -4,7 +4,6 @@ import flowLogo from '../assets/flow/icons/flowLogo.png'
 import PreLoader from '../components/global/PreLoader'
 import Description from '../components/flow/Description'
 import Catalog from '../components/flow/Catalog'
-import bandVideo from '../assets/indosoul/videos/bandVideo.webm'
 import Requirement from '../components/flow/Requirement'
 import { flowHeroImages } from '../data/flowData'
 import VideoCarousal from '../components/global/VideoCarousal'
@@ -15,27 +14,27 @@ const Flow: React.FC = () => {
     {
         id: 0,
         title: 'video 1',
-        video: bandVideo,
+        youTubeId: 'oiBWXuxq22c',
     },
     {
         id: 1,
         title: 'video 2',
-        video: bandVideo,
+        youTubeId: 'NuW7wGnShrM',
     },
     {
         id: 2,
         title: 'video 3',
-        video: bandVideo,
+        youTubeId: 'PluuM68q5Ms',
     },
     {
         id: 3,
         title: 'video 4',
-        video: bandVideo,
+        youTubeId: 'SowyIIRQJxY',
     },
     {
         id: 4,
         title: 'video 5',
-        video: bandVideo,
+        youTubeId: 'FWTehOhixcw',
     },
 ];
 
