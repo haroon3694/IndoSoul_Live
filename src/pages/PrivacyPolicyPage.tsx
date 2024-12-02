@@ -221,7 +221,7 @@ const PrivacyPolicy = () => {
                                         <p>By email:&nbsp;contact@indosoul.in</p>
                                     </li>
                                     <li>
-                                        <p>By phone number: +91 88258 59601</p>
+                                        <p>By phone number: +91 87544 77925</p>
                                     </li>
                                 </ul>
                             </div>

@@ -98,7 +98,7 @@ const Footer = ({ indoSoul, indoSoulStyle, soulSabha, soulSabhaStyle }: { indoSo
                         </div>
 
                         <div className='flex flex-col justify-center items-center gap-4'>
-                            <h1 className='text-md text-white'>+91 88258 59601</h1>
+                            <h1 className='text-md text-white'>+91 87544 77925</h1>
                             <PrimaryButton btnText='Talk to us' onClick={() => window.open("https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2Oy2TFgjxR4qp0qcY_WHvf_woG_VGqWEdygUfyDpSAEOXfseze-9WW1KUBLE3MS5hbQsJhnCMg", '_blank')} />
                             <Link className='text-sm text-white uppercase font-clashdisplay tracking-wider' to={`/privacy-policy`}> Privacy Policy</Link>
                             <div className='w-full justify-center md:w-fit flex items-center gap-10 md:gap-5 mt-2'>
@@ -116,7 +116,7 @@ const Footer = ({ indoSoul, indoSoulStyle, soulSabha, soulSabhaStyle }: { indoSo
                             <img src={logoSoulSabha} className='w-32' alt="" />
                         </div>
                         <div className='flex md:hidden flex-col justify-center items-center gap-4 font-semibold text-sm font-clashdisplay'>
-                            <h1 className='text-md text-black'>+91 88258 59601</h1>
+                            <h1 className='text-md text-black'>+91 87544 77925</h1>
                             <PrimaryButton btnText='Talk to us' bgColor={`hover:scale-105 bg-gradient-to-r from-[#96D312] to-[#E92F2F] transition-all duration-500 ease-in-out`} onClick={() => window.open("https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2Oy2TFgjxR4qp0qcY_WHvf_woG_VGqWEdygUfyDpSAEOXfseze-9WW1KUBLE3MS5hbQsJhnCMg", '_blank')} />
                         </div>
                         {/* pl-8 in the div below to make it center aligned forcefully */}
@@ -130,7 +130,7 @@ const Footer = ({ indoSoul, indoSoulStyle, soulSabha, soulSabhaStyle }: { indoSo
                             </div>
                         </div>
                         <div className='hidden md:flex flex-col justify-center items-end gap-4 font-semibold text-sm font-clashdisplay'>
-                            <h1 className='text-md text-black'>+91 88258 59601</h1>
+                            <h1 className='text-md text-black'>+91 87544 77925</h1>
                             <PrimaryButton btnText='Talk to us' bgColor={`hover:scale-105 bg-gradient-to-r from-[#96D312] to-[#E92F2F] transition-all duration-500 ease-in-out`} onClick={() => window.open("https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2Oy2TFgjxR4qp0qcY_WHvf_woG_VGqWEdygUfyDpSAEOXfseze-9WW1KUBLE3MS5hbQsJhnCMg", '_blank')} />
                         </div>
                     </div>
