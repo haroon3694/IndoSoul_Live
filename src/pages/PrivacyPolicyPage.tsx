@@ -1,10 +1,6 @@
-import Footer from "../components/global/Footer"
-import Navbar from "../components/global/Navbar"
-
 const PrivacyPolicy = () => {
     return (
         <div className="w-full pt-8 md:pt-24">
-            <Navbar />
             <div className="w-full">
                 <div className="mb-6">
                     <div className="w-full max-w-[1024px] px-10 xl:px-0 mx-auto">
@@ -221,14 +217,13 @@ const PrivacyPolicy = () => {
                                         <p>By email:&nbsp;contact@indosoul.in</p>
                                     </li>
                                     <li>
-                                        <p>By phone number: +91 87544 77925</p>
+                                        <p>By phone number: +91 88258 59601</p>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
-                <Footer indoSoulStyle="glass-morphism py-4" />
             </div>
         </div>
     )
