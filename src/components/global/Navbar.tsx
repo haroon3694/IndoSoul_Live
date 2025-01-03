@@ -1,62 +1,150 @@
-import PrimaryButton from './PrimaryButton'
+// ... existing imports ...
+import { useState, useEffect, useRef } from 'react';
+import NavButton from './NavButton';
+import { useLocation, useNavigate } from 'react-router';
+import { findFillColor, getNavButtonProps } from '../../utils/helpers';
+import { navigationData } from '../../data/navigationData';
 
-const Navbar = ({ indoSoul, soulSabha }: { indoSoul?: boolean, soulSabha?: boolean }) => {
+const Navbar = () => {
+    // ... existing state and hooks ...
+    const [isVisible, setIsVisible] = useState(true);
+    const [lastScrollY, setLastScrollY] = useState(0);
 
-    const handleButtonClick = () => {
-        window.location.href = 'mailto:contact@indosoul.in';
+    const handleEmailClick = () => {
+        window.location.href = pathname === '/indo-soul-music'
+            ? 'mailto:contact@indosoulacademy.com'
+            : 'mailto:contact@indosoul.in';
     };
+
+    const { pathname } = useLocation();
+
+    const navigate = useNavigate();
+
+    const [dropdownOpen, setDropdownOpen] = useState(false);
+
+    const navButtonProps = getNavButtonProps(pathname);
+
+    const desktopNavData = navigationData?.slice(0, -1)
+
+    const timeoutId: React.MutableRefObject<null | number> = useRef(null);
+
+    const handleOpenCalender = () => {
+        pathname === '/indo-soul-music' ?
+        window.open("https://docs.google.com/forms/d/e/1FAIpQLSckGmjJe8HL8x2mC-W8KQKE894rWzRRJ8Jn2vLVnUNcv25qFg/viewform?usp=send_form", '_blank')
+        :
+        window.open("https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2Oy2TFgjxR4qp0qcY_WHvf_woG_VGqWEdygUfyDpSAEOXfseze-9WW1KUBLE3MS5hbQsJhnCMg", '_blank')
+    }
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const currentScrollY = window.scrollY;
+
+            // Initial check to hide navbar if page loads scrolled down
+            if (window.scrollY > 100) {
+                setIsVisible(false);
+            }
+
+            // Clear any existing timeout
+            if (timeoutId.current) {
+                clearTimeout(timeoutId.current);
+            }
+
+            if (currentScrollY <= 100) {
+                // Always show navbar when at the top
+                setIsVisible(true);
+            } else {
+                // If scrolling up, show the navbar
+                if (currentScrollY < lastScrollY) {
+                    setIsVisible(true);
+
+                    // Hide after 2 seconds
+                    timeoutId.current = setTimeout(() => {
+                        setIsVisible(false);
+                        timeoutId.current = null;
+                    }, 2000);
+                } else {
+                    // If scrolling down, hide immediately
+                    setIsVisible(false);
+                }
+            }
+
+            setLastScrollY(currentScrollY);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+            if (timeoutId.current) {
+                clearTimeout(timeoutId.current);
+            }
+        };
+    }, [lastScrollY]);
 
     return (
         <>
-            {
-                indoSoul ? (
-                    <div className='hidden md:block w-full py-4 glass-morphism fixed top-0 left-0 z-20 rounded-b-xl'>
-                        <div className="w-full flex justify-between items-center px-10">
-                            <div className='relative'>
-                                <h1 className='text-lg text-white font-bold tracking-[0.3em]'>LIVE</h1>
-                                <span className='absolute -top-0.5 -right-3.5 w-1 h-1 bg-[#D10000] p-[5px] rounded-full'></span>
+            <div className={`w-full p-3 px-8 fixed top-0 left-0 z-30 hidden lg:flex justify-center items-center text-white transition-transform duration-300 ${isVisible ? 'translate-y-0' : '-translate-y-full'
+                }`}>
+                <div className='w-full bg-navBlack flex justify-between items-center pl-10 rounded-full p-2'>
+                    <div className='flex items-center gap-14 w-fit'>
+                        <h1 className='font-manrope text-sm font-semibold cursor-pointer' onClick={() => navigate(`/`)}>Home</h1>
+                        <h1 className='font-manrope text-sm font-semibold cursor-pointer flex items-center gap-2 relative' onClick={() => setDropdownOpen(!dropdownOpen)}>Offerings
+                            <span className='mt-1'>
+                                <svg width="8" height="6" className={`transition-all duration-500 ease-in-out ${!dropdownOpen ? '' : 'rotate-180'}`} viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 6L0.535898 -1.75695e-07L7.4641 4.29987e-07L4 6Z" fill={findFillColor(pathname)} />
+                                </svg>
+                            </span>
+                            <div className={`absolute bottom-0 top-10 w-56 bg-navBlack rounded-xl flex flex-col overflow-hidden transition-all duration-500 ease-in-out z-20 ${dropdownOpen ? 'h-60' : 'h-0 py-0'}`}>
+                                {
+                                    desktopNavData?.map((data) => (
+                                        <div key={data?.id} className={`w-full border-b-white p-4 hover:bg-[#1c1c1b] transition-all duration-500 ease-in-out`} style={{ color: pathname === data?.route ? findFillColor(pathname) : 'whitesmoke' }} onClick={() => navigate(data?.route)}>
+                                            <h1 className='font-manrope text-xs'>{data?.title}</h1>
+                                        </div>
+                                    ))
+                                }
                             </div>
-                            <div className='flex items-center gap-8'>
-                                <div className='flex items-center gap-3'>
-                                    <svg className="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.427 14.768 17.2 13.542a1.733 1.733 0 0 0-2.45 0l-.613.613a1.732 1.732 0 0 1-2.45 0l-1.838-1.84a1.735 1.735 0 0 1 0-2.452l.612-.613a1.735 1.735 0 0 0 0-2.452L9.237 5.572a1.6 1.6 0 0 0-2.45 0c-3.223 3.2-1.702 6.896 1.519 10.117 3.22 3.221 6.914 4.745 10.12 1.535a1.601 1.601 0 0 0 0-2.456Z" />
-                                    </svg>
-                                    <a href="tel:8754477925" className='text-sm text-white hover:text-[#D10000] cursor-pointer transition-all duration-500 ease-in-out'>+91 87544 77925</a>
-                                </div>
-                                <div className='flex items-center gap-3'>
-                                    <svg className="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="m3.5 5.5 7.893 6.036a1 1 0 0 0 1.214 0L20.5 5.5M4 19h16a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z" />
-                                    </svg>
-                                    <h1 className='text-sm text-white hover:text-[#D10000] cursor-pointer transition-all duration-500 ease-in-out' onClick={handleButtonClick}>contact@indosoul.in</h1>
-                                </div>
-                                <PrimaryButton btnText='Talk with us' />
-                            </div>
-                        </div>
+                            <div className={`fixed inset-0 ${dropdownOpen ? '' : 'hidden'}`} onClick={() => setDropdownOpen(false)} />
+                        </h1>
+                        <h1 className={`font-manrope text-sm font-semibold cursor-pointer ${pathname === '/about-us' ? 'text-aboutUsRed' : 'text-white'}`} onClick={() => navigate(`/about-us`)}>About Us</h1>
                     </div>
-                ) : soulSabha ? (
-                    <>
-                        <div className='hidden md:block w-full py-1 fixed top-0 left-0 z-20 bg-black shadow-md'>
-                            <div className="w-full flex justify-end items-center px-10 gap-10 text-white font-clashdisplay tracking-widest">
-                                <div className='flex items-center gap-3'>
-                                    <svg className="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.427 14.768 17.2 13.542a1.733 1.733 0 0 0-2.45 0l-.613.613a1.732 1.732 0 0 1-2.45 0l-1.838-1.84a1.735 1.735 0 0 1 0-2.452l.612-.613a1.735 1.735 0 0 0 0-2.452L9.237 5.572a1.6 1.6 0 0 0-2.45 0c-3.223 3.2-1.702 6.896 1.519 10.117 3.22 3.221 6.914 4.745 10.12 1.535a1.601 1.601 0 0 0 0-2.456Z" />
-                                    </svg>
-                                    <a href="tel:8754477925" className='text-sm font-manrope tracking-wider text-white hover:text-[#D10000] cursor-pointer transition-all duration-500 ease-in-out'>+91 87544 77925</a>
-                                </div>
-                                <div className='flex items-center gap-3'>
-                                    <svg className="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="m3.5 5.5 7.893 6.036a1 1 0 0 0 1.214 0L20.5 5.5M4 19h16a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z" />
-                                    </svg>
-                                    <h1 className='text-sm font-manrope tracking-wider text-white hover:text-[#D10000] cursor-pointer transition-all duration-500 ease-in-out' onClick={handleButtonClick}>contact@indosoul.in</h1>
-                                </div>
-                                <PrimaryButton onClick={() => window.open("https://www.youtube.com/playlist?list=PLribYRRTKTxcUsNldh4iCF2Gy9ekuSdUa", '_blank')} btnText='WATCH US LIVE' bgColor='hover:bg-gradient-to-r from-[#96D312] to-[#E92F2F] transition-all duration-500 ease-in-out' />
-                            </div>
-                        </div>
-                    </>
-                ) : null
-            }
+                    <div className='w-fit flex items-center gap-14'>
+                        <span className='flex items-center gap-2 leading-none'>
+                            <svg width="12" height="12" className='mt-[0.5px]' viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.8767 9.18932C12.0196 9.18932 11.1781 9.05516 10.3804 8.79156C9.98958 8.65812 9.50906 8.78062 9.27063 9.02562L7.69635 10.2138C5.87089 9.23927 4.74615 8.11526 3.7851 6.30328L4.93865 4.77021C5.23833 4.47089 5.34589 4.03375 5.21682 3.62359C4.95214 2.82187 4.8176 1.98078 4.8176 1.12328C4.8176 0.503854 4.31375 0 3.69432 0H1.12328C0.503854 0 0 0.503854 0 1.12328C0 8.22354 5.77646 14 12.8767 14C13.4961 14 14 13.4961 14 12.8767V10.313C14 9.69354 13.4961 9.18969 12.8767 9.18969V9.18932Z"
+                                    fill={findFillColor(pathname)}
+                                />
+                            </svg>
+                            {
+                                pathname === '/indo-soul-music' ?
+                                    <a href="tel:8850411961" className='font-manrope text-sm font-semibold cursor-pointer transition-all duration-500 ease-in-out'>+91 88504 11961</a>
+                                    : <a href="tel:8754477925" className='font-manrope text-sm font-semibold cursor-pointer transition-all duration-500 ease-in-out'>+91 87544 77925</a>
+                            }
+                        </span>
+                        <span className='flex items-center gap-2 leading-none'>
+                            <svg width="17" height="17" className='mt-[3px]' viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clipPath="url(#clip0_338_931)">
+                                    <path d="M7.81706 7.36393L0.0252746 1.69701C0.010832 1.70424 0.0162479 1.70243 0 1.70965V10.2849C0 11.2327 0.767263 12 1.71506 12H15.4355C16.3833 12 17.1506 11.2327 17.1506 10.2849V1.68979C17.1506 1.68979 17.1506 1.68979 17.1452 1.68799L9.33353 7.36574C8.8804 7.69431 8.26839 7.69431 7.81526 7.36574L7.81706 7.36393Z" fill={findFillColor(pathname)} />
+                                    <path d="M9.33531 5.24628L16.2533 0.214834C16.0114 0.083045 15.7316 0 15.4355 0H1.71503C1.41715 0 1.14274 0.083045 0.897217 0.214834L7.81703 5.24628C8.27017 5.57485 8.88217 5.57485 9.33531 5.24628Z" fill={findFillColor(pathname)} />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_338_931">
+                                        <rect width="17.1506" height="12" fill={findFillColor(pathname)} />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            {
+                                pathname == '/indo-soul-music' ?
+                                    <h1 className='font-manrope text-sm font-semibold cursor-pointer' onClick={handleEmailClick}>contact@indosoulacademy.com</h1>
+                                    :
+                                    <h1 className='font-manrope text-sm font-semibold cursor-pointer' onClick={handleEmailClick}>contact@indosoul.in</h1>
+                            }
+                        </span>
+                        <NavButton {...navButtonProps} onCLick={handleOpenCalender} />
+                    </div>
+                </div>
+            </div>
         </>
     )
 }
 
-export default Navbar
+export default Navbar;

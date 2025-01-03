@@ -1,13 +1,16 @@
-import btnIcon from '../../assets/icons/btnIcon.svg'
+import btnIcon from '../../assets/icons/buttonIconBlack.svg'
 
-const PrimaryButton = ({ btnText, onClick, bgColor, styles }: { btnText: string, onClick?: () => void, bgColor?: string, styles?: string }) => {
+const PrimaryButton = ({ btnText, onClick, shadow, styles, shadowStyles }: { btnText: string, onClick?: () => void, shadow?: boolean, styles?: string, shadowStyles?: string }) => {
   return (
-    <button onClick={onClick} className={`font-clashdisplay flex justify-center items-center gap-1 md:gap-3 text-white bg-transparent font-semibold uppercase ${bgColor ? `${bgColor}` : 'hover:bg-[#A90A0A]'} text-xs xl:text-sm py-2.5 md:py-3 px-2.5 md:px-6 xl:px-8 rounded-lg tracking-[3px] transition-all duration-500 ease-in-out ${styles}`}>
-      {btnText}
-      <span>
-        <img src={btnIcon} className="w-4" alt="" />
-      </span>
-    </button>
+    <div className='relative active:scale-95 transition-all duration-150 ease-in-out'>
+      <button onClick={onClick} className={`font-bebasNeue relative z-10 flex justify-center items-center gap-1 md:gap-3 uppercase py-2 pb-2.5 px-16 md:px-20 rounded-full transition-all duration-500 ease-in-out ${styles}`}>
+        <p className='mt-1 leading-none text-nowrap tracking-wide font-bold text-2xl'>{btnText}</p>
+        <span className='absolute top-1/2 -translate-y-1/2 right-2'>
+          <img src={btnIcon} className="w-6" alt="" />
+        </span>
+      </button>
+      {shadow ? <div className={`absolute w-full h-full opacity-30 rounded-full top-3 left-3 z-0 ${shadowStyles}`} /> : null}
+    </div>
   )
 }
 

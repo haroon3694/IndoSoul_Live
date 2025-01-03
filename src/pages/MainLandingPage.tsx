@@ -1,20 +1,36 @@
 import React from 'react'
-import indoSoulLogo from '../assets/indosoul/icons/logo-main.svg';
-import soulSabhaLogo from '../assets/soulsabha/icons/logoMainSoulSabhaWhite.svg'
-import { useNavigate } from 'react-router-dom';
+import Hero from '../components/global/Hero'
+import OurOfferings from '../components/landingpage/OurOfferings'
+// import Events from '../components/landingpage/Events'
+import PreLoader from '../components/global/PreLoader'
+import BackgroundImageContainer from '../components/global/BackgroundImageContainer'
+import SeasonHeader from '../components/global/SeasonHeader'
+import SocialMediaIcons from '../components/global/SocialMediaIcons'
+import SoulCircle from '../components/landingpage/SoulCircle'
+import ArtistGallery from '../components/global/ArtistGallery'
+import { musicianGallery } from '../data/landingPageData'
+import heroImage from '../assets/landing/images/heroimages/hero.jpg'
+import logoIndosoul from '../assets/icons/indosoulLogoMain.png'
+import bgContainerImage from '../assets/landing/images/landingBgContainer.jpg'
 
 const MainLandingPage: React.FC = () => {
 
-    const navigate = useNavigate();
+
 
   return (
-    <div className='w-full h-screen flex flex-col md:flex-row justify-center items-center gap-10 md:gap-0 bg-black'>
-        <div className='w-full flex justify-center items-center' onClick={() => navigate(`/indo-soul-live`)}>
-            <img src={indoSoulLogo} className='w-48 hover:scale-110 transition-all duration-500 ease-in-out' alt="" />
+    <div className=''>
+      <PreLoader logoImage={logoIndosoul} bgColor='bg-black' />
+      <Hero singleHeroImage={heroImage} logo={logoIndosoul} />
+      <OurOfferings />
+      {/* <Events /> */}
+      <BackgroundImageContainer backgroundImage={bgContainerImage} bgSize='100%'>
+        <div className='py-16 md:py-24'>
+          <SeasonHeader text={`experience indosoul`} styles='bg-clip-text text-transparent bg-gradient-to-r from-[#0FA677] to-[#96D112] tracking-none mb-3 md:mb-8' />
+          <SocialMediaIcons />
         </div>
-        <div className='w-full flex justify-center items-center' onClick={() => navigate(`/soul-sabha`)}>
-            <img src={soulSabhaLogo} className='w-60 hover:scale-110 transition-all duration-500 ease-in-out' alt="" />
-        </div>
+      </BackgroundImageContainer>
+      <SoulCircle />
+      <ArtistGallery imagesLTR={musicianGallery.leftToRight} imagesRTL={musicianGallery.rightToLeft} />
     </div>
   )
 }
