@@ -113,21 +113,21 @@ export const soulSabhaExperienceData: SoulSabhaExperienceDataType[] = [
         image: exp_2,
         title: 'Listening Sessions',
         content: [songsImageSingle1, songsImageSingle2, songsImageSingle3, songsImageSingle4, songsImageSingle5, songsImageSingle6, songsImageSingle7],
-        links: '',
+        links: 'https://www.youtube.com/playlist?list=PLribYRRTKTxcUsNldh4iCF2Gy9ekuSdUa',
     },
     {
         id: 1,
         image: exp_3,
         title: 'Live Concerts',
         content: [liveConcerts1, liveConcerts2, liveConcerts3, liveConcerts4, liveConcerts5],
-        links: '',
+        links: 'https://www.youtube.com/playlist?list=PLribYRRTKTxcUsNldh4iCF2Gy9ekuSdUa',
     },
     {
         id: 2,
         image: exp_4,
         title: 'Music & Visual Arts',
         content: [visualArtsImageSingle1, visualArtsImageSingle2, visualArtsImageSingle3, visualArtsImageSingle4, visualArtsImageSingle5],
-        links: '',
+        links: 'https://www.youtube.com/playlist?list=PLribYRRTKTxcUsNldh4iCF2Gy9ekuSdUa',
     },
 ];
 
