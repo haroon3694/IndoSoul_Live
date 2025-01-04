@@ -7,7 +7,6 @@ import Purpose from '../components/music/Purpose'
 import MusicOfferings from '../components/music/MusicOfferings'
 import Educators from '../components/music/Educators'
 import VideoCarousal from '../components/global/VideoCarousal'
-import bandVideo from '../assets/indosoul/videos/bandVideo.webm'
 import ArtistGallery from '../components/global/ArtistGallery'
 import { musicianGallery } from '../data/academyOfMusicData'
 import CourseContent from '../components/music/CourseContent'
@@ -22,27 +21,22 @@ const AcademyOfMusic: React.FC = () => {
     {
       id: 0,
       title: 'video 1',
-      video: bandVideo,
+      youTubeId: 'XxTxp22FDR0',
     },
     {
       id: 1,
       title: 'video 2',
-      video: bandVideo,
+      youTubeId: 'OSL5gA6M3aQ',
     },
     {
       id: 2,
       title: 'video 3',
-      video: bandVideo,
+      youTubeId: 'DY-fcii1eLQ',
     },
     {
       id: 3,
       title: 'video 4',
-      video: bandVideo,
-    },
-    {
-      id: 4,
-      title: 'video 5',
-      video: bandVideo,
+      youTubeId: 'epJSpwxO_sc',
     },
   ];
 

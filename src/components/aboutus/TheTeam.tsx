@@ -5,6 +5,10 @@ import { teamData } from '../../data/aboutUsData';
 
 const TheTeam: React.FC = () => {
 
+  const handleEmailClick = () => {
+    window.location.href = 'mailto:contact@indosoul.in';
+};
+
   return (
     <div className=''>
       <SeasonHeader text={`team indosoul`} styles='bg-clip-text text-transparent bg-gradient-to-r from-[#F44007] to-[#1E1E1E] tracking-none mb-3 md:mb-10' />
@@ -31,7 +35,7 @@ const TheTeam: React.FC = () => {
         <div className='w-full mx-auto border-2 border-black rounded-2xl flex justify-center items-center py-8'>
           <div className='flex flex-col md:flex-row justify-center items-center text-center md:text-nowrap gap-3 md:gap-10'>
             <h1 className='text-lg md:text-xl font-medium'>Would you like to join our team?</h1>
-            <PrimaryButton btnText='email us' styles='bg-gradient-to-r from-[#F44007] to-[#1E1E1E] text-white text-xl scale-95' shadow shadowStyles='bg-gradient-to-r scale-95 from-[#F44007] to-[#1E1E1E]' />
+            <PrimaryButton onClick={handleEmailClick} btnText='email us' styles='bg-gradient-to-r from-[#F44007] to-[#1E1E1E] text-white text-xl scale-95' shadow shadowStyles='bg-gradient-to-r scale-95 from-[#F44007] to-[#1E1E1E]' />
           </div>
         </div>
       </div>
