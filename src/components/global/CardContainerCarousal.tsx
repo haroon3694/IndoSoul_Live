@@ -45,9 +45,12 @@ const CardContainerCarousal: React.FC<CardContainerCarousalProps> = ({ data }) =
         case '/indo-soul-live':
           navigateToLink(link);
           break;
-          case '/flow':
-            navigateToLink(link);
-            break;
+        case '/flow':
+          navigateToLink(link);
+          break;
+        case '/soul-sabha':
+          navigateToLink(link);
+          break;
       
         default:
           break;

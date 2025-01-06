@@ -8,7 +8,6 @@ import Hero from '../components/global/Hero'
 import bandVideo from '../assets/indosoul/videos/bandVideo.webm'
 import Experiences from '../components/indosoullive/Experiences';
 import ArtistGallery from '../components/global/ArtistGallery';
-import VideoCarousal from '../components/global/VideoCarousal';
 import PreLoader from '../components/global/PreLoader';
 import BackgroundImageContainer from '../components/global/BackgroundImageContainer';
 import heroImageIndosoulLive from '../assets/indosoul/images/hero_landing.jpg'
@@ -48,34 +47,6 @@ const LandingPage = () => {
     const heroText = (
         <h1 className="text-[1rem] uppercase tracking-widest">Live Contemporary Music for Every Stage</h1>
     )
-
-    const videoCarousaData = [
-        {
-            id: 0,
-            title: 'video 1',
-            video: bandVideo,
-        },
-        {
-            id: 1,
-            title: 'video 2',
-            video: bandVideo,
-        },
-        {
-            id: 2,
-            title: 'video 3',
-            video: bandVideo,
-        },
-        {
-            id: 3,
-            title: 'video 4',
-            video: bandVideo,
-        },
-        {
-            id: 4,
-            title: 'video 5',
-            video: bandVideo,
-        },
-    ];
     return (
         <div className='relative overflow-hidden bg-black'>
             <PreLoader logoImage={indoSoluLiveLogo} bgColor='bg-black' />
@@ -111,8 +82,10 @@ const LandingPage = () => {
                 </BackgroundImageContainer>
             </div>
             <div className='w-full flex flex-col gap-20 lg:gap-40 md:px-0 mb-32 md:mb-52'>
-                {/* <MusiciansCarousal /> */}
-                <VideoCarousal data={videoCarousaData} />
+                <div className='flex justify-center items-center relative z-10 max-w-[80vw] max-h-[80vh] mx-auto mb-7 md:mb-14'>
+                    <video src={bandVideo} muted autoPlay playsInline loop={true} className={`rounded-2xl h-[80vh] w-full object-cover`}></video>
+                    <div className={`absolute w-full h-full opacity-50 rounded-3xl md:rounded-[32px] top-3 md:top-10 left-3 md:left-10 z-[-1] bg-[#981515]`} />
+                </div>
             </div>
             <ArtistGallery imagesLTR={musicianGallery.leftToRight} imagesRTL={musicianGallery.rightToLeft} />
         </div>

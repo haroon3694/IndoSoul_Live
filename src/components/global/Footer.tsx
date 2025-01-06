@@ -11,6 +11,13 @@ const Footer = () => {
 
     const navButtonProps = getNavButtonProps(pathname);
 
+    const handleOpenCalender = () => {
+        pathname === '/indo-soul-music' ?
+        window.open("https://docs.google.com/forms/d/e/1FAIpQLSckGmjJe8HL8x2mC-W8KQKE894rWzRRJ8Jn2vLVnUNcv25qFg/viewform?usp=send_form", '_blank')
+        :
+        window.open("https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2Oy2TFgjxR4qp0qcY_WHvf_woG_VGqWEdygUfyDpSAEOXfseze-9WW1KUBLE3MS5hbQsJhnCMg", '_blank')
+    }
+
     return (
         <>
             {/* desktop footer */}
@@ -25,7 +32,7 @@ const Footer = () => {
                     <div className='w-fit min-w-32 flex flex-col justify-center items-center gap-1.5'>
                         <p className='font-manrope text-xs font-semibold cursor-pointer transition-all duration-500 ease-in-out text-white leading-none tracking-wider' onClick={() => navigate(`privacy-policy`)}>Privacy Policy</p>
                         <a href="tel:8825859601" className='font-manrope text-xs font-semibold cursor-pointer transition-all duration-500 ease-in-out text-white leading-none mb-1'>+91 88258 59601</a>
-                        <NavButton {...navButtonProps}/>
+                        <NavButton {...navButtonProps} onCLick={handleOpenCalender}/>
                     </div>
                 </div>
             </div>
@@ -41,7 +48,7 @@ const Footer = () => {
                             <p className='font-manrope text-xs font-semibold cursor-pointer transition-all duration-500 ease-in-out text-white leading-none tracking-wider' onClick={() => navigate(`privacy-policy`)}>Privacy Policy</p>
                             <a href="tel:8825859601" className='font-manrope text-xs font-semibold cursor-pointer transition-all duration-500 ease-in-out text-white leading-none mb-1'>+91 88258 59601</a>
                         </span>
-                        <NavButton {...navButtonProps}/>
+                        <NavButton {...navButtonProps} onCLick={handleOpenCalender}/>
                     </div>
                 </div>
             </div>
