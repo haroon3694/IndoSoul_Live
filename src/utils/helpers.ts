@@ -24,7 +24,7 @@ export const findPrimaryButton = (pathname: string): PrimaryButtonProps => {
       shadow: true,
       shadowStyles: 'bg-white',
       btnText: 'Enquire Here',
-      onClick: () => window.open("https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2Oy2TFgjxR4qp0qcY_WHvf_woG_VGqWEdygUfyDpSAEOXfseze-9WW1KUBLE3MS5hbQsJhnCMg", '_blank')
+      onClick: () => window.open("https://forms.gle/D1CpmZzsXzPePgxE9", '_blank')
     };
   } else if (pathname === '/soul-sabha') {
     return {

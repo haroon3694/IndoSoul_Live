@@ -32,7 +32,7 @@ const Navbar = () => {
         pathname === '/indo-soul-music' ?
         window.open("https://docs.google.com/forms/d/e/1FAIpQLSckGmjJe8HL8x2mC-W8KQKE894rWzRRJ8Jn2vLVnUNcv25qFg/viewform?usp=send_form", '_blank')
         :
-        window.open("https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2Oy2TFgjxR4qp0qcY_WHvf_woG_VGqWEdygUfyDpSAEOXfseze-9WW1KUBLE3MS5hbQsJhnCMg", '_blank')
+        window.open("https://forms.gle/D1CpmZzsXzPePgxE9", '_blank')
     }
 
     useEffect(() => {
